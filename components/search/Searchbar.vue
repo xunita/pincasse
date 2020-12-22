@@ -10,7 +10,7 @@
     @mouseleave="manageleave"
   >
     <input
-      class="w-full outline-none rounded py-2 pl-5 font-medium"
+      class="w-full outline-none ml-1 py-2 pl-3 font-medium"
       type="search"
       placeholder="Vue Composition API"
       @focus="managefocus"
@@ -18,7 +18,7 @@
     />
     <client-only>
       <button
-        class="bg-white w-auto no-outline btn-search rounded flex justify-end items-center p-2 mr-1"
+        class="bg-white w-auto no-outline btn-search rounded flex justify-end items-center p-2"
       >
         <i class="fas fa-search color-008489"></i>
       </button>
