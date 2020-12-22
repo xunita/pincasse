@@ -18,7 +18,7 @@
     />
     <client-only>
       <button
-        class="bg-white w-auto no-outline btn-search rounded flex justify-end items-center p-2"
+        class="bg-white w-auto no-outline btn-search rounded flex justify-end items-center p-2 mr-1"
       >
         <i class="fas fa-search color-008489"></i>
       </button>
