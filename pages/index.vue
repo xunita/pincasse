@@ -9,9 +9,7 @@
       <div class="searchbar w-1/2 m-0-auto">
         <Searchbar />
       </div>
-      <div
-        class="links mt-6 flex font-medium space-x-6 btn-trend-home w-fit m-0-auto"
-      >
+      <div class="links mt-6 flex font-medium space-x-6 w-fit m-0-auto">
         <client-only>
           <btn-link
             :needfocus="true"
@@ -23,7 +21,7 @@
           <btn-link
             :needfocus="false"
             :href="localePath('/trending', $i18n.locale)"
-            class="is-light py-3 border-0"
+            class="is-light py-3 border-0 brr"
             ><i class="far fa-heart"></i
             ><span class="ml-2">{{ $t('welcomebtn2') }}</span></btn-link
           >
@@ -91,7 +89,7 @@ export default {
   }
 }
 @media screen and (max-width: 499px) {
-  .btn-trend-home {
+  .brr {
     display: none !important;
   }
   .title {

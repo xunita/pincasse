@@ -1,11 +1,11 @@
 <template>
   <div class="h-14 w-full relative px-8 z-10 flex align-center justify-between">
-    <div v-if="wantmax" class="w-full flex align-center justify-between">
+    <div v-show="wantmax" class="w-full flex align-center justify-between">
       <nuxt-link :to="home" class="h-8">
-        <div class="h-8 relative -ml-145 flex align-center">
+        <div class="h-8 relative h-logo -ml-145 flex align-center">
           <Logo2 class="mt-1" />
           <h4
-            class="title color-008489 -ml-12 -mt-1 select-none size-20 font-semibold"
+            class="title h-title color-008489 -ml-12 -mt-1 select-none size-20 font-semibold"
           >
             Pincasse
           </h4>
@@ -37,18 +37,18 @@
           >
             <span>Courses</span></nuxt-link
           >
-          <div v-show="sm" class="mr-10"><Langchoice /></div>
+          <div v-show="sm" class="mr-5"><Langchoice /></div>
           <btn-link
             :needfocus="false"
             href="https://github.com/nuxt/nuxt.js"
-            class="button is-primary is-outlined font-medium size-14"
+            class="button rounded is-primary no-outline is-outlined font-medium size-14 flex align-center"
             ><i class="fas fa-sign-in-alt size-16"></i
             ><span class="ml-2">{{ $t('sign') }}</span></btn-link
           ></client-only
         >
       </div>
     </div>
-    <div v-else class="w-full flex align-center">
+    <div v-show="min" class="w-full flex align-center">
       <div class="w-full flex align-center justify-center space-x-5">
         <client-only>
           <button
@@ -77,8 +77,11 @@ export default {
     return { width: 99999, wantmax: true }
   },
   computed: {
+    min() {
+      return this.wantmax === false && this.lg < 800
+    },
     lg() {
-      if (this.width > 840) return true
+      if (this.width > 800) return true
       return false
     },
     sm() {
@@ -108,6 +111,8 @@ export default {
   methods: {
     large() {
       this.width = window.innerWidth
+      if (this.wantmax === false && this.lg) this.wantmax = true
+      // console.log(this.wantmax, this.lg)
     },
   },
 }

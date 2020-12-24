@@ -12,6 +12,7 @@
 .homy {
   min-width: 116px !important;
 }
+
 .h-fit {
   height: fit-content !important;
 }
@@ -144,6 +145,23 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .unactive-lang {
   border-left: 4px solid transparent;
+}
+@media screen and (max-width: 500px) {
+  .pos-right {
+    float: none !important;
+    margin: 0 auto !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  .h-title {
+    display: none !important;
+  }
+  .logo-svg {
+    transform: scale(0.25) !important;
+  }
+  .h-logo {
+    width: 130px !important;
+  }
 }
 @-moz-document url-prefix() {
   @media screen and (max-width: 1024px) {
