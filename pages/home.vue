@@ -1,6 +1,6 @@
 <template>
   <div class="welcome center">
-    <div><Header /></div>
+    <div class="d-header"><Header /></div>
     <div class="w-full container">
       <div class="mb-6">
         <div class="logobig w-fit m-0-auto"><Logobig /></div>

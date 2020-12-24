@@ -1,9 +1,11 @@
 <template>
-  <div class="h-14 w-full relative px-8 z-10 flex align-center justify-between">
+  <div
+    class="h-14 w-full relative px-8 z-10 flex align-center justify-between tatapp"
+  >
     <div v-show="wantmax" class="w-full flex align-center justify-between">
-      <nuxt-link :to="home" class="h-8">
-        <div class="h-8 relative h-logo -ml-145 flex align-center">
-          <Logo2 class="mt-1" />
+      <nuxt-link :to="home" class="h-8 -ml-145 h-logo">
+        <div class="h-8 relative flex align-center">
+          <Logo2 class="mt-1 hi-logo" />
           <h4
             class="title h-title color-008489 -ml-12 -mt-1 select-none size-20 font-semibold"
           >
@@ -14,7 +16,7 @@
       <div v-show="lg" class="container w-3/12 lg:w-2/5 mx-2">
         <Searchbar />
       </div>
-      <div class="flex align-center">
+      <div class="flex align-center cc-header">
         <div v-show="!lg" class="mr-2">
           <client-only>
             <button

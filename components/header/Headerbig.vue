@@ -1,5 +1,5 @@
 <template>
-  <div class="h-16 w-full relative px-8 z-10">
+  <div class="h-16 w-full relative px-8 z-10 tatapp">
     <div class="vertical-center w-fit flex align-center relative pos-right">
       <div class="mr-5"><Langchoice /></div>
       <client-only>
