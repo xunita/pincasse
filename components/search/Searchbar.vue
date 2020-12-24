@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border flex rounded"
+    class="border flex align-center rounded"
     :class="{ 'my-shadow border-transparent': focused }"
     @mouseover="
       {
@@ -10,16 +10,14 @@
     @mouseleave="manageleave"
   >
     <input
-      class="w-full outline-none py-2 pl-3 font-medium"
+      class="w-full outline-none py-15 pl-3 font-medium font-semibold"
       type="search"
       placeholder="Vue Composition API"
       @focus="managefocus"
       @blur="manageblur"
     />
     <client-only>
-      <button
-        class="bg-white w-auto no-outline btn-search flex justify-end items-center p-2"
-      >
+      <button class="bg-white no-outline btn-search p-2 mr-1">
         <i class="fas fa-search color-008489"></i>
       </button>
     </client-only>

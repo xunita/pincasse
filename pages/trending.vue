@@ -16,7 +16,7 @@
           <btn-link
             :needfocus="true"
             :href="localePath('/home', $i18n.locale)"
-            class="bg-color-008489 text-white bghover-008489 hover-white active-white py-3 border-0"
+            class="bg-color-008489 text-white bghover-008489 hover-white py-3 border-0"
             ><i class="fas fa-home"></i
             ><span class="ml-2">{{ $t('welcomebtn1') }}</span></btn-link
           >
@@ -54,7 +54,7 @@ export default {
   text-align: center;
 }
 .logobig {
-  margin: 0 auto !important;
+  margin: 0 auto;
 }
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
@@ -76,7 +76,6 @@ export default {
   position: relative;
   bottom: 1rem;
 }
-
 .links {
   padding-top: 15px;
 }

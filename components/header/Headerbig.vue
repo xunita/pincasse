@@ -6,9 +6,9 @@
         <btn-link
           :needfocus="false"
           href="https://github.com/nuxt/nuxt.js"
-          class="button is-primary is-outlined font-medium size-15"
-          ><i class="fas fa-sign-in-alt"></i
-          ><span class="ml-2">{{ $t('sign') }}</span></btn-link
+          class="button is-primary is-outlined font-medium"
+          ><i class="fas fa-sign-in-alt size-16"></i
+          ><span class="ml-2 size-14">{{ $t('sign') }}</span></btn-link
         ></client-only
       >
     </div>

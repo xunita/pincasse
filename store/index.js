@@ -9,4 +9,9 @@ export const mutations = {
     state.currentlanguage = value
   },
 }
-export const actions = {}
+export const actions = {
+  GetWidth() {
+    console.log(document.body.clientWidth)
+    return document.body.clientWidth
+  },
+}

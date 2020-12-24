@@ -76,7 +76,6 @@ export default {
   position: relative;
   bottom: 1rem;
 }
-
 .links {
   padding-top: 15px;
 }
