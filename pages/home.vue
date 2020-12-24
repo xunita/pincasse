@@ -1,6 +1,9 @@
 <template>
   <div class="welcome center">
-    <div class="d-header fixed w-full bg-white" :class="{ shadown: scrolling }">
+    <div
+      class="d-header fixed w-full bg-white z-50"
+      :class="{ shadown: scrolling }"
+    >
       <Header />
     </div>
     <div style="height: 57px !important"></div>
