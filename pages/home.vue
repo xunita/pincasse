@@ -1,6 +1,9 @@
 <template>
   <div class="welcome center">
-    <div class="d-header"><Header /></div>
+    <div class="d-header fixed w-full bg-white" :class="{ shadown: scrolling }">
+      <Header />
+    </div>
+    <div style="height: 57px !important"></div>
     <div class="w-full container">
       <div class="mb-6">
         <div class="logobig w-fit m-0-auto"><Logobig /></div>
@@ -37,7 +40,29 @@
 <script>
 import Searchbar from '../components/search/Searchbar.vue'
 export default {
+  name: 'Homie',
   components: { Searchbar },
+  data() {
+    return {
+      scroll: 0,
+    }
+  },
+  computed: {
+    scrolling() {
+      return this.scroll > 1
+    },
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+      this.scroll = window.scrollY
+    },
+  },
 }
 </script>
 

@@ -3,7 +3,7 @@
     class="h-14 w-full relative px-8 z-10 flex align-center justify-between tatapp"
   >
     <div v-show="wantmax" class="w-full flex align-center justify-between">
-      <nuxt-link :to="home" class="h-8 -ml-145 h-logo">
+      <a :href="home" class="h-8 -ml-145 h-logo">
         <div class="h-8 relative flex align-center">
           <Logo2 class="mt-1 hi-logo" />
           <h4
@@ -12,7 +12,7 @@
             Pincasse
           </h4>
         </div>
-      </nuxt-link>
+      </a>
       <div v-show="lg" class="container w-3/12 lg:w-2/5 mx-2">
         <Searchbar />
       </div>
@@ -32,12 +32,12 @@
           </client-only>
         </div>
         <client-only>
-          <nuxt-link
+          <a
             :to="courses"
             class="color-008489 mr-10 hover-008489 font-medium font-semibold"
             :class="{ 'mr-5ok': !lg }"
           >
-            <span>Courses</span></nuxt-link
+            <span>Courses</span></a
           >
           <div v-show="sm" class="mr-5"><Langchoice /></div>
           <btn-link
