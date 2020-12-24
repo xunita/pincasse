@@ -33,7 +33,7 @@
         </div>
         <client-only>
           <a
-            :to="courses"
+            :href="courses"
             class="color-008489 mr-10 hover-008489 font-medium font-semibold"
             :class="{ 'mr-5ok': !lg }"
           >
