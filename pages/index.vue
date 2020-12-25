@@ -15,15 +15,13 @@
             :needfocus="true"
             :href="localePath('/home', $i18n.locale)"
             class="bg-color-008489 text-white bghover-008489 hover-white active-white py-3 border-0"
-            ><i class="fas fa-home"></i
-            ><span class="ml-2">{{ $t('welcomebtn1') }}</span></btn-link
+            ><span class="px-3">{{ $t('welcomebtn1') }}</span></btn-link
           >
           <btn-link
             :needfocus="false"
-            :href="localePath('/trending', $i18n.locale)"
+            :href="localePath('/home/trending', $i18n.locale)"
             class="is-light py-3 border-0 brr"
-            ><i class="far fa-heart"></i
-            ><span class="ml-2">{{ $t('welcomebtn2') }}</span></btn-link
+            ><span class="px-3">{{ $t('welcomebtn2') }}</span></btn-link
           >
         </client-only>
       </div>

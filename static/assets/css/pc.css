@@ -26,9 +26,23 @@ input[type='search']::-webkit-search-cancel-button {
 .color-008489 {
   color: #008489 !important;
 }
-
+.aside {
+  width: 240px !important;
+  height: 100% !important;
+  background-color: white !important;
+}
+.bb {
+  margin-left: -0.09rem;
+}
+.bbs {
+  margin-left: 0.7rem !important;
+}
+.as-bur {
+  padding-top: 0rem;
+  padding-left: 1.6rem;
+}
 .hover-008489:hover .makeme-008489 {
-  color: #008489bd !important;
+  color: #008489 !important;
 }
 .color-6d6d6d {
   color: #8d8d8d;
@@ -39,6 +53,9 @@ input[type='search']::-webkit-search-cancel-button {
 .color-ff385c {
   color: #ff385c !important;
 }
+.border-tr {
+  border-color: transparent !important;
+}
 .no-outline {
   outline: 2px solid transparent !important;
   outline-offset: 2px !important;
@@ -46,6 +63,22 @@ input[type='search']::-webkit-search-cancel-button {
 .no-outlines {
   outline: 0px solid transparent !important;
   outline-offset: 0px !important;
+}
+.button.is-lights {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.button.is-lights.is-hovered,
+.button.is-lights:hover {
+  background-color: #f5f5f5;
+  border-color: transparent;
+}
+.border-6d6d6d {
+  border-color: #555555 !important;
+}
+.color-363636 {
+  color: #777777 !important;
 }
 .hover-008489:hover {
   color: #008489bd !important;
@@ -81,6 +114,9 @@ input[type='search']::-webkit-search-cancel-button {
 .bg-color-008489 {
   background-color: #008489 !important;
 }
+.bg-color-white {
+  background-color: #fff !important;
+}
 .bg-color-008489ok {
   background-color: #00848911 !important;
 }
@@ -105,6 +141,46 @@ input[type='search']::-webkit-search-cancel-button {
 .pos-right {
   float: right !important;
 }
+.jj-self {
+  justify-self: end;
+}
+.size-3 {
+  font-size: 3px !important;
+}
+.clickable {
+  cursor: pointer;
+}
+
+.size-2 {
+  font-size: 2px !important;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+.size-4 {
+  font-size: 4px !important;
+}
+.dropdown-items {
+  color: #4a4a4a;
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.375rem 1rem;
+  position: relative;
+}
+.size-6 {
+  font-size: 6px !important;
+}
+.size-7 {
+  font-size: 7px !important;
+}
+.size-8 {
+  font-size: 8px !important;
+}
+.size-10 {
+  font-size: 10px !important;
+}
 .size-12 {
   font-size: 12px !important;
 }
@@ -114,8 +190,14 @@ input[type='search']::-webkit-search-cancel-button {
 .size-16 {
   font-size: 16px !important;
 }
+.size-17 {
+  font-size: 17px !important;
+}
 .size-18 {
   font-size: 18px !important;
+}
+.size-19 {
+  font-size: 19px !important;
 }
 .size-20 {
   font-size: 20px !important;
@@ -136,6 +218,9 @@ input[type='search']::-webkit-search-cancel-button {
   font-size: 30px !important;
 }
 .-ml-145 {
+  margin-left: -2rem !important;
+}
+.-ml-1456 {
   margin-left: -3.5rem !important;
 }
 .size-32 {
@@ -150,26 +235,46 @@ input[type='search']::-webkit-search-cancel-button {
 .unactive-lang {
   border-left: 4px solid transparent;
 }
+.aside::-webkit-scrollbar {
+  width: 7px; /* Remove scrollbar space */
+  border-radius: 10px;
+  animation: 0.2s appear;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.aside::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.aside:hover::-webkit-scrollbar-thumb {
+  background: #dddddd;
+}
 @media screen and (max-width: 500px) {
   .pos-right {
     float: none !important;
     margin: 0 auto !important;
   }
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 530px) {
   .h-title {
     display: none !important;
   }
   .logo-svg {
-    transform: scale(0.25) !important;
+    transform: scale(0.23) !important;
   }
   .cc-header {
     margin-left: -3rem !important;
   }
 }
-@media screen and (max-width: 391px) {
+@media screen and (max-width: 450px) {
   .tatapp {
     padding: 0 !important;
+  }
+  .h-logo {
+    margin-left: -3.5rem !important;
+  }
+  .tt {
+    position: relative !important;
+    right: 0 !important;
   }
 }
 @-moz-document url-prefix() {

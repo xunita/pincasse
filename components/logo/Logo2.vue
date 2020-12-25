@@ -72,7 +72,7 @@
   margin: auto;
 }
 .logo-svg {
-  transform: scale(0.3);
+  transform: scale(0.25);
 }
 @keyframes appear {
   0% {

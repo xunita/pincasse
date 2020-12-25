@@ -1,6 +1,6 @@
 <template>
   <a
-    class="button rounded"
+    class="button rounded size-14"
     :class="{ 'my-shadow': focused }"
     @mouseover="managefocus"
     @mouseleave="managefocus"

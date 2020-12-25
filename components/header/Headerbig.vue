@@ -6,9 +6,11 @@
         <btn-link
           :needfocus="false"
           href="https://github.com/nuxt/nuxt.js"
-          class="button rounded is-primary no-outline is-outlined font-medium size-14 flex align-center"
-          ><i class="fas fa-sign-in-alt size-16"></i
-          ><span class="ml-2 size-14">{{ $t('sign') }}</span></btn-link
+          class="button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2"
+          ><i class="fas fa-sign-in-alt size-16 color-363636"></i
+          ><span class="ml-2 size-14 color-363636">{{
+            $t('sign')
+          }}</span></btn-link
         ></client-only
       >
     </div>

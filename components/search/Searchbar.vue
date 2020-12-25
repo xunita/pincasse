@@ -17,8 +17,8 @@
       @blur="manageblur"
     />
     <client-only>
-      <button class="bg-white no-outline btn-search p-2 mr-1">
-        <i class="fas fa-search color-008489"></i>
+      <button class="bg-white hover-008489 no-outline btn-search p-2 mr-1">
+        <i class="fas fa-search color-363636 makeme-008489"></i>
       </button>
     </client-only>
   </div>

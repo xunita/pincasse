@@ -622,6 +622,7 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
   box-shadow: none;
   color: #fff;
 }
+
 .button.is-primary {
   background-color: #00d1b2;
   border-color: transparent;

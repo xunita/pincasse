@@ -4,55 +4,40 @@
       class="d-header fixed w-full bg-white z-50"
       :class="{ shadown: scrolling }"
     >
-      <Header />
+      <Header @showMenu="showMenu" />
     </div>
+    <Aside
+      v-show="menu"
+      v-click-outside="hide"
+      class="fixed overflow-auto h-aside z-50"
+      @hideMenu="hideMenu"
+      @more="more"
+    />
     <div style="height: 57px !important"></div>
     <div class="w-full container">
-      <div class="mb-6">
-        <div class="logobig w-fit m-0-auto"><Logobig /></div>
-        <h1 class="title color-008489 -mt-4 mb-10 select-none">PINCASSE</h1>
-      </div>
-      <div class="searchbar w-1/2 m-0-auto">
-        <Searchbar />
-      </div>
-      <div
-        class="links mt-6 flex font-medium space-x-6 btn-trend-home w-fit m-0-auto"
-      >
-        <client-only>
-          <btn-link
-            :needfocus="true"
-            :href="localePath('/home', $i18n.locale)"
-            class="bg-color-008489 text-white bghover-008489 hover-white py-3 border-0"
-            ><i class="fas fa-home"></i
-            ><span class="ml-2">{{ $t('welcomebtn1') }}</span></btn-link
-          >
-          <btn-link
-            :needfocus="false"
-            :href="localePath('/trending', $i18n.locale)"
-            class="is-light py-3 border-0"
-            ><i class="far fa-heart"></i
-            ><span class="ml-2">{{ $t('welcomebtn2') }}</span></btn-link
-          >
-        </client-only>
-      </div>
+      <nuxt-child />
     </div>
     <footer></footer>
   </div>
 </template>
 
 <script>
-import Searchbar from '../components/search/Searchbar.vue'
 export default {
   name: 'Homie',
-  components: { Searchbar },
   data() {
     return {
       scroll: 0,
+      menuu: false,
+      ismenuclick: false,
+      moree: false,
     }
   },
   computed: {
     scrolling() {
       return this.scroll > 1
+    },
+    menu() {
+      return this.menuu === true
     },
   },
   beforeMount() {
@@ -62,8 +47,32 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    showMenu(value) {
+      this.menuu = value
+      this.ismenuclick = true
+    },
+    hideMenu() {
+      this.menuu = false
+      this.ismenuclick = false
+    },
+    sleep(milliseconds) {
+      const date = Date.now()
+      let currentDate = null
+      do {
+        currentDate = Date.now()
+      } while (currentDate - date < milliseconds)
+    },
     handleScroll() {
       this.scroll = window.scrollY
+    },
+    hide() {
+      this.sleep(100)
+      if (!this.ismenuclick && !this.moree) this.menuu = false
+      this.ismenuclick = false
+      this.moree = false
+    },
+    more() {
+      this.moree = true
     },
   },
 }
@@ -81,49 +90,13 @@ export default {
   align-items: center;
   text-align: center;
 }
-.logobig {
-  margin: 0 auto;
+.h-aside {
+  animation: appear 0.3s;
 }
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 600;
-  font-size: 48px;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.searchbar {
-  position: relative;
-  bottom: 1rem;
-}
-.links {
-  padding-top: 15px;
-}
-@media screen and (max-width: 1024px) {
-  .searchbar {
-    width: 70% !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .searchbar {
-    width: 80% !important;
-  }
-}
-@media screen and (max-width: 499px) {
-  .btn-trend-home {
-    display: none !important;
-  }
-  .title {
-    font-size: 32px;
-    margin-top: -1.5rem !important;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
   }
 }
 </style>

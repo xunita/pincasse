@@ -8,7 +8,7 @@
       <div class="dropdown-trigger">
         <client-only>
           <button
-            class="button rounded is-primary no-outline is-outlined font-medium size-14 flex align-center"
+            class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
             @click="
@@ -17,15 +17,19 @@
               }
             "
           >
-            <i class="fas fa-globe size-16"></i>
-            <span class="block ml-2 hover-008489">{{ currentlang }}</span>
+            <i class="fas fa-globe size-16 color-363636"></i>
+            <span class="block ml-2">{{ currentlang }}</span>
             <span class="block icon is-small">
-              <i class="fas fa-chevron-down size-12"></i>
+              <i class="fas fa-chevron-down size-10 color-363636"></i>
             </span>
           </button>
         </client-only>
       </div>
-      <div id="dropdown-menu" class="dropdown-menu" role="menu">
+      <div
+        id="dropdown-menu"
+        class="dropdown-menu font-semibold lele"
+        role="menu"
+      >
         <div class="dropdown-content">
           <nuxt-link
             :to="switchLocalePath('en')"
@@ -127,8 +131,17 @@ export default {
 }
 </script>
 <style scoped>
+.lele {
+  animation: appear 0.3s;
+}
 .langmag {
   height: 20px !important;
   width: 20px !important;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
 }
 </style>
