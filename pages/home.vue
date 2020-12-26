@@ -66,7 +66,7 @@ export default {
       this.scroll = window.scrollY
     },
     hide() {
-      this.sleep(100)
+      this.sleep(50)
       if (!this.ismenuclick && !this.moree) this.menuu = false
       this.ismenuclick = false
       this.moree = false
@@ -91,7 +91,7 @@ export default {
   text-align: center;
 }
 .h-aside {
-  animation: appear 0.3s;
+  animation: appear 0.2s;
 }
 @keyframes appear {
   0% {
