@@ -274,6 +274,11 @@ input[type='search']::-webkit-search-cancel-button {
     margin: 0 auto !important;
   }
 }
+@media screen and (max-width: 524px) {
+  .milogo {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 530px) {
   .h-title {
     display: none !important;
@@ -282,19 +287,25 @@ input[type='search']::-webkit-search-cancel-button {
     transform: scale(0.23) !important;
   }
   .cc-header {
-    margin-left: -3rem !important;
+    margin-left: 0rem !important;
   }
 }
 @media screen and (max-width: 450px) {
   .tatapp {
     padding: 0 !important;
   }
-  .h-logo {
-    margin-left: -3.5rem !important;
-  }
   .tt {
     position: relative !important;
     right: 0 !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .yyo {
+    display: none !important;
+  }
+  .tt {
+    position: relative !important;
+    right: 0.7rem !important;
   }
 }
 @-moz-document url-prefix() {

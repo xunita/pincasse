@@ -17,7 +17,7 @@
         </client-only>
         <a :href="home" class="h-8 -ml-145 h-logo">
           <div class="h-8 relative flex align-center">
-            <Logo2 class="mt-1 hi-logo" />
+            <Logo2 class="mt-1 milogo hi-logo" />
             <h4
               class="title h-title color-008489 -ml-1456 -mt-1 select-none size-18 font-semibold"
             >
@@ -26,7 +26,7 @@
           </div>
         </a>
       </div>
-      <div v-show="lg" class="container w-4/12 lg:w-2/5 ml-1">
+      <div v-show="lg" class="container w-4/12 lg:w-2/5 ml-5">
         <Searchbar />
       </div>
       <div class="flex align-center cc-header">
@@ -47,7 +47,7 @@
         <client-only>
           <a
             :href="courses"
-            class="tt color-363636 button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
+            class="tt color-363636 button yyo rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
           >
             <span>{{ $t('cr') }}</span></a
           >
