@@ -115,7 +115,7 @@ export default {
       return false
     },
     sm() {
-      if (this.width > 640) return true
+      if (this.width > 690) return true
       return false
     },
     home() {
