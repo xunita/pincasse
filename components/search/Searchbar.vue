@@ -18,7 +18,7 @@
     />
     <client-only>
       <button
-        class="bg-white hover-008489 no-outline btn-search p-2 h-full border-r border-transparent"
+        class="bg-white hover-008489 no-outline btn-search p-2 border-r border-transparent"
       >
         <i class="fas fa-search color-363636 makeme-008489"></i>
       </button>

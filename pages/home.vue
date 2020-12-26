@@ -10,6 +10,7 @@
       v-show="menu"
       v-click-outside="hide"
       class="fixed overflow-auto h-aside z-50"
+      :class="{ hidding: !menu }"
       @hideMenu="hideMenu"
       @more="more"
     />
@@ -90,6 +91,9 @@ export default {
   align-items: center;
   text-align: center;
 }
+.hidding {
+  animation: disappear 0.2s;
+}
 .h-aside {
   animation: appear 0.2s;
 }
@@ -97,6 +101,12 @@ export default {
   0% {
     opacity: 0;
     transform: translateX(-10px);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 0;
+    transform: translateX(10px);
   }
 }
 </style>
