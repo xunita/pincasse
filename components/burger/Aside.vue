@@ -1,5 +1,5 @@
 <template>
-  <div class="aside border-r color-363636">
+  <div class="aside overflow-x-hidden border-r color-363636">
     <div
       class="flex w-full sticky z-50 top-0 bg-color-white h-14 align-center as-bur"
     >
@@ -23,8 +23,8 @@
       </client-only>
     </div>
     <div>
-      <Northaside class="py-2" />
-      <Middleaside class="py-2" @more="more" />
+      <Northaside class="py-2 pl5px" />
+      <Middleaside class="pl5px" @more="more" />
       <footer class="py-2"><Footer /></footer>
     </div>
   </div>

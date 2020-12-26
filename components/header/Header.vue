@@ -49,9 +49,25 @@
             :href="courses"
             class="tt color-363636 button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
           >
-            <span>Courses</span></a
+            <span>{{ $t('cr') }}</span></a
           >
           <div v-show="sm" class="tt"><Langchoice /></div>
+          <client-only>
+            <button
+              class="bg-white hover-008489 no-outline btn-search p-2 mr-1"
+            >
+              <svg
+                class="w-5 h-5 -pl-1 bb color-363636 makeme-008489"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+                ></path>
+              </svg>
+            </button>
+          </client-only>
           <btn-link
             :needfocus="false"
             href="https://github.com/nuxt/nuxt.js"

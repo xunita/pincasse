@@ -5,7 +5,7 @@
         :href="localePath('/home', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><i class="fas fa-home color-363636 size-17"></i
-        ><span class="font-semibold">Home</span></a
+        ><span class="font-semibold">{{ $t('welcomebtn1') }}</span></a
       >
       <a
         :href="localePath('/home/trending', $i18n.locale)"
@@ -42,7 +42,7 @@
               />
             </g>
           </g></svg
-        ><span class="font-semibold">Trending</span></a
+        ><span class="font-semibold">{{ $t('welcomebtn2') }}</span></a
       >
       <a
         :href="localePath('/home/trending', $i18n.locale)"
@@ -74,7 +74,7 @@
               fill="#777777"
             />
           </g></svg
-        ><span class="block font-semibold bbs">Video courses</span></a
+        ><span class="block font-semibold bbs">{{ $t('vid_course') }}</span></a
       >
     </client-only>
   </div>

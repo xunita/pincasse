@@ -11,7 +11,7 @@
           "
           ><i class="fas fa-globe color-363636 size-16"></i>
           <p class="flex align-center space-x-2">
-            <span class="font-semibold">English</span
+            <span class="font-semibold">{{ currentlang }}</span
             ><span class="block icon is-small">
               <i class="fas fa-chevron-down size-10 color-363636"></i>
             </span></p
@@ -46,15 +46,6 @@
           >Español</nuxt-link
         >
         <nuxt-link
-          :to="switchLocalePath('cn')"
-          class="dropdown-item flex"
-          :class="{
-            'active-lang': $i18n.locale === 'cn',
-            'unactive-lang': $i18n.locale !== 'cn',
-          }"
-          >中文</nuxt-link
-        >
-        <nuxt-link
           :to="switchLocalePath('ru')"
           class="dropdown-item flex"
           :class="{
@@ -62,6 +53,15 @@
             'unactive-lang': $i18n.locale !== 'ru',
           }"
           >русский</nuxt-link
+        >
+        <nuxt-link
+          :to="switchLocalePath('cn')"
+          class="dropdown-item flex"
+          :class="{
+            'active-lang': $i18n.locale === 'cn',
+            'unactive-lang': $i18n.locale !== 'cn',
+          }"
+          >中文</nuxt-link
         >
         <nuxt-link
           :to="switchLocalePath('jp')"
@@ -72,27 +72,30 @@
           }"
           >日本人</nuxt-link
         >
-        <nuxt-link
-          :to="switchLocalePath('ar')"
-          class="dropdown-item flex"
-          :class="{
-            'active-lang': $i18n.locale === 'ar',
-            'unactive-lang': $i18n.locale !== 'ar',
-          }"
-          >عربى</nuxt-link
-        >
       </div>
     </div>
-    <div class="mt-10 px-2">
+    <div class="px-5 w-fit m-0-auto ffoot">
       <ul
         class="flex flex-wrap justify-between color-363636 font-semibold size-14"
       >
-        <li><a class="hover-008489" href="#">About</a></li>
-        <li><a class="hover-008489" href="#">Contact</a></li>
-        <li><a class="hover-008489" href="#">Contribute</a></li>
-        <li><a class="hover-008489" href="#">Privacy Policy</a></li>
-        <li><a class="hover-008489" href="#">Terms of Service</a></li>
-        <li><a class="hover-008489" href="#">Copyright Policy</a></li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('about') }}</a>
+        </li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('contact') }}</a>
+        </li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('contribute') }}</a>
+        </li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('ppolicy') }}</a>
+        </li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('tos') }}</a>
+        </li>
+        <li>
+          <a class="hover-008489" href="#">{{ $t('cpolicy') }}</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -101,6 +104,23 @@
 export default {
   data() {
     return { lang: false }
+  },
+  computed: {
+    currentlang() {
+      return this.$i18n.locale === 'en'
+        ? 'English'
+        : this.$i18n.locale === 'fr'
+        ? 'Français'
+        : this.$i18n.locale === 'es'
+        ? 'Español'
+        : this.$i18n.locale === 'cn'
+        ? '中文'
+        : this.$i18n.locale === 'ru'
+        ? 'русский'
+        : this.$i18n.locale === 'jp'
+        ? '日本人'
+        : 'عربى'
+    },
   },
 }
 </script>

@@ -13,7 +13,7 @@
             src="https://i.ibb.co/NSQWM85/56.png"
             alt=""
           />
-          <span class="font-semibold">Home</span>
+          <span class="font-semibold">John Wick</span>
         </p>
         <p class="flex align-center">
           <i class="fas fa-circle size-2 color-008489"></i
@@ -24,7 +24,7 @@
         key="er"
         class="dropdown-items hover-008489 underline-hover w-fit m-0-auto clickable flex align-center space-x-2 py-2 pl-8"
         @click="more"
-        ><span class="size-14 font-semibold">More</span
+        ><span class="size-14 font-semibold">{{ $t('see_more') }}</span
         ><span class="block icon is-small">
           <i
             class="fas fa-chevron-down size-10 color-363636 makeme-008489"
@@ -35,7 +35,7 @@
         key="dd"
         class="dropdown-items hover-008489 underline-hover w-fit m-0-auto clickable flex align-center space-x-2 py-2 pl-8"
         @click="more"
-        ><span class="size-14 font-semibold">Less</span
+        ><span class="size-14 font-semibold">{{ $t('see_less') }}</span
         ><span class="block icon is-small">
           <i
             class="fas fa-chevron-up size-10 color-363636 makeme-008489"

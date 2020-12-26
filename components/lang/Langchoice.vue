@@ -2,7 +2,7 @@
   <div>
     <div
       v-click-outside="hide"
-      class="dropdown"
+      class="dropdown flex align-center"
       :class="{ 'is-active': focused }"
     >
       <div class="dropdown-trigger">
@@ -59,15 +59,6 @@
             >Español</nuxt-link
           >
           <nuxt-link
-            :to="switchLocalePath('cn')"
-            class="dropdown-item flex"
-            :class="{
-              'active-lang': $i18n.locale === 'cn',
-              'unactive-lang': $i18n.locale !== 'cn',
-            }"
-            >中文</nuxt-link
-          >
-          <nuxt-link
             :to="switchLocalePath('ru')"
             class="dropdown-item flex"
             :class="{
@@ -77,6 +68,15 @@
             >русский</nuxt-link
           >
           <nuxt-link
+            :to="switchLocalePath('cn')"
+            class="dropdown-item flex"
+            :class="{
+              'active-lang': $i18n.locale === 'cn',
+              'unactive-lang': $i18n.locale !== 'cn',
+            }"
+            >中文</nuxt-link
+          >
+          <nuxt-link
             :to="switchLocalePath('jp')"
             class="dropdown-item flex"
             :class="{
@@ -84,15 +84,6 @@
               'unactive-lang': $i18n.locale !== 'jp',
             }"
             >日本人</nuxt-link
-          >
-          <nuxt-link
-            :to="switchLocalePath('ar')"
-            class="dropdown-item flex"
-            :class="{
-              'active-lang': $i18n.locale === 'ar',
-              'unactive-lang': $i18n.locale !== 'ar',
-            }"
-            >عربى</nuxt-link
           >
         </div>
       </div>
