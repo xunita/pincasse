@@ -3,7 +3,7 @@
     :to="localePath('/home/followed', $i18n.locale)"
     class="dropdown-item flex align-center space-x-3 py-2 pl-8"
     ><svg
-      class="w-5 h-5 bb color-363636"
+      class="w-5 h-5 color-363636"
       fill="currentColor"
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
