@@ -78,7 +78,7 @@
         >
       </div>
     </div>
-    <div v-show="min" class="w-full flex align-center">
+    <div v-show="min" class="w-full flex align-center mx-2">
       <div class="w-full flex align-center justify-center space-x-4">
         <client-only>
           <button
