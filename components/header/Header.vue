@@ -48,11 +48,9 @@
           >
             <span>{{ $t('cr') }}</span></a
           >
-          <div v-show="sm" class="tt llchoice"><Langchoice /></div>
+          <div v-show="sm" class="tt llchoice mr-2"><Langchoice /></div>
           <client-only>
-            <button
-              class="bg-white hover-008489 no-outline btn-search p-2 mr-1"
-            >
+            <button class="bg-white hover-008489 no-outline p-2 mr-2">
               <svg
                 class="w-5 h-5 -pl-1 bb color-363636 makeme-008489"
                 fill="currentColor"
