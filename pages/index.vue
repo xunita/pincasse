@@ -1,5 +1,5 @@
 <template>
-  <div class="welcome">
+  <div class="welcome bg-color-white">
     <div class="mb-16"><Headerbig /></div>
     <div class="w-full container">
       <div class="mb-6">

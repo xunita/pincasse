@@ -1,8 +1,8 @@
 <template>
-  <div class="welcome center">
+  <div class="welcome center bg-color-white">
     <div
       class="d-header fixed w-full bg-white z-50"
-      :class="{ shadown: scrolling }"
+      :class="{ shadown: scrolling && !$store.state.tagsugges }"
     >
       <Header @showMenu="showMenu" />
     </div>
@@ -15,7 +15,7 @@
       @more="more"
     />
     <div style="height: 57px !important"></div>
-    <div class="w-full container">
+    <div class="w-full sweethome">
       <nuxt-child />
     </div>
     <footer></footer>
@@ -85,6 +85,9 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+.sweethome {
+  height: 1024px;
+}
 .container {
   margin: 0 auto;
   justify-content: center;

@@ -10,7 +10,7 @@
     @mouseleave="manageleave"
   >
     <input
-      class="w-full outline-none py-15 pl-3 font-medium font-semibold"
+      class="w-full outline-none py-15 pl-3 font-normal font font-semibold"
       type="search"
       placeholder="Vue Composition API"
       @focus="managefocus"
