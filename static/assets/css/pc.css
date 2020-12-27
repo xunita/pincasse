@@ -294,24 +294,29 @@ input[type='search']::-webkit-search-cancel-button {
   .tatapp {
     padding: 0 !important;
   }
-  .tt {
-    position: relative !important;
-    right: 0 !important;
-  }
 }
 @media screen and (max-width: 360px) {
   .yyo {
     display: none !important;
-  }
-  .tt {
-    position: relative !important;
-    right: 0.7rem !important;
   }
 }
 @-moz-document url-prefix() {
   @media screen and (max-width: 1024px) {
     .btn-search {
       margin-left: -2rem !important;
+    }
+    .llchoice {
+      display: none !important;
+    }
+    .yyo {
+      position: relative !important;
+      left: -2.5rem !important;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .yosearch {
+      position: relative !important;
+      left: -3rem !important;
     }
   }
 }

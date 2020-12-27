@@ -8,10 +8,7 @@
     >
       <div class="flex align-center relative">
         <client-only>
-          <button
-            class="bg-white z-40 no-outline btn-search p-2"
-            @click="showMenu"
-          >
+          <button class="bg-white z-40 no-outline p-2" @click="showMenu">
             <i class="fas fa-bars color-363636 size-18"></i>
           </button>
         </client-only>
@@ -30,7 +27,7 @@
         <Searchbar />
       </div>
       <div class="flex align-center cc-header">
-        <div v-show="!lg" class="z-50 tt">
+        <div v-show="!lg" class="z-50 tt yosearch">
           <client-only>
             <button
               class="bg-white no-outline btn-search p-2"
@@ -51,7 +48,7 @@
           >
             <span>{{ $t('cr') }}</span></a
           >
-          <div v-show="sm" class="tt"><Langchoice /></div>
+          <div v-show="sm" class="tt llchoice"><Langchoice /></div>
           <client-only>
             <button
               class="bg-white hover-008489 no-outline btn-search p-2 mr-1"
