@@ -79,7 +79,7 @@
       <div class="w-full flex align-center justify-center space-x-4">
         <client-only>
           <button
-            class="bg-white no-outline btn-search"
+            class="bg-white no-outline"
             @click="
               {
                 wantmax = !wantmax
