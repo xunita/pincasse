@@ -1,6 +1,6 @@
 <template>
   <div id="eltoscrol" class="z-10 plus50px overflow-x-auto">
-    <div class="flex align-center whatyou ml-1">
+    <div class="flex align-center">
       <client-only>
         <div
           class="fixed bg-color-white is-lights left-0 nexttag -ml-2 p-1 hover:shadow"
