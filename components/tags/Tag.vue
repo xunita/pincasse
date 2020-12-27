@@ -1,5 +1,5 @@
 <template>
-  <div id="eltoscrol" class="z-10 plus50px overflow-x-auto">
+  <div id="eltoscrol" class="z-10 plus50px overflow-x-auto mx-1">
     <div class="flex align-center whatyou ml-1">
       <client-only>
         <div
