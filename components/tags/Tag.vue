@@ -1,5 +1,5 @@
 <template>
-  <div id="eltoscrol" class="z-10 plus50px overflow-x-auto mx-1">
+  <div id="eltoscrol" class="z-10 plus50px overflow-x-auto">
     <div class="flex align-center whatyou ml-1">
       <client-only>
         <div
@@ -118,7 +118,6 @@ export default {
       this.clw = cl
       this.scrw = scr
       this.totalscroll = Math.floor((scr - cl) / 500) + 1
-      console.log(this.totalscroll)
     },
     large() {
       const scr = document.getElementById('eltoscrol').scrollWidth
@@ -132,7 +131,6 @@ export default {
       this.totalscroll = Math.floor((scr - cl) / 500) + 1
       if (this.nbscroll - Math.floor(this.clw / 500) + 1) this.nbscroll = 0
       else this.nbscroll = this.nbscroll - Math.floor(this.clw / 500) + 1
-      console.log(this.totalscroll)
     },
     hide() {
       this.focused = false
@@ -151,6 +149,8 @@ export default {
   margin: 0 auto !important;
   top: 55px !important;
   padding-top: 0.5rem !important;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
   animation: 0.3s appear;
   scrollbar-width: none;
 }
