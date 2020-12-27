@@ -24,7 +24,7 @@
       </a>
       <client-only>
         <div
-          class="fixed bg-color-white is-lights right-0 nexttag -mr-2 p-1 hover:shadow-md"
+          class="fixed bg-color-white is-lights right-0 nexttag -mr-2 p-1 hover:shadow"
           :class="{ hidden: scrollxr }"
           @click="scrollRight"
         >
