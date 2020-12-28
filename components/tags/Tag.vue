@@ -1,6 +1,6 @@
 <template>
   <div id="eltoscrol" class="z-10 plus50px overflow-x-auto">
-    <div class="flex align-center">
+    <div class="flex align-center w-fit m-0-auto px-8 wtag">
       <client-only>
         <div
           class="fixed bg-color-white is-lights left-0 nexttag -ml-2 p-1 hover:shadow"
@@ -15,7 +15,7 @@
         </div>
       </client-only>
       <a
-        v-for="i in 20"
+        v-for="i in 45"
         :key="i"
         :href="localePath('/home', $i18n.locale)"
         class="color-363636 button rounded-full is-lights no-outline border-0 font-medium size-14 py-2 px-5"
@@ -154,7 +154,11 @@ export default {
   animation: 0.3s appear;
   scrollbar-width: none;
 }
-
+@media screen and (max-width: 450px) {
+  .wtag {
+    padding: 0 !important;
+  }
+}
 @keyframes appear {
   0% {
     transform: translateY(-10px);
