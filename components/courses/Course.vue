@@ -146,7 +146,7 @@
             </figure>
           </div>
           <div class="w-fit">
-            <span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+            <span class="mscourses pb-1zz font-semibold size-14 color-6d6d6ddd"
               >John Smitgd gddggd refrefs fez ggg d refrefs fez ggg d refrefs
               fez ggg d
             </span>
