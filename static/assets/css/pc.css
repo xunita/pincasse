@@ -60,6 +60,9 @@ input[type='search']::-webkit-search-cancel-button {
 .color-6d6d6d {
   color: #8d8d8d;
 }
+.color-6d6d6ddd {
+  color: #5e5e5e;
+}
 .hover-8d8d8d:hover {
   color: #757575 !important;
 }
@@ -138,6 +141,15 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .justify-center {
   justify-content: center !important;
+}
+.justify-self-center {
+  justify-self: center !important;
+}
+.justify-self-end {
+  justify-self: end !important;
+}
+.align-self-end {
+  align-self: flex-end;
 }
 .align-center {
   align-items: center !important;
@@ -280,7 +292,7 @@ input[type='search']::-webkit-search-cancel-button {
 .aside:hover::-webkit-scrollbar-thumb {
   background: #dddddd;
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 450px) {
   .nexttag {
     display: none !important;
   }

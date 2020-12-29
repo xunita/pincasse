@@ -82,28 +82,35 @@ export default {
       } while (currentDate - date < milliseconds)
     },
     scrollLeft() {
-      if (this.nbscroll > 0) this.nbscroll--
-      if (this.nbscroll < this.totalscroll) this.reachtotal = false
       const scroll = document.getElementById('eltoscrol').scrollLeft
+      const scr = document.getElementById('eltoscrol').scrollWidth
+      const cl = document.getElementById('eltoscrol').clientWidth
       this.tagscrol = scroll - 500
       document.getElementById('eltoscrol').scroll({
         top: scroll - 500,
         left: scroll - 500,
         behavior: 'smooth',
       })
+      if (Math.abs(scr - scroll + 500) <= cl) {
+        this.reachtotal = true
+      } else {
+        this.reachtotal = false
+      }
       // this.sleep(500)
     },
     scrollRight() {
       const scroll = document.getElementById('eltoscrol').scrollLeft
+      const scr = document.getElementById('eltoscrol').scrollWidth
+      const cl = document.getElementById('eltoscrol').clientWidth
       this.tagscrol = scroll + 500
       document.getElementById('eltoscrol').scroll({
         top: scroll + 500,
         left: scroll + 500,
         behavior: 'smooth',
       })
-      this.nbscroll++
-      if (this.nbscroll >= this.totalscroll) this.reachtotal = true
-      else {
+      if (Math.abs(scr - scroll - 500) <= cl) {
+        this.reachtotal = true
+      } else {
         this.reachtotal = false
       }
     },
@@ -115,9 +122,6 @@ export default {
         this.tagscrol = 0
         this.reachtotal = true
       }
-      this.clw = cl
-      this.scrw = scr
-      this.totalscroll = Math.floor((scr - cl) / 500) + 1
     },
     large() {
       const scr = document.getElementById('eltoscrol').scrollWidth

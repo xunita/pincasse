@@ -13,7 +13,7 @@
     "
   >
     <div class="card">
-      <div class="card-image border rounded ddd">
+      <div class="card-image rounded ddd">
         <figure class="image relative is-4by3">
           <div
             class="z-10 bg-color-008489 absolute vidcone px-3 rounded w-fit top-0 left-0"
@@ -117,31 +117,51 @@
               </button>
             </client-only>
           </div>
-          <img src="/b.jpg" alt="Placeholder image" />
+          <img class="igmg" src="/b.jpg" alt="Placeholder image" />
         </figure>
       </div>
-      <div class="card-content">
+      <div class="mt-3 ert">
+        <div class="content mb-1">
+          <div class="ctag">
+            <a
+              class="underline font-semibold clickable color-008489 hover-008489"
+              >#VueJs</a
+            >
+          </div>
+          <div class="ctitle font-semibold">
+            <span class="mscourse pb-1"
+              >How to Write gggGood Commit Messages: A Practical Git Guide A
+              Practical Git Guide ggs dzefd dez</span
+            >
+          </div>
+        </div>
         <div class="media">
           <div class="media-left">
-            <figure class="image is-48x48">
+            <figure class="image rounded-full is-44x44">
               <img
+                class="rounded-full"
                 src="https://bulma.io/images/placeholders/96x96.png"
                 alt="Placeholder image"
               />
             </figure>
           </div>
-          <div class="media-content">
-            <p class="title is-4">John Smith</p>
-            <p class="subtitle is-6">@johnsmith</p>
+          <div class="w-fit">
+            <span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+              >John Smitgd gddggd refrefs fez ggg d refrefs fez ggg d refrefs
+              fez ggg d
+            </span>
+            <div class="flex align-center">
+              <client-only>
+                <p class="flex align-center">
+                  <span class="size-4 mr-1"
+                    ><i class="fas fa-circle color-6d6d6d"></i></span
+                  ><span class="font-semibold size-12 color-6d6d6d"
+                    >2 days ago</span
+                  >
+                </p>
+              </client-only>
+            </div>
           </div>
-        </div>
-
-        <div class="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
-          iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
-          <a href="#">#responsive</a>
-          <br />
-          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
         </div>
       </div>
     </div>
@@ -193,10 +213,28 @@ export default {
 }
 </script>
 <style scoped>
+.mscourse {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 20px;
+}
+.mscourses {
+  max-width: 190px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 20px;
+}
 .showunlikedtext {
   visibility: visible !important;
   width: auto;
   animation: 0.1s appear;
+}
+.igmg {
+  border-radius: 0.25rem;
 }
 .showlikedtext {
   visibility: visible !important;
@@ -229,10 +267,18 @@ export default {
 @media screen and (max-width: 450px) {
   .course-sample {
     padding: 0 !important;
+    padding-bottom: 1rem !important;
     border-bottom-width: 1px;
+  }
+  .ert {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .ddd {
     border: none !important;
+  }
+  .igmg {
+    border-radius: 0 !important;
   }
 }
 @keyframes appear {

@@ -215,8 +215,8 @@
   top: 0;
 }
 .image.is-4by3 {
-  padding-top: 75%;
-  height: auto!important;
+  padding-top: 60%;
+  height: auto !important;
 }
 .columns.is-multiline {
   flex-wrap: wrap;
@@ -312,6 +312,18 @@
 .image.is-32x32 {
   height: 32px;
   width: 32px;
+}
+.image.is-36x36 {
+  height: 36px;
+  width: 36px;
+}
+.image.is-40x40 {
+  height: 40px;
+  width: 40px;
+}
+.image.is-44x44 {
+  height: 44px;
+  width: 44px;
 }
 .image.is-48x48 {
   height: 48px;
