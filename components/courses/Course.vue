@@ -129,7 +129,7 @@
             >
           </div>
           <div class="ctitle font-semibold">
-            <span class="mscourse pb-1"
+            <span class="mscourse pb-1zz"
               >How to Write gggGood Commit Messages: A Practical Git Guide A
               Practical Git Guide ggs dzefd dez</span
             >
@@ -146,7 +146,7 @@
             </figure>
           </div>
           <div class="w-fit">
-            <span class="mscourses pb-1zz font-semibold size-14 color-6d6d6ddd"
+            <span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
               >John Smitgd gddggd refrefs fez ggg d refrefs fez ggg d refrefs
               fez ggg d
             </span>
