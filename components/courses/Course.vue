@@ -117,7 +117,7 @@
               </button>
             </client-only>
           </div>
-          <img class="igmg" src="/b.jpg" alt="Placeholder image" />
+          <img class="igmg" src="/b.png" alt="Placeholder image" />
         </figure>
       </div>
       <div class="mt-3 ert">
@@ -130,8 +130,8 @@
           </div>
           <div class="ctitle font-semibold">
             <span class="mscourse pb-1zz"
-              >How to Write gggGood Commit Messages: A Practical Git Guide A
-              Practical Git Guide ggs dzefd dez</span
+              >How to Write Good Commit Messages: A Practical Git Guide A
+              Practical Git Guide</span
             >
           </div>
         </div>
@@ -140,15 +140,14 @@
             <figure class="image rounded-full is-44x44">
               <img
                 class="rounded-full"
-                src="https://bulma.io/images/placeholders/96x96.png"
+                src="https://i.ibb.co/NSQWM85/56.png"
                 alt="Placeholder image"
               />
             </figure>
           </div>
           <div class="w-fit">
             <span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
-              >John Smitgd gddggd refrefs fez ggg d refrefs fez ggg d refrefs
-              fez ggg d
+              >Yaya Sopegue
             </span>
             <div class="flex align-center">
               <client-only>
