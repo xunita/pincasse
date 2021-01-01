@@ -45,7 +45,7 @@
         ><span class="font-semibold">{{ $t('welcomebtn2') }}</span></a
       >
       <a
-        :href="localePath('/home/trending', $i18n.locale)"
+        :href="localePath('/home/courses/video', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="color-363636"

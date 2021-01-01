@@ -1,6 +1,6 @@
 <template>
   <div
-    class="course-sample"
+    class="course-sample clickable"
     @mouseover="
       {
         chover = true
@@ -16,7 +16,7 @@
       <div class="card-image rounded ddd">
         <figure class="image relative is-4by3">
           <div
-            class="z-10 bg-color-008489 absolute vidcone px-3 rounded w-fit top-0 left-0"
+            class="z-10 bg-color-008489p absolute vidcone px-3 rounded w-fit top-0 left-0"
           >
             <client-only>
               <div class="-mt-1">
@@ -123,10 +123,12 @@
       <div class="mt-3 ert">
         <div class="content mb-1">
           <div class="ctag">
-            <a
+            <nuxt-link
               class="underline font-semibold clickable color-008489 hover-008489"
-              >#VueJs</a
+              to="#"
             >
+              #VueJs
+            </nuxt-link>
           </div>
           <div class="ctitle font-semibold">
             <span class="mscourse pb-1zz"
@@ -136,19 +138,23 @@
           </div>
         </div>
         <div class="media">
-          <div class="media-left">
-            <figure class="image rounded-full is-44x44">
-              <img
-                class="rounded-full"
-                src="https://i.ibb.co/NSQWM85/56.png"
-                alt="Placeholder image"
-              />
-            </figure>
-          </div>
+          <nuxt-link to="#" title="See profile">
+            <div class="media-left">
+              <figure class="image rounded-full is-44x44">
+                <img
+                  class="rounded-full"
+                  src="https://i.ibb.co/NSQWM85/56.png"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+          </nuxt-link>
           <div class="w-fit">
-            <span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
-              >Yaya Sopegue
-            </span>
+            <nuxt-link to="#" title="See profile"
+              ><span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+                >Yaya Sopegue
+              </span></nuxt-link
+            >
             <div class="flex align-center">
               <client-only>
                 <p class="flex align-center">
@@ -266,7 +272,7 @@ export default {
 @media screen and (max-width: 450px) {
   .course-sample {
     padding: 0 !important;
-    padding-bottom: 1rem !important;
+    padding-bottom: 2rem !important;
     border-bottom-width: 1px;
   }
   .ert {

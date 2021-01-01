@@ -1,39 +1,10 @@
 <template>
-  <div>
-    <div class="mb-6">
-      <div class="logobig w-fit m-0-auto"><Logobig /></div>
-      <h1 class="title color-008489 -mt-4 mb-10 select-none">PINCASSE</h1>
-    </div>
-    <div class="searchbar w-1/2 m-0-auto">
-      <Searchbar />
-    </div>
-    <div
-      class="links mt-6 flex font-medium space-x-6 btn-trend-home w-fit m-0-auto"
-    >
-      <client-only>
-        <btn-link
-          :needfocus="true"
-          :href="localePath('/home', $i18n.locale)"
-          class="bg-color-008489 text-white bghover-008489 hover-white py-3 border-0"
-          ><i class="fas fa-home"></i
-          ><span class="ml-2">{{ $t('welcomebtn1') }}</span></btn-link
-        >
-        <btn-link
-          :needfocus="false"
-          :href="localePath('/home/trending', $i18n.locale)"
-          class="is-light py-3 border-0"
-          ><i class="far fa-heart"></i
-          ><span class="ml-2">{{ $t('welcomebtn2') }}</span></btn-link
-        >
-      </client-only>
-    </div>
-  </div>
+  <div class="px-2 sm:px-8"><nuxt-child /></div>
 </template>
 
 <script>
-import Searchbar from '../../components/search/Searchbar.vue'
 export default {
-  components: { Searchbar },
+  name: 'Hco',
   data() {
     return {
       scroll: 0,

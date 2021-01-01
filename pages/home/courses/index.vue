@@ -1,9 +1,12 @@
 <template>
-  <div></div>
+  <div>
+    <div><Filtering /></div>
+  </div>
 </template>
 
 <script>
 export default {
+  name: 'Vidd',
   data() {
     return {
       scroll: 0,

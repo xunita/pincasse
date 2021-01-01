@@ -172,6 +172,11 @@
   height: 100%;
   width: 100%;
 }
+.column.is-one-fifth,
+.column.is-one-fifth-tablet {
+  flex: none;
+  width: 20%;
+}
 .hero-video,
 .image.is-16by9 .has-ratio,
 .image.is-16by9 img,

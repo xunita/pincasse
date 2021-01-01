@@ -1,8 +1,10 @@
 <template>
-  <div class="welcome center bg-color-white">
+  <div v-cloak class="welcome center bg-color-white">
     <div
       class="d-header fixed w-full bg-white z-50"
-      :class="{ shadown: scrolling && !$store.state.tagsugges }"
+      :class="{
+        shadown: scrolling && !hastag && !hastrend,
+      }"
     >
       <Header @showMenu="showMenu" />
     </div>
@@ -15,6 +17,9 @@
       @more="more"
     />
     <div style="height: 57px !important"></div>
+    <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
+    <Trending v-if="hastrend" class="bg-color-white border-b pb-2 z-30" />
+    <div class="ddtag"></div>
     <div class="w-full sweethome">
       <nuxt-child />
     </div>
@@ -23,8 +28,10 @@
 </template>
 
 <script>
+import trending from './home/trending.vue'
 export default {
   name: 'Homie',
+  components: { trending },
   data() {
     return {
       scroll: 0,
@@ -34,6 +41,12 @@ export default {
     }
   },
   computed: {
+    hastag() {
+      return this.$store.state.tagsugges === true
+    },
+    hastrend() {
+      return this.$store.state.tagtrend === true
+    },
     scrolling() {
       return this.scroll > 1
     },
@@ -46,6 +59,9 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
+  },
+  mounted() {
+    this.handleScroll()
   },
   methods: {
     showMenu(value) {
@@ -85,9 +101,6 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.sweethome {
-  height: 1024px;
-}
 .container {
   margin: 0 auto;
   justify-content: center;
@@ -104,6 +117,14 @@ export default {
   0% {
     opacity: 0;
     transform: translateX(-10px);
+  }
+}
+.ddtag {
+  height: 60px !important;
+}
+@media screen and (max-width: 345px) {
+  .ddtag {
+    height: 75px !important;
   }
 }
 @keyframes disappear {

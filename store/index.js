@@ -4,7 +4,8 @@ export const state = () => ({
   newlocale: '',
   currentlanguage: 'English',
 
-  tagsugges: true,
+  tagsugges: false,
+  tagtrend: false,
 })
 export const mutations = {
   SET_LANG(state, value) {
@@ -12,6 +13,9 @@ export const mutations = {
   },
   SET_TAG_SUG(state, value) {
     state.tagsugges = value
+  },
+  SET_TAG_TREND(state, value) {
+    state.tagtrend = value
   },
 }
 export const actions = {}
