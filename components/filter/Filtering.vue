@@ -657,6 +657,9 @@ export default {
 .baba a {
   width: fit-content !important;
 }
+.ddrop a {
+  width: 100% !important;
+}
 .ddrop {
   max-height: 240px;
 }
