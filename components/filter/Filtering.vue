@@ -483,38 +483,58 @@ export default {
   methods: {
     itemsel(item) {
       if (item === 'lh') {
-        this.sortby.orderdate.uploaded.lh = true
-        for (const property in this.sortby.orderdate.uploaded) {
-          if (property !== 'lh')
-            this.sortby.orderdate.uploaded[property] = false
+        if (this.sortby.orderdate.uploaded.lh) {
+          this.sortby.orderdate.uploaded.lh = false
+        } else {
+          this.sortby.orderdate.uploaded.lh = true
+          for (const property in this.sortby.orderdate.uploaded) {
+            if (property !== 'lh')
+              this.sortby.orderdate.uploaded[property] = false
+          }
         }
       }
       if (item === 'ld') {
-        this.sortby.orderdate.uploaded.ld = true
-        for (const property in this.sortby.orderdate.uploaded) {
-          if (property !== 'ld')
-            this.sortby.orderdate.uploaded[property] = false
+        if (this.sortby.orderdate.uploaded.ld) {
+          this.sortby.orderdate.uploaded.ld = false
+        } else {
+          this.sortby.orderdate.uploaded.ld = true
+          for (const property in this.sortby.orderdate.uploaded) {
+            if (property !== 'ld')
+              this.sortby.orderdate.uploaded[property] = false
+          }
         }
       }
       if (item === 'lw') {
-        this.sortby.orderdate.uploaded.lw = true
-        for (const property in this.sortby.orderdate.uploaded) {
-          if (property !== 'lw')
-            this.sortby.orderdate.uploaded[property] = false
+        if (this.sortby.orderdate.uploaded.lw) {
+          this.sortby.orderdate.uploaded.lw = false
+        } else {
+          this.sortby.orderdate.uploaded.lw = true
+          for (const property in this.sortby.orderdate.uploaded) {
+            if (property !== 'lw')
+              this.sortby.orderdate.uploaded[property] = false
+          }
         }
       }
       if (item === 'lm') {
-        this.sortby.orderdate.uploaded.lm = true
-        for (const property in this.sortby.orderdate.uploaded) {
-          if (property !== 'lm')
-            this.sortby.orderdate.uploaded[property] = false
+        if (this.sortby.orderdate.uploaded.lm) {
+          this.sortby.orderdate.uploaded.lm = false
+        } else {
+          this.sortby.orderdate.uploaded.lm = true
+          for (const property in this.sortby.orderdate.uploaded) {
+            if (property !== 'lm')
+              this.sortby.orderdate.uploaded[property] = false
+          }
         }
       }
       if (item === 'ly') {
-        this.sortby.orderdate.uploaded.ly = true
-        for (const property in this.sortby.orderdate.uploaded) {
-          if (property !== 'ly')
-            this.sortby.orderdate.uploaded[property] = false
+        if (this.sortby.orderdate.uploaded.ly) {
+          this.sortby.orderdate.uploaded.ly = false
+        } else {
+          this.sortby.orderdate.uploaded.ly = true
+          for (const property in this.sortby.orderdate.uploaded) {
+            if (property !== 'ly')
+              this.sortby.orderdate.uploaded[property] = false
+          }
         }
       }
       if (item === 'web') {
