@@ -18,7 +18,7 @@
         v-for="i in 4"
         :key="i"
         :href="localePath('/home', $i18n.locale)"
-        class="color-363636 button rounded-full is-lights no-outline border-0 font-medium size-14 py-2 px-5"
+        class="color-363636 button rounded-full is-lights no-outline border-0 font-medium size-14 py-1 px-5"
       >
         #Vue{{ i }}
       </a>

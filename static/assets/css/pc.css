@@ -1,7 +1,10 @@
 [v-cloak] {
   display: none !important;
 }
-
+.framedisabled {
+  pointer-events: none !important;
+  opacity: 0.5 !important;
+}
 .m-0-auto {
   margin: 0 auto !important;
 }

@@ -101,6 +101,9 @@ export default {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
+.welcome {
+  height: 768px;
+}
 .container {
   margin: 0 auto;
   justify-content: center;
@@ -120,9 +123,9 @@ export default {
   }
 }
 .ddtag {
-  height: 60px !important;
+  height: 55px !important;
 }
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 326px) {
   .ddtag {
     height: 75px !important;
   }
