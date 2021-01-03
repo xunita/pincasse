@@ -60,7 +60,9 @@ export default {
   font-size: 48px;
   letter-spacing: 1px;
 }
-
+.welcome {
+  height: 100%;
+}
 .subtitle {
   font-weight: 300;
   font-size: 42px;
