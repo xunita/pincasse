@@ -654,6 +654,9 @@ export default {
 }
 </script>
 <style scoped>
+.baba a {
+  width: fit-content !important;
+}
 .ddrop {
   max-height: 240px;
 }
