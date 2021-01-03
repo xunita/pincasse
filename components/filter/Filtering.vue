@@ -173,8 +173,8 @@
                   </a>
                 </client-only>
               </div>
-              <div v-else class="color-6d6d6d px-5 size-12">
-                <span>Empty! Try another word</span>
+              <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
+                <span>Empty ! Try another word</span>
               </div>
             </div>
           </div>
@@ -235,8 +235,8 @@
                   </a>
                 </client-only>
               </div>
-              <div v-else class="color-6d6d6d px-5 size-12">
-                <span>Empty! Try another word</span>
+              <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
+                <span>Empty ! Try another word</span>
               </div>
             </div>
           </div>
