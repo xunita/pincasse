@@ -180,6 +180,68 @@
           </div>
         </div>
       </div>
+      <div
+        class="column is-one-fifth baba"
+        :class="{ framedisabled: disableframe }"
+      >
+        <h5 class="font-semibold border-b pb-1 size-15">Framework</h5>
+        <div
+          v-click-outside="hidelistframe"
+          class="mt-1 border border-transparent rounded p-1 relative"
+        >
+          <div class="flex align-center flex-wrap space-x-1">
+            <a
+              v-for="(langage, i) in frametab"
+              :key="i"
+              class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
+              ><span>{{ langage }}</span>
+              <client-only>
+                <button
+                  class="no-outline hover-008489"
+                  @click="removeframe(langage)"
+                >
+                  <i
+                    class="fas fa-times color-363636 makeme-008489 size-10"
+                  ></i>
+                </button> </client-only
+            ></a>
+          </div>
+          <div class="pb-1">
+            <input
+              v-model="framing"
+              type="search"
+              placeholder="Vue Js"
+              class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
+              @focus="showlistframe"
+            />
+          </div>
+          <div v-show="listelingframe" class="relative">
+            <div class="dropdown-content ddrop overflow-y-auto absolute w-full">
+              <div v-if="frameavai.length !== 0">
+                <client-only>
+                  <a
+                    v-for="(langage, i) in frameavai"
+                    :key="i"
+                    class="dropdown-item clickable flex align-center space-x-1 size-14"
+                    :class="{
+                      'font-semibold color-008489': hasframesel(langage),
+                    }"
+                    @click="addframework(langage)"
+                  >
+                    {{ langage }}
+                    <span v-show="hasframesel(langage)" class="ml-2"
+                      ><i class="fas fa-check size-10"></i
+                    ></span>
+                  </a>
+                </client-only>
+              </div>
+              <div v-else class="color-6d6d6d px-5 size-12">
+                <span>Empty! Try another word</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="column is-one-fifth baba">
         <h5 class="font-semibold border-b pb-1 size-15">Track</h5>
         <div class="mt-1">
@@ -249,68 +311,6 @@
               >Cloud<span v-show="cloud" class="ml-2"
                 ><i class="fas fa-check size-10"></i></span></a
           ></client-only>
-        </div>
-      </div>
-      <div
-        class="column is-one-fifth baba"
-        :class="{ framedisabled: disableframe }"
-      >
-        <h5 class="font-semibold border-b pb-1 size-15">Framework</h5>
-        <div
-          v-click-outside="hidelistframe"
-          class="mt-1 border border-transparent rounded p-1 relative"
-        >
-          <div class="flex align-center flex-wrap space-x-1">
-            <a
-              v-for="(langage, i) in frametab"
-              :key="i"
-              class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
-              ><span>{{ langage }}</span>
-              <client-only>
-                <button
-                  class="no-outline hover-008489"
-                  @click="removeframe(langage)"
-                >
-                  <i
-                    class="fas fa-times color-363636 makeme-008489 size-10"
-                  ></i>
-                </button> </client-only
-            ></a>
-          </div>
-          <div class="pb-1">
-            <input
-              v-model="framing"
-              type="search"
-              placeholder="Vue Js"
-              class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
-              @focus="showlistframe"
-            />
-          </div>
-          <div v-show="listelingframe" class="relative">
-            <div class="dropdown-content ddrop overflow-y-auto absolute w-full">
-              <div v-if="frameavai.length !== 0">
-                <client-only>
-                  <a
-                    v-for="(langage, i) in frameavai"
-                    :key="i"
-                    class="dropdown-item clickable flex align-center space-x-1 size-14"
-                    :class="{
-                      'font-semibold color-008489': hasframesel(langage),
-                    }"
-                    @click="addframework(langage)"
-                  >
-                    {{ langage }}
-                    <span v-show="hasframesel(langage)" class="ml-2"
-                      ><i class="fas fa-check size-10"></i
-                    ></span>
-                  </a>
-                </client-only>
-              </div>
-              <div v-else class="color-6d6d6d px-5 size-12">
-                <span>Empty! Try another word</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
