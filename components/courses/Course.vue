@@ -141,7 +141,7 @@
         <div class="content mb-1">
           <div class="ctag">
             <nuxt-link
-              class="underline font-semibold clickable color-008489 hover-008489"
+              class="font-semibold clickable color-008489 hover-008489"
               to="#"
             >
               #VueJs
