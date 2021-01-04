@@ -12,6 +12,13 @@
             <i class="fas fa-bars color-363636 size-18"></i>
           </button>
         </client-only>
+        <a :href="home" class="hhhome hidden"
+          ><h4
+            class="title color-008489 -mt-1 httile select-none size-16 font-semibold"
+          >
+            Pincasse
+          </h4></a
+        >
         <a :href="home" class="h-8 -ml-145 h-logo">
           <div class="h-8 relative flex align-center">
             <Logo2 class="mt-1 milogo hi-logo" />

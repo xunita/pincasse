@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <div><Filtering /></div>
-  </div>
+  <div></div>
 </template>
 
 <script>

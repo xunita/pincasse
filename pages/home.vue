@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak class="welcome center bg-color-white">
+  <div v-cloak class="welcome center">
     <div
       class="d-header fixed w-full bg-white z-50"
       :class="{
@@ -16,11 +16,11 @@
       @hideMenu="hideMenu"
       @more="more"
     />
-    <div style="height: 57px !important"></div>
+    <div style="height: 57px !important" class="bg-color-white"></div>
     <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
     <Trending v-if="hastrend" class="bg-color-white border-b pb-2 z-30" />
-    <div class="ddtag"></div>
-    <div class="w-full sweethome">
+    <div v-if="hastrend || hastag" class="ddtag bg-color-white"></div>
+    <div class="w-full bg-color-white sweethome">
       <nuxt-child />
     </div>
     <footer></footer>

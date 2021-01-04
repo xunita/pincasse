@@ -1,6 +1,6 @@
 <template>
   <div
-    class="course-sample clickable"
+    class="coursesample clickable mb-3 sm:mb-2"
     @mouseover="
       {
         chover = true
@@ -12,11 +12,11 @@
       }
     "
   >
-    <div class="card">
-      <div class="card-image rounded ddd">
-        <figure class="image relative is-4by3">
+    <div class="card flex w-fit whatis pr-3 m-0-auto">
+      <div class="card-image rounded w-fit cimg">
+        <figure class="image relative">
           <div
-            class="z-10 bg-color-008489ok absolute vidcone px-3 rounded w-fit top-0 left-0 ml-2"
+            class="z-10 ml-2 bg-color-008489ok absolute vidcone px-3 rounded w-fit top-0 left-0"
           >
             <client-only>
               <div class="-mt-1">
@@ -137,9 +137,9 @@
           <img class="igmg" src="/b.png" alt="Placeholder image" />
         </figure>
       </div>
-      <div class="mt-1 ert">
-        <div class="content mb-1">
-          <div class="ctag">
+      <div class="relative hkho ml-4">
+        <div>
+          <div class="ctag pt-1">
             <nuxt-link
               class="underline font-semibold clickable color-008489 hover-008489"
               to="#"
@@ -153,17 +153,11 @@
               Practical Git Guide</span
             >
           </div>
-          <div class="ctitle size-12 color-6d6d6d">
+          <div class="ctitle size-12 color-6d6d6d mt-1">
             <span class="mscourse pb-1zz">2 Min Read</span>
           </div>
-          <div class="ctitle size-12 color-6d6d6d">
-            <span class="mscourse pb-1zz">600 Min Read / 10 Hour Watch</span>
-          </div>
-          <div class="ctitle size-12 color-6d6d6d">
-            <span class="mscourse pb-1zz">10 Hour Watch</span>
-          </div>
         </div>
-        <div class="media">
+        <div class="media mt-2">
           <nuxt-link to="#" title="See profile">
             <div class="media-left">
               <figure class="image rounded-full is-44x44">
@@ -244,6 +238,60 @@ export default {
 }
 </script>
 <style scoped>
+.whatis:hover {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+}
+.showunlikedtext {
+  visibility: visible !important;
+  width: auto;
+  animation: 0.1s appear;
+}
+.igmg {
+  border-radius: 0.25rem;
+  height: 160px !important;
+  width: 320px !important;
+}
+@media screen and (max-width: 800px) {
+  .igmg {
+    width: 600px !important;
+  }
+}
+@media screen and (max-width: 639px) {
+  .igmg {
+    width: 620 !important;
+  }
+}
+@media screen and (max-width: 540px) {
+  .igmg {
+    width: 660px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cimg {
+    width: 100%;
+  }
+  .igmg {
+    height: 180px !important;
+    width: 100% !important;
+  }
+  .whatis {
+    flex-direction: column;
+  }
+  .coursesample {
+    padding-bottom: 1rem;
+  }
+  .ctag {
+    margin-top: 0.5rem;
+  }
+  .hkho {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
 .mscourse {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -259,14 +307,6 @@ export default {
   overflow: hidden;
   line-height: 20px;
 }
-.showunlikedtext {
-  visibility: visible !important;
-  width: auto;
-  animation: 0.1s appear;
-}
-.igmg {
-  border-radius: 0.25rem;
-}
 .showlikedtext {
   visibility: visible !important;
   width: auto;
@@ -275,43 +315,7 @@ export default {
 .vidcone {
   margin-top: 0.5rem !important;
 }
-@media screen and (max-width: 1024px) {
-  .course-sample {
-    width: 33.33%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .course-sample {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 640px) {
-  .course-sample {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .course-sample {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 450px) {
-  .course-sample {
-    padding: 0 !important;
-    padding-bottom: 2rem !important;
-    border-bottom-width: 1px;
-  }
-  .ert {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .ddd {
-    border: none !important;
-  }
-  .igmg {
-    border-radius: 0 !important;
-  }
-}
+
 @keyframes appear {
   0% {
     transform: translateX(10px);
