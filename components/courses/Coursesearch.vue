@@ -275,7 +275,7 @@ export default {
     width: 100%;
   }
   .igmg {
-    height: 180px !important;
+    height: 200px !important;
     width: 100% !important;
   }
   .whatis {
