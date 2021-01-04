@@ -134,7 +134,7 @@
               </button>
             </client-only>
           </div>
-          <img class="igmg" src="/b.png" alt="Placeholder image" />
+          <img class="igmg" src="/vue.jpeg" alt="Placeholder image" />
         </figure>
       </div>
       <div class="relative hkho ml-4">
