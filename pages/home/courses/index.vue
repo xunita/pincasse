@@ -1,5 +1,10 @@
 <template>
-  <div></div>
+  <div>
+    <div class="mb-4 text-center color-363636f">
+      <h4 class="font-semibold size-18">Courses</h4>
+    </div>
+    <List />
+  </div>
 </template>
 
 <script>

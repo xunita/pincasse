@@ -1,6 +1,6 @@
 <template>
   <div
-    class="coursesample clickable mb-3 sm:mb-2"
+    class="coursesample clickable mb-5 sm:mb-4"
     @mouseover="
       {
         chover = true
@@ -241,7 +241,7 @@ export default {
 .whatis:hover {
   background-color: #fff;
   border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+  box-shadow: 0 0.1em 0.1em 0 rgba(10, 10, 10, 0.068),
     0 0 0 1px rgba(10, 10, 10, 0.02);
   color: #4a4a4a;
 }
@@ -280,6 +280,7 @@ export default {
   }
   .whatis {
     flex-direction: column;
+    padding-right: 0 !important;
   }
   .coursesample {
     padding-bottom: 1rem;

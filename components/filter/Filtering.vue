@@ -3,314 +3,329 @@
     <div class="mx-0 sm:mx-2">
       <client-only
         ><button
-          class="no-outline outline-none"
+          class="no-outline outline-none flex align-center space-x-2"
           @click="
             {
               hasfilter = !hasfilter
             }
           "
         >
-          <i class="fas fa-sliders-h color-363636 size-16"></i></button
-      ></client-only>
-    </div>
-    <div v-show="filtering" class="flex flex-wrap mx-0 sm:mx-2">
-      <div class="column is-one-fifth baba">
-        <h5 class="font-semibold border-b pb-1 size-15">Sort by</h5>
-        <div class="mt-1">
-          <client-only>
-            <!-- <div> Here will go sort by relevance </div> -->
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': mostseen }"
-              @click="itemsel('mostseen')"
-              >Most seen<span v-show="mostseen" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': mostliked }"
-              @click="itemsel('mostliked')"
-              >Most liked<span v-show="mostliked" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': newest }"
-              @click="itemsel('new')"
-              >Newest<span v-show="newest" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': oldest }"
-              @click="itemsel('old')"
-              >Oldest<span v-show="oldest" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <div>
-              <div
-                class="flex align-center clickable size-14"
-                @click="
-                  {
-                    uploadedate = !uploadedate
-                  }
-                "
-              >
-                Uploaded date
-                <span class="block icon is-small ml-1">
-                  <i class="fas fa-chevron-down size-10 color-363636"></i>
-                </span>
-              </div>
-              <div v-if="update" class="pl-5 update">
-                <a
-                  class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                  :class="{ 'font-semibold color-008489': lh }"
-                  @click="itemsel('lh')"
-                  >Last hour<span v-show="lh" class="ml-2"
-                    ><i class="fas fa-check size-10"></i></span
-                ></a>
-                <a
-                  class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                  :class="{ 'font-semibold color-008489': ld }"
-                  @click="itemsel('ld')"
-                  >Last day<span v-show="ld" class="ml-2"
-                    ><i class="fas fa-check size-10"></i></span
-                ></a>
-                <a
-                  class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                  :class="{ 'font-semibold color-008489': lw }"
-                  @click="itemsel('lw')"
-                  >Last week<span v-show="lw" class="ml-2"
-                    ><i class="fas fa-check size-10"></i></span
-                ></a>
-                <a
-                  class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                  :class="{ 'font-semibold color-008489': lm }"
-                  @click="itemsel('lm')"
-                  >Last month<span v-show="lm" class="ml-2"
-                    ><i class="fas fa-check size-10"></i></span
-                ></a>
-                <a
-                  class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                  :class="{ 'font-semibold color-008489': ly }"
-                  @click="itemsel('ly')"
-                  >Last year<span v-show="ly" class="ml-2"
-                    ><i class="fas fa-check size-10"></i></span
-                ></a>
-              </div></div
-          ></client-only>
-        </div>
-      </div>
-      <div class="column is-one-fifth baba">
-        <h5 class="font-semibold border-b pb-1 size-15">Content type</h5>
-        <div class="mt-1">
-          <client-only>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': txt }"
-              @click="itemsel('text')"
-              >Text<span v-show="txt" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': vid }"
-              @click="itemsel('video')"
-              >Video<span v-show="vid" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span></a
-          ></client-only>
-        </div>
-      </div>
-      <div class="column is-one-fifth baba">
-        <h5 class="font-semibold border-b pb-1 size-15">Language</h5>
-        <div
-          v-click-outside="hidelistlang"
-          class="mt-1 border border-transparent rounded p-1 relative"
-        >
-          <div class="flex align-center flex-wrap space-x-1">
-            <a
-              v-for="(langage, i) in langtab"
-              :key="i"
-              class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
-              ><span>{{ langage }}</span>
-              <client-only>
-                <button
-                  class="no-outline hover-008489"
-                  @click="removelang(langage)"
-                >
-                  <i
-                    class="fas fa-times color-363636 makeme-008489 size-10"
-                  ></i>
-                </button> </client-only
-            ></a>
-          </div>
-          <div class="pb-1">
-            <input
-              v-model="languaging"
-              type="search"
-              placeholder="Javascript"
-              class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
-              @focus="showlistlang"
-            />
-          </div>
-          <div v-show="listelinglang" class="relative">
-            <div
-              class="dropdown-content z-10 ddrop overflow-y-auto absolute w-full"
-            >
-              <div v-if="langavai.length !== 0">
-                <client-only>
-                  <a
-                    v-for="(langage, i) in langavai"
-                    :key="i"
-                    class="dropdown-item clickable flex align-center space-x-1 size-14"
-                    :class="{ 'font-semibold color-008489': hassel(langage) }"
-                    @click="addlang(langage)"
-                  >
-                    {{ langage }}
-                    <span v-show="hassel(langage)" class="ml-2"
-                      ><i class="fas fa-check size-10"></i
-                    ></span>
-                  </a>
-                </client-only>
-              </div>
-              <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
-                <span>Empty ! Try another word</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="column is-one-fifth baba"
-        :class="{ framedisabled: disableframe }"
+          <i class="fas fa-sliders-h color-363636 size-16"></i>
+          <span class="color-363636f font-semibold">Filter</span>
+        </button></client-only
       >
-        <h5 class="font-semibold border-b pb-1 size-15">Framework</h5>
-        <div
-          v-click-outside="hidelistframe"
-          class="mt-1 border border-transparent rounded p-1 relative"
-        >
-          <div class="flex align-center flex-wrap space-x-1">
-            <a
-              v-for="(langage, i) in frametab"
-              :key="i"
-              class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
-              ><span>{{ langage }}</span>
-              <client-only>
-                <button
-                  class="no-outline hover-008489"
-                  @click="removeframe(langage)"
+    </div>
+    <div v-show="filtering">
+      <div class="flex flex-wrap mx-0 sm:mx-2">
+        <div class="column is-one-fifth baba">
+          <h5 class="font-semibold border-b pb-1 size-15">Sort by</h5>
+          <div class="mt-1">
+            <client-only>
+              <!-- <div> Here will go sort by relevance </div> -->
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': mostseen }"
+                @click="itemsel('mostseen')"
+                >Most seen<span v-show="mostseen" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': mostliked }"
+                @click="itemsel('mostliked')"
+                >Most liked<span v-show="mostliked" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': newest }"
+                @click="itemsel('new')"
+                >Newest<span v-show="newest" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': oldest }"
+                @click="itemsel('old')"
+                >Oldest<span v-show="oldest" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <div>
+                <div
+                  class="flex align-center clickable size-14"
+                  @click="
+                    {
+                      uploadedate = !uploadedate
+                    }
+                  "
                 >
-                  <i
-                    class="fas fa-times color-363636 makeme-008489 size-10"
-                  ></i>
-                </button> </client-only
-            ></a>
-          </div>
-          <div class="pb-1">
-            <input
-              v-model="framing"
-              type="search"
-              placeholder="Vue Js"
-              class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
-              @focus="showlistframe"
-            />
-          </div>
-          <div v-show="listelingframe" class="relative">
-            <div class="dropdown-content ddrop overflow-y-auto absolute w-full">
-              <div v-if="frameavai.length !== 0">
-                <client-only>
+                  Uploaded date
+                  <span class="block icon is-small ml-1">
+                    <i class="fas fa-chevron-down size-10 color-363636"></i>
+                  </span>
+                </div>
+                <div v-if="update" class="pl-5 update">
                   <a
-                    v-for="(langage, i) in frameavai"
-                    :key="i"
-                    class="dropdown-item clickable flex align-center space-x-1 size-14"
-                    :class="{
-                      'font-semibold color-008489': hasframesel(langage),
-                    }"
-                    @click="addframework(langage)"
+                    class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                    :class="{ 'font-semibold color-008489': lh }"
+                    @click="itemsel('lh')"
+                    >Last hour<span v-show="lh" class="ml-2"
+                      ><i class="fas fa-check size-10"></i></span
+                  ></a>
+                  <a
+                    class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                    :class="{ 'font-semibold color-008489': ld }"
+                    @click="itemsel('ld')"
+                    >Last day<span v-show="ld" class="ml-2"
+                      ><i class="fas fa-check size-10"></i></span
+                  ></a>
+                  <a
+                    class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                    :class="{ 'font-semibold color-008489': lw }"
+                    @click="itemsel('lw')"
+                    >Last week<span v-show="lw" class="ml-2"
+                      ><i class="fas fa-check size-10"></i></span
+                  ></a>
+                  <a
+                    class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                    :class="{ 'font-semibold color-008489': lm }"
+                    @click="itemsel('lm')"
+                    >Last month<span v-show="lm" class="ml-2"
+                      ><i class="fas fa-check size-10"></i></span
+                  ></a>
+                  <a
+                    class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                    :class="{ 'font-semibold color-008489': ly }"
+                    @click="itemsel('ly')"
+                    >Last year<span v-show="ly" class="ml-2"
+                      ><i class="fas fa-check size-10"></i></span
+                  ></a>
+                </div></div
+            ></client-only>
+          </div>
+        </div>
+        <div class="column is-one-fifth baba">
+          <h5 class="font-semibold border-b pb-1 size-15">Content type</h5>
+          <div class="mt-1">
+            <client-only>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': txt }"
+                @click="itemsel('text')"
+                >Text<span v-show="txt" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': vid }"
+                @click="itemsel('video')"
+                >Video<span v-show="vid" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span></a
+            ></client-only>
+          </div>
+        </div>
+        <div class="column is-one-fifth baba">
+          <h5 class="font-semibold border-b pb-1 size-15">Language</h5>
+          <div
+            v-click-outside="hidelistlang"
+            class="mt-1 border border-transparent rounded p-1 relative"
+          >
+            <div class="flex align-center flex-wrap space-x-1">
+              <a
+                v-for="(langage, i) in langtab"
+                :key="i"
+                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
+                ><span>{{ langage }}</span>
+                <client-only>
+                  <button
+                    class="no-outline hover-008489"
+                    @click="removelang(langage)"
                   >
-                    {{ langage }}
-                    <span v-show="hasframesel(langage)" class="ml-2"
-                      ><i class="fas fa-check size-10"></i
-                    ></span>
-                  </a>
-                </client-only>
-              </div>
-              <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
-                <span>Empty ! Try another word</span>
+                    <i
+                      class="fas fa-times color-363636 makeme-008489 size-10"
+                    ></i>
+                  </button> </client-only
+              ></a>
+            </div>
+            <div class="pb-1">
+              <input
+                v-model="languaging"
+                type="search"
+                placeholder="Javascript"
+                class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
+                @focus="showlistlang"
+              />
+            </div>
+            <div v-show="listelinglang" class="relative">
+              <div
+                class="dropdown-content z-10 ddrop overflow-y-auto absolute w-full"
+              >
+                <div v-if="langavai.length !== 0">
+                  <client-only>
+                    <a
+                      v-for="(langage, i) in langavai"
+                      :key="i"
+                      class="dropdown-item clickable flex align-center space-x-1 size-14"
+                      :class="{ 'font-semibold color-008489': hassel(langage) }"
+                      @click="addlang(langage)"
+                    >
+                      {{ langage }}
+                      <span v-show="hassel(langage)" class="ml-2"
+                        ><i class="fas fa-check size-10"></i
+                      ></span>
+                    </a>
+                  </client-only>
+                </div>
+                <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
+                  <span>Empty ! Try another word</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column is-one-fifth baba">
-        <h5 class="font-semibold border-b pb-1 size-15">Track</h5>
-        <div class="mt-1">
-          <client-only>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': web }"
-              @click="itemsel('web')"
-              >Web<span v-show="web" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': mob }"
-              @click="itemsel('mob')"
-              >Mobile<span v-show="mob" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': lap }"
-              @click="itemsel('lap')"
-              >Laptop<span v-show="lap" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': desk }"
-              @click="itemsel('desk')"
-              >Desktop<span v-show="desk" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-          </client-only>
-          <!-- <a class="block clickable hover-008489 size-14">Server</a> -->
+        <div
+          class="column is-one-fifth baba"
+          :class="{ framedisabled: disableframe }"
+        >
+          <h5 class="font-semibold border-b pb-1 size-15">Framework</h5>
+          <div
+            v-click-outside="hidelistframe"
+            class="mt-1 border border-transparent rounded p-1 relative"
+          >
+            <div class="flex align-center flex-wrap space-x-1">
+              <a
+                v-for="(langage, i) in frametab"
+                :key="i"
+                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
+                ><span>{{ langage }}</span>
+                <client-only>
+                  <button
+                    class="no-outline hover-008489"
+                    @click="removeframe(langage)"
+                  >
+                    <i
+                      class="fas fa-times color-363636 makeme-008489 size-10"
+                    ></i>
+                  </button> </client-only
+              ></a>
+            </div>
+            <div class="pb-1">
+              <input
+                v-model="framing"
+                type="search"
+                placeholder="Vue Js"
+                class="no-outline outline-none border-b px-1 pb-1 size-14 w-full"
+                @focus="showlistframe"
+              />
+            </div>
+            <div v-show="listelingframe" class="relative">
+              <div
+                class="dropdown-content ddrop overflow-y-auto absolute w-full"
+              >
+                <div v-if="frameavai.length !== 0">
+                  <client-only>
+                    <a
+                      v-for="(langage, i) in frameavai"
+                      :key="i"
+                      class="dropdown-item clickable flex align-center space-x-1 size-14"
+                      :class="{
+                        'font-semibold color-008489': hasframesel(langage),
+                      }"
+                      @click="addframework(langage)"
+                    >
+                      {{ langage }}
+                      <span v-show="hasframesel(langage)" class="ml-2"
+                        ><i class="fas fa-check size-10"></i
+                      ></span>
+                    </a>
+                  </client-only>
+                </div>
+                <div v-else class="color-6d6d6d text-center px-2 py-3 size-12">
+                  <span>Empty ! Try another word</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="column is-one-fifth baba">
+          <h5 class="font-semibold border-b pb-1 size-15">Track</h5>
+          <div class="mt-1">
+            <client-only>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': web }"
+                @click="itemsel('web')"
+                >Web<span v-show="web" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': mob }"
+                @click="itemsel('mob')"
+                >Mobile<span v-show="mob" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': lap }"
+                @click="itemsel('lap')"
+                >Laptop<span v-show="lap" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': desk }"
+                @click="itemsel('desk')"
+                >Desktop<span v-show="desk" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+            </client-only>
+            <!-- <a class="block clickable hover-008489 size-14">Server</a> -->
+          </div>
+        </div>
 
-      <div class="column is-one-fifth baba">
-        <h5 class="font-semibold border-b pb-1 size-15">Platform</h5>
-        <div class="mt-1">
-          <client-only>
-            <!-- <a
+        <div class="column is-one-fifth baba">
+          <h5 class="font-semibold border-b pb-1 size-15">Platform</h5>
+          <div class="mt-1">
+            <client-only>
+              <!-- <a
               class="block clickable flex align-center space-x-1 hover-008489 size-14"
               :class="{ 'font-semibold color-008489': os }"
               @click="itemsel('os')"
               >Operating system<span v-show="os" class="ml-2"
                 ><i class="fas fa-check size-10"></i></span
             ></a> -->
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': soft }"
-              @click="itemsel('soft')"
-              >Software<span v-show="soft" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': vg }"
-              @click="itemsel('vg')"
-              >Video game<span v-show="vg" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span
-            ></a>
-            <a
-              class="block clickable flex align-center space-x-1 hover-008489 size-14"
-              :class="{ 'font-semibold color-008489': cloud }"
-              @click="itemsel('cloud')"
-              >Cloud<span v-show="cloud" class="ml-2"
-                ><i class="fas fa-check size-10"></i></span></a
-          ></client-only>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': soft }"
+                @click="itemsel('soft')"
+                >Software<span v-show="soft" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': vg }"
+                @click="itemsel('vg')"
+                >Video game<span v-show="vg" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span
+              ></a>
+              <a
+                class="block clickable flex align-center space-x-1 hover-008489 size-14"
+                :class="{ 'font-semibold color-008489': cloud }"
+                @click="itemsel('cloud')"
+                >Cloud<span v-show="cloud" class="ml-2"
+                  ><i class="fas fa-check size-10"></i></span></a
+            ></client-only>
+          </div>
+        </div>
+      </div>
+      <div class="pb-1 pt-4 w-full">
+        <div class="w-full m-0-auto">
+          <button
+            class="button bg-color-008489 bghover-008489hh border-0 rounded color-white w-full font-semibold size-15"
+          >
+            Apply filter
+          </button>
         </div>
       </div>
     </div>

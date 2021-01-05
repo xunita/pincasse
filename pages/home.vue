@@ -18,8 +18,12 @@
     />
     <div style="height: 57px !important" class="bg-color-white"></div>
     <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
-    <Trending v-if="hastrend" class="bg-color-white border-b pb-2 z-30" />
-    <div v-if="hastrend || hastag" class="ddtag bg-color-white"></div>
+    <Trending v-if="hastrend" class="bg-color-white border-b pb-4 z-30" />
+    <div
+      v-if="hastrend || hastag"
+      class="ddtag bg-color-white"
+      :class="{ dtagli: hastrend }"
+    ></div>
     <div class="w-full bg-color-white sweethome">
       <nuxt-child />
     </div>
@@ -124,6 +128,9 @@ export default {
 }
 .ddtag {
   height: 55px !important;
+}
+.dtagli {
+  height: 20px !important;
 }
 @media screen and (max-width: 326px) {
   .ddtag {
