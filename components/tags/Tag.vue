@@ -15,12 +15,12 @@
         </div>
       </client-only>
       <a
-        v-for="i in 4"
+        v-for="i in 63"
         :key="i"
         :href="localePath('/home', $i18n.locale)"
         class="color-363636 button rounded-full is-lights no-outline border-0 font-medium size-14 py-1 px-5"
       >
-        #Vue{{ i }}
+        #Vuevfd{{ i }}
       </a>
       <client-only>
         <div
@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       scroll: 0,
-      tagscrol: 0,
+      tagscrol: false,
       reachtotal: false,
       totalscroll: 0,
       nbscroll: 0,
@@ -56,22 +56,19 @@ export default {
       return this.scroll
     },
     scrollxl() {
-      return this.tagscrol > 1
+      return this.tagscrol === true
     },
     scrollxr() {
       return this.reachtotal === true
     },
   },
   beforeMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('wheel', this.handleScroll)
     window.addEventListener('resize', this.large)
   },
   beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('wheel', this.handleScroll)
     window.addEventListener('resize', this.large)
-  },
-  mounted() {
-    this.handleScroll()
   },
   methods: {
     sleep(milliseconds) {
@@ -85,7 +82,8 @@ export default {
       const scroll = document.getElementById('eltoscrol').scrollLeft
       const scr = document.getElementById('eltoscrol').scrollWidth
       const cl = document.getElementById('eltoscrol').clientWidth
-      this.tagscrol = scroll - 500
+      if (scroll - 500 > 5) this.tagscrol = true
+      else this.tagscrol = false
       document.getElementById('eltoscrol').scroll({
         top: scroll - 500,
         left: scroll - 500,
@@ -102,7 +100,8 @@ export default {
       const scroll = document.getElementById('eltoscrol').scrollLeft
       const scr = document.getElementById('eltoscrol').scrollWidth
       const cl = document.getElementById('eltoscrol').clientWidth
-      this.tagscrol = scroll + 500
+      if (scroll + 500 > 5) this.tagscrol = true
+      else this.tagscrol = false
       document.getElementById('eltoscrol').scroll({
         top: scroll + 500,
         left: scroll + 500,
@@ -115,13 +114,13 @@ export default {
       }
     },
     handleScroll() {
-      this.scroll = window.scrollY
-      const scr = document.getElementById('eltoscrol').scrollWidth
       const cl = document.getElementById('eltoscrol').clientWidth
-      if (cl >= scr) {
-        this.tagscrol = 0
-        this.reachtotal = true
-      }
+      const scroll = document.getElementById('eltoscrol').scrollLeft
+      const scr = document.getElementById('eltoscrol').scrollWidth
+      if (scr - cl <= scroll) this.reachtotal = true
+      else this.reachtotal = false
+      if (scroll <= 0) this.tagscrol = false
+      else this.tagscrol = true
     },
     large() {
       const scr = document.getElementById('eltoscrol').scrollWidth

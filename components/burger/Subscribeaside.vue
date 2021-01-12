@@ -2,7 +2,7 @@
   <div class="border-b">
     <client-only>
       <a
-        :href="localePath('/home/trending', $i18n.locale)"
+        :href="localePath('/trending', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="scale"

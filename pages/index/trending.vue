@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="mt-8"><List /></div>
 </template>
 
 <script>

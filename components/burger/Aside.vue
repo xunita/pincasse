@@ -48,8 +48,8 @@ export default {
     },
     courses() {
       return this.$i18n.locale === 'en'
-        ? '/home/courses'
-        : '/' + this.$i18n.locale + '/home/courses'
+        ? '/courses'
+        : '/' + this.$i18n.locale + '/courses'
     },
   },
   methods: {

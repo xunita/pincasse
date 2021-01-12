@@ -316,6 +316,7 @@
   height: 32px;
   width: 32px;
 }
+
 .image.is-36x36 {
   height: 36px;
   width: 36px;
@@ -1659,7 +1660,6 @@ fieldset[disabled] .button {
 }
 a.dropdown-item,
 button.dropdown-item {
-  padding-right: 3rem;
   text-align: inherit;
   white-space: nowrap;
   width: 100%;

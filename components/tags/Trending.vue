@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full pt-4">
+  <div class="w-full pt-4 fixed">
     <div class="w-fit flex align-center space-x-5 m-0-auto">
       <div v-for="i in 5" :key="i">
         <nuxt-link to="#"

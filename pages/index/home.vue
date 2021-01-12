@@ -1,41 +1,12 @@
 <template>
-  <div v-cloak class="welcome center">
-    <div
-      class="d-header fixed w-full bg-white z-50"
-      :class="{
-        shadown: scrolling && !hastag && !hastrend,
-      }"
-    >
-      <Header @showMenu="showMenu" />
-    </div>
-    <Aside
-      v-show="menu"
-      v-click-outside="hide"
-      class="fixed overflow-auto h-aside z-50"
-      :class="{ hidding: !menu }"
-      @hideMenu="hideMenu"
-      @more="more"
-    />
-    <div style="height: 57px !important" class="bg-color-white"></div>
-    <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
-    <Trending v-if="hastrend" class="bg-color-white border-b pb-4 z-30" />
-    <div
-      v-if="hastrend || hastag"
-      class="ddtag bg-color-white"
-      :class="{ dtagli: hastrend }"
-    ></div>
-    <div class="w-full bg-color-white sweethome">
-      <nuxt-child />
-    </div>
-    <footer></footer>
+  <div>
+    <List />
   </div>
 </template>
 
 <script>
-import trending from './home/trending.vue'
 export default {
   name: 'Homie',
-  components: { trending },
   data() {
     return {
       scroll: 0,
@@ -127,7 +98,7 @@ export default {
   }
 }
 .ddtag {
-  height: 55px !important;
+  height: 75px !important;
 }
 .dtagli {
   height: 20px !important;

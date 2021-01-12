@@ -141,14 +141,14 @@
         <div class="content mb-1">
           <div class="ctag">
             <nuxt-link
-              class="font-semibold clickable color-008489 hover-008489"
+              class="font-semibold size-14 clickable color-008489 hover-008489"
               to="#"
             >
               #VueJs
             </nuxt-link>
           </div>
-          <div class="ctitle font-semibold mt-1">
-            <span class="mscourse pb-1zz"
+          <div class="ctitle font-semibold">
+            <span class="mscourse pb-1zz size-15"
               >How to Write Good Commit Messages: A Practical Git Guide A
               Practical Git Guide</span
             >
@@ -163,36 +163,44 @@
             <span class="mscourse pb-1zz">10 Hour Watch</span>
           </div>
         </div>
-        <div class="media">
-          <nuxt-link to="#" title="See profile">
-            <div class="media-left">
-              <figure class="image rounded-full is-44x44">
-                <img
-                  class="rounded-full"
-                  src="https://i.ibb.co/NSQWM85/56.png"
-                  alt="Placeholder image"
-                />
-              </figure>
-            </div>
-          </nuxt-link>
-          <div class="w-fit">
-            <nuxt-link to="#" title="See profile"
-              ><span class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
-                >Yaya Sopegue
-              </span></nuxt-link
-            >
-            <div class="flex align-center">
-              <client-only>
-                <p class="flex align-center">
-                  <span class="size-4 mr-1"
-                    ><i class="fas fa-circle color-6d6d6d"></i></span
-                  ><span class="font-semibold size-12 color-6d6d6d"
-                    >2 days ago</span
-                  >
-                </p>
-              </client-only>
+        <div class="media justify-between">
+          <div class="flex align-center">
+            <nuxt-link to="#" title="See profile">
+              <div class="media-left">
+                <figure class="image rounded-full is-44x44">
+                  <img
+                    class="rounded-full"
+                    src="https://i.ibb.co/NSQWM85/56.png"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+            </nuxt-link>
+            <div class="w-fit">
+              <nuxt-link to="#" title="See profile"
+                ><span
+                  class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+                  >Yaya Sopegue
+                </span></nuxt-link
+              >
+              <div class="flex align-center">
+                <client-only>
+                  <p class="flex align-center">
+                    <span class="size-4 mr-1"
+                      ><i class="fas fa-circle color-6d6d6d"></i></span
+                    ><span class="font-semibold size-12 color-6d6d6d"
+                      >2 days ago</span
+                    >
+                  </p>
+                </client-only>
+              </div>
             </div>
           </div>
+          <!-- <button
+            class="rounded-md bg-color-008489 text-white bghover-008489hh hover-white active-white py-1"
+          >
+            <span class="px-3 size-12">Follow</span>
+          </button> -->
         </div>
       </div>
     </div>
@@ -257,7 +265,6 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 20px;
 }
 .showunlikedtext {
   visibility: visible !important;
