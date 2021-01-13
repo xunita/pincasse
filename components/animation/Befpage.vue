@@ -5,7 +5,7 @@
     >
       <client-only>
         <span
-          class="color-008489 opacity-100 top-1/2 my-0 mx-auto block relative w-0 h-0"
+          class="color-008489 opacity-100 top-1/2 my-0 m-0-auto block relative w-fit h-fit"
           style="top: 40%"
         >
           <i class="fas fa-cog size-64 fa-spin fa-5x"></i> </span

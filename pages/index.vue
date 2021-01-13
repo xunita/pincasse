@@ -1,6 +1,6 @@
 <template>
   <div v-cloak>
-    <Befpage v-if="reload" />
+    <div v-if="reload"><Befpage /></div>
     <div v-else>
       <div v-if="ishome" class="welcome bg-color-white">
         <div class="mb-16"><Headerbig /></div>
