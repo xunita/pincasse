@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 pt-1 sm:px-8">
+  <div class="mt-5">
     <div><Filtering /></div>
     <div class="pt-5"><nuxt-child /></div>
   </div>

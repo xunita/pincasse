@@ -1,60 +1,63 @@
 <template>
   <div v-cloak>
-    <div v-if="ishome" class="welcome bg-color-white">
-      <div class="mb-16"><Headerbig /></div>
-      <div class="w-full container">
-        <div class="mb-6">
-          <div class="logobig w-fit m-0-auto"><Logobig /></div>
-          <h1 class="title color-008489 -mt-4 mb-10 select-none">PINCASSE</h1>
-        </div>
-        <div class="searchbar w-1/2 m-0-auto">
-          <Searchbar />
-        </div>
-        <div class="links mt-6 flex font-medium space-x-6 w-fit m-0-auto">
-          <client-only>
-            <btn-link
-              :needfocus="true"
-              :href="localePath('/home', $i18n.locale)"
-              class="bg-color-008489 text-white bghover-008489 hover-white active-white py-3 border-0"
-              ><span class="px-3">{{ $t('welcomebtn1') }}</span></btn-link
-            >
-            <btn-link
-              :needfocus="false"
-              :href="localePath('/home/trending', $i18n.locale)"
-              class="is-light py-3 border-0 brr"
-              ><span class="px-3">{{ $t('welcomebtn2') }}</span></btn-link
-            >
-          </client-only>
-        </div>
-      </div>
-      <footer></footer>
-    </div>
+    <Befpage v-if="accueil && reload" />
     <div v-else>
-      <div class="welcome center">
-        <div
-          class="d-header fixed w-full bg-white z-50"
-          :class="{
-            shadown: scrolling && !hastag && !hastrend,
-          }"
-        >
-          <Header @showMenu="showMenu" />
-        </div>
-        <Aside
-          v-show="menu"
-          v-click-outside="hide"
-          class="fixed overflow-auto h-aside z-50"
-          :class="{ hidding: !menu }"
-          @hideMenu="hideMenu"
-          @more="more"
-        />
-        <div style="height: 50px !important" class="bg-color-white"></div>
-        <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
-        <Trending v-if="hastrend" class="bg-color-white border-b pb-4 z-30" />
-        <div v-if="hastrend || hastag" class="ddtag bg-color-white"></div>
-        <div class="w-full px-2 sm:px-8 bg-color-white sweethome">
-          <nuxt-child />
+      <div v-if="ishome" class="welcome bg-color-white">
+        <div class="mb-16"><Headerbig /></div>
+        <div class="w-full container">
+          <div class="mb-6">
+            <div class="logobig w-fit m-0-auto"><Logobig /></div>
+            <h1 class="title color-008489 -mt-4 mb-10 select-none">PINCASSE</h1>
+          </div>
+          <div class="searchbar w-1/2 m-0-auto">
+            <Searchbar />
+          </div>
+          <div class="links mt-6 flex font-medium space-x-6 w-fit m-0-auto">
+            <client-only>
+              <btn-link
+                :needfocus="true"
+                :href="localePath('/home', $i18n.locale)"
+                class="bg-color-008489 text-white bghover-008489 hover-white active-white py-3 border-0"
+                ><span class="px-3">{{ $t('welcomebtn1') }}</span></btn-link
+              >
+              <btn-link
+                :needfocus="false"
+                :href="localePath('/home/trending', $i18n.locale)"
+                class="is-light py-3 border-0 brr"
+                ><span class="px-3">{{ $t('welcomebtn2') }}</span></btn-link
+              >
+            </client-only>
+          </div>
         </div>
         <footer></footer>
+      </div>
+      <div v-else>
+        <div class="welcome center">
+          <div
+            class="d-header fixed w-full bg-white z-50"
+            :class="{
+              shadown: scrolling && !hastag && !hastrend,
+            }"
+          >
+            <Header @showMenu="showMenu" />
+          </div>
+          <Aside
+            v-show="menu"
+            v-click-outside="hide"
+            class="fixed overflow-auto h-aside z-50"
+            :class="{ hidding: !menu }"
+            @hideMenu="hideMenu"
+            @more="more"
+          />
+          <div style="height: 50px !important" class="bg-color-white"></div>
+          <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
+          <Trending v-if="hastrend" class="bg-color-white border-b pb-4 z-30" />
+          <div v-if="hastrend || hastag" class="ddtag bg-color-white"></div>
+          <div class="w-full px-2 sm:px-8 bg-color-white sweethome">
+            <nuxt-child />
+          </div>
+          <footer></footer>
+        </div>
       </div>
     </div>
   </div>
@@ -67,12 +70,16 @@ export default {
   data() {
     return {
       scroll: 0,
+      reloading: true,
       menuu: false,
       ismenuclick: false,
       moree: false,
     }
   },
   computed: {
+    reload() {
+      return this.reloading === true
+    },
     ishome() {
       return (
         this.$route.path === '/' ||
@@ -87,6 +94,9 @@ export default {
         this.$route.path === '/jp' ||
         this.$route.path === '/jp/'
       )
+    },
+    accueil() {
+      return this.$route.path === '/'
     },
     hashome() {
       return (
@@ -124,6 +134,9 @@ export default {
   },
   mounted() {
     this.handleScroll()
+    setTimeout(() => {
+      this.reloading = false
+    }, 1000)
   },
   methods: {
     showMenu(value) {

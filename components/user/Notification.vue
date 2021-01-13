@@ -454,6 +454,11 @@
         </div>
       </a>
     </div>
+    <Loading class="m-0-auto" />
+    <Skeletonnot />
+    <div class="w-full text-center mt-5 px-8 pb-8">
+      <h4 class="color-6d6d6d italic">No more notifications.</h4>
+    </div>
   </div>
 </template>
 <script>

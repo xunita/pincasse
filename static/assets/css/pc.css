@@ -1,5 +1,8 @@
-[v-cloak] {
-  display: none !important;
+[v-cloak] > * {
+  display: none;
+}
+[v-cloak]::before {
+  content: 'loading...';
 }
 body {
   height: 100%;
@@ -307,6 +310,18 @@ input[type='search']::-webkit-search-cancel-button {
 .size-36 {
   font-size: 36px !important;
 }
+.size-38 {
+  font-size: 38px !important;
+}
+.size-40 {
+  font-size: 40px !important;
+}
+.size-64 {
+  font-size: 64px !important;
+}
+.size-96 {
+  font-size: 96px !important;
+}
 .-ml-145 {
   margin-left: -3rem !important;
 }
@@ -355,6 +370,18 @@ input[type='search']::-webkit-search-cancel-button {
   .nexttag {
     display: none !important;
   }
+}
+.slow-spin {
+  -webkit-animation: fa-spin 6s infinite linear;
+  animation: fa-spin 6s infinite linear;
+}
+.fast-spin {
+  -webkit-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+}
+.fastest-spin {
+  -webkit-animation: fa-spin 0.5s infinite linear;
+  animation: fa-spin 0.5s infinite linear;
 }
 @media screen and (max-width: 500px) {
   .pos-right {
