@@ -9,7 +9,7 @@
     @mouseleave="manageleave"
   >
     <input
-      class="w-full outline-none pl-4 pr-8"
+      class="w-full outline-none pl-3 pr-8"
       type="search"
       placeholder="Search a comment, subscriber, course..."
       @focus="managefocus"

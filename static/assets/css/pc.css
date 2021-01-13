@@ -308,9 +308,15 @@ input[type='search']::-webkit-search-cancel-button {
   font-size: 36px !important;
 }
 .-ml-145 {
-  margin-left: -2rem !important;
+  margin-left: -3rem !important;
+}
+.-ml-1454 {
+  margin-left: -3rem !important;
 }
 .-ml-1456 {
+  margin-left: -3.5rem !important;
+}
+.-ml-14566 {
   margin-left: -3.5rem !important;
 }
 .size-32 {
@@ -363,8 +369,14 @@ input[type='search']::-webkit-search-cancel-button {
   }
 }
 @media screen and (max-width: 570px) {
-  .h-title {
+  .milogo {
     display: none !important;
+  }
+  .-ml-1454 {
+    margin-left: -1.8rem !important;
+  }
+  .-ml-14566 {
+    margin-left: 2rem !important;
   }
   .logo-svg {
     transform: scale(0.23) !important;
