@@ -51,7 +51,7 @@
         <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
         <Trending v-if="hastrend" class="bg-color-white border-b pb-4 z-30" />
         <div v-if="hastrend || hastag" class="ddtag bg-color-white"></div>
-        <div class="w-full bg-color-white sweethome">
+        <div class="w-full px-2 sm:px-8 bg-color-white sweethome">
           <nuxt-child />
         </div>
         <footer></footer>

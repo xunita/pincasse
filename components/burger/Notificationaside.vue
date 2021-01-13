@@ -2,7 +2,7 @@
   <div class="border-b">
     <client-only>
       <a
-        :href="localePath('/trending', $i18n.locale)"
+        :href="localePath('/user/notifications', $i18n.locale)"
         class="dropdown-item flex align-center space-x-2 py-2 pl-8"
         ><svg
           class="w-6 h-6 -pl-1 bb color-363636"
