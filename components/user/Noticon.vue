@@ -521,11 +521,11 @@ export default {
 }
 .drop-not {
   width: 460px;
-  margin-left: -6rem;
-  max-height: 512px !important;
+  margin-left: -10.5rem;
+  max-height: 360px !important;
 }
 .d-drop-not {
-  max-height: 512px !important;
+  max-height: 360px !important;
 }
 .wordbreak {
   overflow-wrap: break-word !important;
@@ -566,13 +566,13 @@ strong {
     width: 84px;
   }
   .drop-not {
-    margin-left: -4.5rem;
+    margin-left: -12.5rem;
   }
 }
 @media screen and (max-width: 440px) {
   .drop-not {
     width: 385px !important;
-    margin-left: -5rem;
+    margin-left: -10rem;
   }
 }
 .dropdown-item:hover .more-not {
@@ -584,8 +584,8 @@ strong {
     width: 64px !important;
   }
   .drop-not {
-    width: 300px !important;
-    margin-left: 0;
+    width: 320px !important;
+    margin-left: -5.5rem;
   }
 }
 @keyframes appear {
