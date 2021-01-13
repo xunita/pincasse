@@ -7,8 +7,10 @@
     >
       <div class="dropdown-trigger">
         <client-only>
-          <div class="flex align-center space-x-3">
-            <span class="size-13 color-6d6d6ddd font-semibold">Sort by</span>
+          <div class="flex align-center space-x-2">
+            <span class="size-13 block fo43 color-6d6d6ddd font-semibold"
+              >Sort by</span
+            >
             <button
               class="button color-363636 rounded-md no-outline outline-none border font-medium size-14 flex align-center py-2"
               aria-haspopup="true"
@@ -90,6 +92,9 @@ export default {
 <style scoped>
 .lele {
   animation: appear 0.3s;
+}
+.fo43 {
+  width: 43px !important;
 }
 .mylele {
   margin-left: 4.5rem !important;

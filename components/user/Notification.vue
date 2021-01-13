@@ -4,7 +4,7 @@
       <h4 class="font-semibold size-18">Notifications</h4>
     </div>
     <div
-      class="flex w-full whatitis align-center justify-between pb-2 border-b mb-8 space-x-10"
+      class="flex w-full whatitis align-center justify-between pb-2 border-b mb-8 space-x-8"
     >
       <div class="z-30"><Sort /></div>
       <div class="w-8/12 xl:w-5/12 lg:w-1/2 md:w-8/12 sm:w-9/12">
@@ -51,12 +51,12 @@
           </div>
           <div class="message-not self-start">
             <div>
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> comments your course
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -113,12 +113,12 @@
           </div>
           <div class="message-not self-start">
             <div>
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> answered to your comment
               </p>
             </div>
             <div class="wordbreak">
-              <span class="size-12 font-semibold color-6d6d6d"
+              <span class="size-13 font-semibold color-6d6d6d"
                 >Your comment:</span
               ><span>
                 Browsers support native module and import only what is need on
@@ -126,7 +126,7 @@
               >
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -185,12 +185,12 @@
           </div>
           <div class="message-not self-start">
             <div>
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> follows you from now
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -240,12 +240,12 @@
           </div>
           <div class="message-not self-start">
             <div class="wordbreak">
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> and <strong> Mark </strong>like you
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -300,13 +300,13 @@
           </div>
           <div class="message-not self-start">
             <div class="wordbreak">
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John, Mark</strong> and <strong> +2 more </strong>like
                 you
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -367,12 +367,12 @@
           </div>
           <div class="message-not self-start">
             <div>
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> tags you on a comment
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
@@ -431,12 +431,12 @@
           </div>
           <div class="message-not self-start">
             <div>
-              <p class="size-13 wordbreak">
+              <p class="size-14 wordbreak">
                 <strong>John</strong> added a new course
               </p>
             </div>
             <div>
-              <span class="size-12 color-6d6d6d">• 2 days ago</span>
+              <span class="size-13 color-6d6d6d">• 2 days ago</span>
             </div>
             <div></div>
           </div>
