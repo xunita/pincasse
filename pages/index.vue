@@ -1,6 +1,6 @@
 <template>
   <div v-cloak>
-    <Befpage v-if="accueil && reload" />
+    <Befpage v-if="reload" />
     <div v-else>
       <div v-if="ishome" class="welcome bg-color-white">
         <div class="mb-16"><Headerbig /></div>
@@ -70,6 +70,7 @@ export default {
   data() {
     return {
       scroll: 0,
+      previous: '',
       reloading: true,
       menuu: false,
       ismenuclick: false,
@@ -134,11 +135,27 @@ export default {
   },
   mounted() {
     this.handleScroll()
-    setTimeout(() => {
-      this.reloading = false
-    }, 1000)
+    this.brefpage()
   },
   methods: {
+    brefpage() {
+      this.reloading = false
+      if (localStorage.previous) {
+        this.previous = localStorage.getItem('previous')
+        if (this.previous === this.$route.path) {
+          this.reloading = true
+          setTimeout(() => {
+            this.reloading = false
+          }, 1000)
+        }
+      } else {
+        this.reloading = true
+        setTimeout(() => {
+          this.reloading = false
+        }, 1000)
+      }
+      localStorage.setItem('previous', this.$route.path)
+    },
     showMenu(value) {
       this.menuu = value
       this.ismenuclick = true
