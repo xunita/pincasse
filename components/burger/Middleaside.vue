@@ -4,7 +4,7 @@
       <Notificationaside class="py-2" />
       <div class="border-b py-2">
         <a
-          :href="localePath('/trending', $i18n.locale)"
+          :href="localePath('/user/mycourses', $i18n.locale)"
           class="dropdown-item flex align-center space-x-2 py-2 pl-8"
           ><svg
             class="w-6 h-6 -pl-1 bb color-363636"

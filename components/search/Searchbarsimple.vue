@@ -11,7 +11,7 @@
     <input
       class="w-full outline-none pl-3 pr-8"
       type="search"
-      placeholder="Search a comment, subscriber, course..."
+      :placeholder="placeholder"
       @focus="managefocus"
       @blur="manageblur"
     />
@@ -24,6 +24,12 @@
 </template>
 <script>
 export default {
+  props: {
+    placeholder: {
+      type: String,
+      default: 'Search...',
+    },
+  },
   data() {
     return {
       focused: false,

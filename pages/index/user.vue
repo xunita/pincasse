@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'Userrrr',
   data() {
     return {
       scroll: 0,

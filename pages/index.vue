@@ -1,5 +1,6 @@
 <template>
   <div v-cloak>
+    <div v-show="modaled" class="z-max"><Delmodal /></div>
     <div v-if="reload"><Befpage /></div>
     <div v-else>
       <div v-if="ishome" class="welcome bg-color-white">
@@ -32,7 +33,7 @@
         <footer></footer>
       </div>
       <div v-else>
-        <div class="welcome center">
+        <div class="welcome center" :class="{ 'is-clipped': modaled }">
           <div
             class="d-header fixed w-full bg-white z-50"
             :class="{
@@ -78,6 +79,9 @@ export default {
     }
   },
   computed: {
+    modaled() {
+      return this.$store.state.delmod === true
+    },
     reload() {
       return this.reloading === true
     },
@@ -243,6 +247,9 @@ export default {
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+}
+.z-max {
+  z-index: 9999 !important;
 }
 .searchbar {
   position: relative;

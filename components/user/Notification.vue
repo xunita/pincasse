@@ -7,7 +7,9 @@
       class="flex w-full whatitis align-center justify-between pb-2 border-b mb-8 space-x-8"
     >
       <div class="w-full xl:w-5/12 lg:w-1/2 md:w-8/12 sm:w-9/12 self-end">
-        <Searchbarsimple />
+        <Searchbarsimple
+          placeholder="Search a comment, subscriber, course..."
+        />
       </div>
     </div>
     <div class="w-full xl:w-9/12 lg:w-10/12 m-0-auto">
