@@ -20,7 +20,7 @@
           ><span class="font-semibold">{{ $t('my_courses') }}</span></a
         >
         <a
-          :href="localePath('/trending', $i18n.locale)"
+          :href="localePath('/user/likedcourses', $i18n.locale)"
           class="dropdown-item flex align-center space-x-3 py-2 pl-8"
           ><i class="fas fa-thumbs-up color-363636 ml-1 size-15"></i
           ><span class="font-semibold">{{ $t('liked_courses') }}</span></a

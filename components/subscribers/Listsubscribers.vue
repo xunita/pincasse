@@ -1,8 +1,8 @@
 <template>
   <div class="bg-color-white">
     <div class="hasdata">
-      <div class="flex align-center flex-wrap zeze">
-        <Coursesme v-for="i in 6" :key="i" class="column is-one-quarter" />
+      <div class="flex flex-col space-y-8">
+        <Subscriber v-for="i in 6" :key="i" class="self-center" />
       </div>
       <div class="container px-8 pb-8">
         <h4 class="color-6d6d6d italic">

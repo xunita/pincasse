@@ -1,6 +1,6 @@
 <template>
   <div
-    class="course-sample whatis clickable"
+    class="course-sample clickable"
     @mouseover="
       {
         chover = true
@@ -41,51 +41,103 @@
               </button>
             </client-only>
           </div>
+          <div
+            class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+          >
+            <client-only>
+              <button
+                v-if="notliked"
+                key="bl"
+                class="color-white pb-2 pt-2 pr-3 px-3 flex align-center space-x-2"
+                @click="
+                  {
+                    unliked = false
+                  }
+                "
+              >
+                <i class="far fa-thumbs-up size-16"></i>
+              </button>
+              <button
+                v-else
+                key="ubl"
+                class="color-white pb-2 pt-2 pr-3 px-3 flex align-center space-x-2"
+                @click="
+                  {
+                    unliked = true
+                  }
+                "
+              >
+                <i class="fas fa-thumbs-up size-16"></i>
+              </button>
+            </client-only>
+          </div>
+          <div
+            v-if="phover"
+            class="z-10 mr-2 hidden sm:block bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+          >
+            <client-only>
+              <button
+                v-if="notliked"
+                key="bl"
+                class="color-white pb-2 pt-1 pr-3 px-2 flex align-center space-x-2"
+                @mouseover="
+                  {
+                    likehover = true
+                  }
+                "
+                @mouseleave="
+                  {
+                    likehover = false
+                  }
+                "
+                @click="
+                  {
+                    unliked = false
+                  }
+                "
+              >
+                <span
+                  style="visibility: hidden"
+                  class="font-semibold size-14 w-0 pt-1"
+                  :class="{ showlikedtext: islikedhover }"
+                  >Like</span
+                >
+                <i class="far fa-thumbs-up size-16"></i>
+              </button>
+              <button
+                v-else
+                key="ubl"
+                class="color-white pb-2 pt-1 pr-3 px-2 flex align-center space-x-2"
+                @mouseover="
+                  {
+                    unlikedhover = true
+                  }
+                "
+                @mouseleave="
+                  {
+                    unlikedhover = false
+                  }
+                "
+                @click="
+                  {
+                    unliked = true
+                  }
+                "
+              >
+                <span
+                  style="visibility: hidden"
+                  class="font-semibold size-14 w-0 pt-1"
+                  :class="{ showunlikedtext: isunlikedhover }"
+                  >Liked</span
+                >
+                <i class="fas fa-thumbs-up size-16"></i>
+              </button>
+            </client-only>
+          </div>
           <img class="igmg" src="/b.png" alt="Placeholder image" />
         </figure>
       </div>
-      <div class="mt-2 relative ert">
-        <div
-          class="hidden absolute mr-2 btn-mod z-30 right-0 top-0 flex align-center space-x-2"
-        >
-          <button class="no-outlines hover-008489 outline-none">
-            <client-only>
-              <svg
-                class="w-5 h-5 color-363636 makeme-008489"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </client-only>
-          </button>
-          <button
-            class="no-outlines hover-008489 outline-none"
-            @click="openmodal"
-          >
-            <client-only
-              ><svg
-                class="w-5 h-5 color-363636 makeme-red"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                  clip-rule="evenodd"
-                ></path></svg
-            ></client-only>
-          </button>
-        </div>
+      <div class="mt-1 ert">
         <div class="content mb-1">
           <div class="ctag">
             <nuxt-link
@@ -113,7 +165,24 @@
         </div>
         <div class="media justify-between">
           <div class="flex align-center">
+            <nuxt-link to="#" title="See profile">
+              <div class="media-left">
+                <figure class="image rounded-full is-44x44">
+                  <img
+                    class="rounded-full"
+                    src="https://i.ibb.co/NSQWM85/56.png"
+                    alt="Placeholder image"
+                  />
+                </figure>
+              </div>
+            </nuxt-link>
             <div class="w-fit">
+              <nuxt-link to="#" title="See profile"
+                ><span
+                  class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+                  >Yaya Sopegue
+                </span></nuxt-link
+              >
               <div class="flex align-center">
                 <client-only>
                   <p class="flex align-center">
@@ -148,9 +217,6 @@ export default {
     }
   },
   computed: {
-    modaled() {
-      return this.$store.state.delmod === true
-    },
     notliked() {
       return this.unliked === true
     },
@@ -173,10 +239,6 @@ export default {
     window.addEventListener('resize', this.large)
   },
   methods: {
-    openmodal() {
-      this.$store.commit('SET_DEL_MOD', true)
-      document.body.style.overflow = 'hidden'
-    },
     sleep(milliseconds) {
       const date = Date.now()
       let currentDate = null
@@ -219,18 +281,6 @@ export default {
 }
 .vidcone {
   margin-top: 0.5rem !important;
-}
-.whatis:hover .btn-mod {
-  display: block;
-  animation: appear 0.3s;
-}
-@media screen and (max-width: 500px) {
-  .whatis .btn-mod {
-    display: block !important;
-  }
-  .whatis:hover .btn-mod {
-    animation: none !important;
-  }
 }
 @media screen and (max-width: 1024px) {
   .course-sample {
