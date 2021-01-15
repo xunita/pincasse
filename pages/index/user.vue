@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-8"><nuxt-child /></div>
+  <div class="pt-8"><nuxt-child /></div>
 </template>
 
 <script>
