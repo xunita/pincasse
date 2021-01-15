@@ -150,7 +150,7 @@ export default {
           this.reloading = true
           setTimeout(() => {
             this.reloading = false
-          }, 1000)
+          }, 500)
         }
       } else {
         this.reloading = true

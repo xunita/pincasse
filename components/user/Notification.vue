@@ -29,7 +29,7 @@
           </svg>
         </button>
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -91,7 +91,7 @@
           </svg>
         </button>
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -161,7 +161,7 @@
           </svg>
         </button>
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -207,7 +207,7 @@
       </a>
       <a class="px-12 okok clickable dropdown-item hasdouble">
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -267,7 +267,7 @@
       </a>
       <a class="px-12 okok clickable dropdown-item hasdouble">
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -342,7 +342,7 @@
           </svg>
         </button>
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
             >
@@ -407,7 +407,7 @@
           </svg>
         </button>
         <div class="flex align-center space-x-5">
-          <div class="img-not relative">
+          <div class="img-not self-start relative">
             <span
               class="w-6 h-6 bg-color-008489oks icoimg rounded-full absolute bottom-0 icoco z-20 right-0"
               ><svg
@@ -520,7 +520,7 @@ export default {
   overflow-wrap: break-word !important;
   white-space: normal;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   line-height: 20px;
@@ -539,8 +539,8 @@ strong {
   margin-left: 1rem !important;
 }
 .image.is-96x64 {
-  height: 56px;
-  width: 90px;
+  width: 128px;
+  height: 76px;
 }
 .lele {
   animation: appear 0.3s;
@@ -551,6 +551,12 @@ strong {
 }
 .message-not {
   width: 100% !important;
+}
+@media screen and (max-width: 747px) {
+  .image.is-96x64 {
+    width: 96px;
+    height: 64px;
+  }
 }
 @media screen and (max-width: 574px) {
   .okok {
