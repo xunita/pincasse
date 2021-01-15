@@ -6,7 +6,7 @@
       v-show="wantmax"
       class="w-full relative flex align-center justify-between"
     >
-      <div class="flex align-center relative">
+      <div class="flex align-center relative -ml-1">
         <client-only>
           <button class="bg-white z-40 no-outline p-2" @click="showMenu">
             <i class="fas fa-bars color-363636 size-18"></i>
