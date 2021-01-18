@@ -12,7 +12,7 @@
             <i class="fas fa-bars color-363636 size-18"></i>
           </button>
         </client-only>
-        <a :href="home" class="h-8 -ml-1454 h-logo">
+        <nuxt-link :to="home" class="h-8 -ml-1454 h-logo">
           <div class="h-8 relative flex align-center">
             <Logo2 class="mt-1 milogo hi-logo" />
             <h4
@@ -21,7 +21,7 @@
               Pincasse
             </h4>
           </div>
-        </a>
+        </nuxt-link>
       </div>
       <div v-show="lg" class="container w-4/12 lg:w-2/5 ml-5">
         <Searchbar />
@@ -42,22 +42,22 @@
           </client-only>
         </div>
         <client-only>
-          <a
-            :href="courses"
+          <nuxt-link
+            :to="courses"
             class="tt color-363636 button yyo rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
           >
-            <span>{{ $t('cr') }}</span></a
+            <span>{{ $t('cr') }}</span></nuxt-link
           >
           <div v-show="sm" class="tt llchoice mr-2"><Langchoice /></div>
           <Noticon />
-          <btn-link
-            :needfocus="false"
-            href="https://github.com/nuxt/nuxt.js"
-            class="button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2"
-            ><i class="fas fa-sign-in-alt color-363636 size-16"></i
-            ><span class="ml-2 color-363636">{{ $t('sign') }}</span></btn-link
-          ></client-only
-        >
+          <nuxt-link
+            :to="courses"
+            class="tt color-363636 button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
+          >
+            <i class="fas fa-sign-in-alt color-363636 size-16"></i
+            ><span class="ml-2 color-363636">{{ $t('sign') }}</span>
+          </nuxt-link>
+        </client-only>
       </div>
     </div>
     <div v-show="min" class="w-full flex align-center mx-2">

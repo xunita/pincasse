@@ -10,7 +10,7 @@
         >
           <i class="fas fa-bars color-363636 size-18"></i>
         </button>
-        <a :href="home" class="h-8 -ml-145">
+        <nuxt-link :to="home" class="h-8 -ml-145">
           <div class="h-8 relative flex align-center">
             <Logo2 class="mt-1 hi-logo" />
             <h4
@@ -19,7 +19,7 @@
               Pincasse
             </h4>
           </div>
-        </a>
+        </nuxt-link>
       </client-only>
     </div>
     <div>

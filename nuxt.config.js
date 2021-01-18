@@ -1,4 +1,16 @@
 export default {
+  ssr: false,
+  // loading: '@/components/animation/Loadingfull.vue',
+  loading: {
+    color: '#008489',
+    height: '3px',
+    continuous: true,
+  },
+  loadingIndicator: {
+    name: 'cube-grid',
+    color: '#008489',
+    background: 'white',
+  },
   router: {
     middleware: 'tag',
   },

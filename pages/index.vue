@@ -1,8 +1,7 @@
 <template>
-  <div v-cloak>
+  <div v-cloak class="relative">
     <div v-show="modaled" class="z-max"><Delmodal /></div>
-    <div v-if="reload"><Befpage /></div>
-    <div v-else>
+    <div>
       <div v-if="ishome" class="welcome bg-color-white">
         <div class="mb-16"><Headerbig /></div>
         <div class="w-full container">
@@ -23,7 +22,7 @@
               >
               <btn-link
                 :needfocus="false"
-                :href="localePath('/home/trending', $i18n.locale)"
+                :href="localePath('/trending', $i18n.locale)"
                 class="is-light py-3 border-0 brr"
                 ><span class="px-3">{{ $t('welcomebtn2') }}</span></btn-link
               >
@@ -37,7 +36,12 @@
           <div
             class="d-header fixed w-full bg-white z-50"
             :class="{
-              shadown: scrolling && !hastag && !hastrend,
+              shadown:
+                (scrolling && !hastag && !hastrend && currentroute) ||
+                (scrolling &&
+                  !currentroute &&
+                  scrollsize < 540 &&
+                  winsize > 500),
             }"
           >
             <Header @showMenu="showMenu" />
@@ -70,20 +74,30 @@ export default {
   components: { trending },
   data() {
     return {
+      width: 9999,
       scroll: 0,
       previous: '',
-      reloading: true,
+      reloading: false,
       menuu: false,
       ismenuclick: false,
       moree: false,
     }
   },
   computed: {
+    winsize() {
+      return this.width
+    },
+    scrollsize() {
+      return this.scroll
+    },
     modaled() {
       return this.$store.state.delmod === true
     },
     reload() {
       return this.reloading === true
+    },
+    currentroute() {
+      return !this.$route.path.includes('/user')
     },
     ishome() {
       return (
@@ -132,33 +146,24 @@ export default {
     },
   },
   beforeMount() {
+    window.addEventListener('resize', this.large)
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.large)
   },
   mounted() {
     this.handleScroll()
-    this.brefpage()
+    // this.brefpage()
+    // this.$nextTick(() => {
+    //   this.$nuxt.$loading.start()
+    //   setTimeout(() => this.$nuxt.$loading.finish(), 5000)
+    // })
   },
   methods: {
-    brefpage() {
-      this.reloading = false
-      if (localStorage.previous) {
-        this.previous = localStorage.getItem('previous')
-        if (this.previous === this.$route.path) {
-          this.reloading = true
-          setTimeout(() => {
-            this.reloading = false
-          }, 500)
-        }
-      } else {
-        this.reloading = true
-        setTimeout(() => {
-          this.reloading = false
-        }, 1000)
-      }
-      localStorage.setItem('previous', this.$route.path)
+    large() {
+      this.width = window.innerWidth
     },
     showMenu(value) {
       this.menuu = value

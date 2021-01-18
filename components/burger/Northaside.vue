@@ -1,14 +1,14 @@
 <template>
   <div class="border-b color-363636">
     <client-only>
-      <a
-        :href="localePath('/home', $i18n.locale)"
+      <nuxt-link
+        :to="localePath('/home', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><i class="fas fa-home color-363636 size-17"></i
-        ><span class="font-semibold">{{ $t('welcomebtn1') }}</span></a
+        ><span class="font-semibold">{{ $t('welcomebtn1') }}</span></nuxt-link
       >
-      <a
-        :href="localePath('/trending', $i18n.locale)"
+      <nuxt-link
+        :to="localePath('/trending', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="color-363636"
@@ -42,10 +42,10 @@
               />
             </g>
           </g></svg
-        ><span class="font-semibold">{{ $t('welcomebtn2') }}</span></a
+        ><span class="font-semibold">{{ $t('welcomebtn2') }}</span></nuxt-link
       >
-      <a
-        :href="localePath('/courses/video', $i18n.locale)"
+      <nuxt-link
+        :to="localePath('/courses/video', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="color-363636"
@@ -74,7 +74,9 @@
               fill="#777777"
             />
           </g></svg
-        ><span class="block font-semibold bbs">{{ $t('vid_course') }}</span></a
+        ><span class="block font-semibold bbs">{{
+          $t('vid_course')
+        }}</span></nuxt-link
       >
     </client-only>
   </div>

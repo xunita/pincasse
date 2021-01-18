@@ -1,8 +1,8 @@
 <template>
   <div class="border-b">
     <client-only>
-      <a
-        :href="localePath('/user/subscribers', $i18n.locale)"
+      <nuxt-link
+        :to="localePath('/user/subscribers', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="scale"
@@ -70,7 +70,7 @@
           </g></svg
         ><span class="block font-semibold subspan">{{
           $t('subscribe')
-        }}</span></a
+        }}</span></nuxt-link
       >
       <Asidefollowed />
       <Listburger @more="more" />

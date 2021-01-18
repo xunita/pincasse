@@ -20,6 +20,14 @@
 .card-header-title.is-centered {
   justify-content: center;
 }
+.image.is-full {
+  width: 100% !important;
+  height: 100% !important;
+}
+.image.is-110x110 {
+  width: 110px !important;
+  height: 110px !important;
+}
 .card-header-icon {
   align-items: center;
   cursor: pointer;
@@ -1743,6 +1751,7 @@ fieldset[disabled] .button {
   position: relative;
   width: 100%;
 }
+
 @media screen and (min-width: 769px) {
   .modal-card,
   .modal-content {

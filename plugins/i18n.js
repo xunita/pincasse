@@ -10,6 +10,6 @@ export default function ({ app }) {
     // console.log(oldLocale, newLocale)
     setTimeout(() => {
       location.reload()
-    }, 200)
+    }, 10)
   }
 }
