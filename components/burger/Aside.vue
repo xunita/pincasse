@@ -10,12 +10,9 @@
         >
           <i class="fas fa-bars color-363636 size-18"></i>
         </button>
-        <nuxt-link :to="home" class="h-8 -ml-145">
+        <nuxt-link :to="home" class="h-fit ml-2 -mt-1">
           <div class="h-8 relative flex align-center">
-            <Logo2 class="mt-1 hi-logo" />
-            <h4
-              class="title color-008489 -ml-1456 -mt-1 select-none size-18 font-semibold"
-            >
+            <h4 class="title color-008489 ml select-none size-18 font-semibold">
               Pincasse
             </h4>
           </div>
