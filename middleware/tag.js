@@ -2,6 +2,7 @@ export default function ({ store, route }) {
   // If the user is not authenticated
   if (
     route.path === '/home' ||
+    route.path === '/home/' ||
     route.path === '/' + store.$i18n.locale + '/home' ||
     route.path === '/' + store.$i18n.locale + '/home/' ||
     route.path === '/courses' ||
@@ -16,6 +17,7 @@ export default function ({ store, route }) {
 
   if (
     route.path === '/trending' ||
+    route.path === '/trending/' ||
     route.path === '/' + store.$i18n.locale + '/trending' ||
     route.path === '/' + store.$i18n.locale + '/trending/'
   ) {

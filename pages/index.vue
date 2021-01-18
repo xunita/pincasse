@@ -120,6 +120,7 @@ export default {
     hashome() {
       return (
         this.$route.path === '/home' ||
+        this.$route.path === '/home/' ||
         this.$route.path === '/fr/home' ||
         this.$route.path === '/fr/home/' ||
         this.$route.path === '/es/home' ||
