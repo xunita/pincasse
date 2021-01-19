@@ -64,6 +64,39 @@ input[type='search']::-webkit-search-cancel-button {
   height: 100% !important;
   background-color: white !important;
 }
+.top-1x {
+  top: 1rem !important;
+}
+.top-05x {
+  top: 0.5rem !important;
+}
+.top-02x {
+  top: 0.2rem !important;
+}
+.top-03x {
+  top: 0.3rem !important;
+}
+.top-08x {
+  top: 0.8rem !important;
+}
+.bottom-1x {
+  bottom: 1rem !important;
+}
+.top-2x {
+  top: 2rem !important;
+}
+.bottom-2x {
+  bottom: 2rem !important;
+}
+.pbottom-2x {
+  padding-bottom: 2rem !important;
+}
+.pbottom-1x {
+  padding-bottom: 1rem !important;
+}
+.pbottom-05x {
+  padding-bottom: 0.5rem !important;
+}
 .bb {
   margin-left: -0.09rem;
 }

@@ -2,10 +2,13 @@
   <div class="pt-8 user">
     <div class="mb-3">
       <div class="pproffile">
-        <div class="couv w-full">
+        <div class="couv relative w-full">
           <figure class="image rounded-md is-full">
-            <img class="rounded-md" src="/b.png" alt="Placeholder image" />
+            <img class="rounded-md" src="/b.jpg" alt="Placeholder image" />
           </figure>
+          <div class="absolute top-0 right-0 mr-2 mt-2">
+            <Modifycon />
+          </div>
         </div>
         <div class="profile-id relative h-auto">
           <div class="profilepic absolute w-fit">
@@ -16,13 +19,19 @@
                 alt="Placeholder image"
               />
             </figure>
+            <div class="absolute bottom-0 right-0 -mr-10"><Modifycon /></div>
           </div>
-          <div class="profile-inf relative w-fit m-0-auto">
-            <div class="ctitle font-semibold size-17 text-center">
+          <div class="profile-inf relative">
+            <div class="size-17 w-fit m-0-auto font-semibold text-center">
               <span class="mscourse">Yaya Sopegue Soro</span>
+              <span
+                class="mscourse relative top-02x size-14 block -mt-1 color-6d6d6d"
+                >@sopoude</span
+              >
             </div>
+
             <div
-              class="mt-3 mscourse w-fit flex align-center space-x-5 font-semibold color-6d6d6d size-14"
+              class="relative top-05x pbottom-05x mscourse w-fit m-0-auto flex align-center space-x-5 font-semibold color-363636f size-145"
             >
               <span class="pb-1zz block sm:inline-block"
                 >18.5 K subscribers
@@ -47,6 +56,19 @@
                     d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
                   ></path></svg
               ></span>
+            </div>
+            <div
+              class="relative top-03x size-14 w-fit m-0-auto text-center mt-1 mb-2"
+            >
+              <client-only>
+                <span class="mscourse block font-semibold color-363636f"
+                  ><i class="fab fa-github mr-2 color-363636f"></i>sopoude</span
+                >
+                <span class="mscourse block font-semibold color-363636f mt-1"
+                  ><i class="fab fa-twitter mr-2 color-363636f"></i
+                  >SYSopegue</span
+                >
+              </client-only>
             </div>
           </div>
         </div>

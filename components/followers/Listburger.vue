@@ -4,7 +4,7 @@
       <a
         v-for="i in 3"
         :key="i"
-        :href="localePath('/home', $i18n.locale)"
+        :href="localePath('/other/courses', $i18n.locale)"
         class="dropdown-item flex align-center justify-between space-x-3 py-2 pl-8"
       >
         <p class="flex align-center space-x-3">
