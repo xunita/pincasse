@@ -26,6 +26,9 @@ body {
   width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content;
 }
+.couvmod .leli {
+  right: 0rem !important;
+}
 .center {
   margin: 0 auto !important;
 }

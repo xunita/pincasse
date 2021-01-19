@@ -30,8 +30,14 @@
           </button>
         </client-only>
       </div>
-      <div id="dropdown-menu" class="dropdown-menu drop-not lele" role="menu">
-        <div class="dropdown-content d-drop-not overflow-y-auto">
+      <div
+        id="dropdown-menu"
+        class="dropdown-menu relative w-fit leli"
+        role="menu"
+      >
+        <div
+          class="dropdown-content w-fit px-3 font-semibold size-14 color-363636f"
+        >
           <a class="clickable w-full"> Import a picture from this device </a>
         </div>
       </div>
@@ -66,14 +72,7 @@ export default {
 :hover::-webkit-scrollbar-thumb {
   background: #ddd;
 }
-.drop-not {
-  width: 460px;
-  margin-left: -10.5rem;
-  max-height: 360px !important;
-}
-.d-drop-not {
-  max-height: 360px !important;
-}
+
 .wordbreak {
   overflow-wrap: break-word !important;
   white-space: normal;
@@ -107,34 +106,7 @@ strong {
 .message-not {
   width: 100% !important;
 }
-@media screen and (max-width: 480px) {
-  .image.is-96x64 {
-    height: 48px;
-    width: 84px;
-  }
-  .drop-not {
-    margin-left: -12.5rem;
-  }
-}
-@media screen and (max-width: 440px) {
-  .drop-not {
-    width: 385px !important;
-    margin-left: -10rem;
-  }
-}
-.dropdown-item:hover .more-not {
-  display: block;
-}
-@media screen and (max-width: 390px) {
-  .image.is-96x64 {
-    height: 32px !important;
-    width: 64px !important;
-  }
-  .drop-not {
-    width: 320px !important;
-    margin-left: -5.5rem;
-  }
-}
+
 @keyframes appear {
   0% {
     opacity: 0;

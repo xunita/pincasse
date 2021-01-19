@@ -6,7 +6,7 @@
           <figure class="image rounded-md is-full">
             <img class="rounded-md" src="/b.jpg" alt="Placeholder image" />
           </figure>
-          <div class="absolute top-0 right-0 mr-2 mt-2">
+          <div class="absolute couvmod top-0 right-0 mr-2 mt-2">
             <Modifycon />
           </div>
         </div>
