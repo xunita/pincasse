@@ -37,11 +37,8 @@
             class="d-header fixed w-full bg-white z-50"
             :class="{
               shadown:
-                (scrolling && !hastag && !hastrend && currentroute) ||
-                (scrolling &&
-                  !currentroute &&
-                  scrollsize < 540 &&
-                  winsize > 500),
+                (scrolling && !hastag && !hastrend && hasnouser) ||
+                (scrolling && !hasnouser && scrollsize < 540 && winsize > 500),
             }"
           >
             <Header @showMenu="showMenu" />
@@ -96,8 +93,11 @@ export default {
     reload() {
       return this.reloading === true
     },
-    currentroute() {
-      return !this.$route.path.includes('/user')
+    hasnouser() {
+      return (
+        !this.$route.path.includes('/user') &&
+        !this.$route.path.includes('/other')
+      )
     },
     ishome() {
       return (
@@ -156,6 +156,7 @@ export default {
   },
   mounted() {
     this.handleScroll()
+    this.large()
     // this.brefpage()
     // this.$nextTick(() => {
     //   this.$nuxt.$loading.start()

@@ -65,22 +65,18 @@
         class="nav-desc w-fit font-semibold m-0-auto flex align-center size-145 overflow-x-auto"
       >
         <li>
-          <nuxt-link to="#" class="text-center">Profile</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="#" class="text-center">Notifications</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="#" class="text-center current-desc">Courses</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="#" class="text-center">Liked</nuxt-link>
+          <nuxt-link to="#" class="text-center">Courses</nuxt-link>
         </li>
         <li>
           <nuxt-link to="#" class="text-center">Subscribers</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="#" class="text-center">Subscriptions</nuxt-link>
+          <nuxt-link to="#" class="text-center current-desc"
+            >Subscriptions</nuxt-link
+          >
+        </li>
+        <li>
+          <nuxt-link to="#" class="text-center">About</nuxt-link>
         </li>
       </ul>
     </div>
