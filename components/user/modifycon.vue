@@ -30,11 +30,7 @@
           </button>
         </client-only>
       </div>
-      <div
-        id="dropdown-menu"
-        class="dropdown-menu relative w-fit leli"
-        role="menu"
-      >
+      <div id="dropdown-menu" class="dropdown-menu w-fit leli" role="menu">
         <div
           class="dropdown-content w-fit px-3 font-semibold size-14 color-363636f"
         >
