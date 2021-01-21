@@ -8,15 +8,19 @@
     >
       <div class="flex align-center relative -ml-1">
         <client-only>
-          <button class="bg-white z-40 no-outline p-2" @click="showMenu">
-            <i class="fas fa-bars color-363636 size-18"></i>
+          <button
+            id="menubtn"
+            class="bg-white z-40 no-outline p-2"
+            @click="showMenu"
+          >
+            <i id="menubtnii" class="fas fa-bars color-363636 size-18"></i>
           </button>
         </client-only>
         <nuxt-link :to="home" class="h-8 -ml-1454 h-logo">
           <div class="h-8 relative flex align-center">
             <Logo2 class="mt-1 milogo hi-logo" />
             <h4
-              class="title h-title color-008489 -ml-14566 -mt-1 select-none size-18 font-semibold"
+              class="title h-title color-008489 -ml-14566 select-none size-18 font-semibold"
             >
               Pincasse
             </h4>
@@ -51,7 +55,7 @@
           <div v-show="sm" class="tt llchoice mr-2"><Langchoice /></div>
           <Noticon />
           <nuxt-link
-            :to="courses"
+            to="/login"
             class="tt color-363636 button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
           >
             <i class="fas fa-sign-in-alt color-363636 size-16"></i
@@ -132,7 +136,7 @@ export default {
       // console.log(this.wantmax, this.lg)
     },
     showMenu() {
-      this.$emit('showMenu', true)
+      this.$store.commit('SHOW_MENU', true)
     },
   },
 }

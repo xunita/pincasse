@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-8 text-center color-363636f">
-      <h4 class="font-semibold size-18">Subscribers</h4>
+      <h4 class="font-semibold size-18">My subscribers</h4>
     </div>
     <div
       class="flex w-full whatitis align-center justify-between pb-2 border-b mb-8 space-x-8"

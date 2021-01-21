@@ -15,7 +15,7 @@
         </button></client-only
       >
     </div>
-    <div v-show="filtering">
+    <div :class="{ fifi: filtering, notfifi: !filtering }">
       <div class="flex flex-wrap mx-0 sm:mx-2">
         <div class="column is-one-fifth baba">
           <h5 class="font-semibold border-b pb-1 size-15">Sort by</h5>
@@ -694,6 +694,15 @@ export default {
 :hover::-webkit-scrollbar-thumb {
   background: #ddd;
 }
+.fifi {
+  visibility: visible;
+  animation: 0.3s appear;
+}
+.notfifi {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
 @media screen and (max-width: 1600px) {
   .baba {
     width: 16.66666%;
@@ -726,7 +735,22 @@ export default {
 }
 @keyframes appear {
   0% {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: translateY(10px);
+  }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 </style>

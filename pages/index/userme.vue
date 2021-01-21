@@ -6,6 +6,9 @@
           <figure class="image rounded-md is-full">
             <img class="rounded-md" src="/b.jpg" alt="Placeholder image" />
           </figure>
+          <div class="absolute couvmod top-0 right-0 mr-2 mt-2">
+            <Modifycon />
+          </div>
         </div>
         <div class="profile-id relative h-auto">
           <div class="profilepic absolute w-fit">
@@ -16,6 +19,7 @@
                 alt="Placeholder image"
               />
             </figure>
+            <div class="absolute bottom-0 right-0 -mr-10"><Modifycon /></div>
           </div>
           <div class="profile-inf relative">
             <div class="size-17 w-fit m-0-auto font-semibold text-center">
@@ -75,26 +79,30 @@
       class="sticky top-0 w-full border-b overflow-x-auto mb-8"
       :class="{
         'h64 bg-white z-40':
-          (scrollsize > 540 && winsize > 500) ||
-          (scrollsize > 400 && winsize <= 500),
+          (scrollsize > 607 && winsize > 500) ||
+          (scrollsize > 447 && winsize <= 500),
       }"
     >
       <ul
         class="nav-desc w-fit font-semibold m-0-auto flex align-center size-145 overflow-x-auto"
       >
         <li>
-          <nuxt-link to="#" class="text-center">Courses</nuxt-link>
+          <nuxt-link to="#" class="text-center">Profile</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="#" class="text-center">Notifications</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="#" class="text-center current-desc">Courses</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="#" class="text-center">Liked</nuxt-link>
         </li>
         <li>
           <nuxt-link to="#" class="text-center">Subscribers</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="#" class="text-center current-desc"
-            >Subscriptions</nuxt-link
-          >
-        </li>
-        <li>
-          <nuxt-link to="#" class="text-center">About</nuxt-link>
+          <nuxt-link to="#" class="text-center">Subscriptions</nuxt-link>
         </li>
       </ul>
     </div>

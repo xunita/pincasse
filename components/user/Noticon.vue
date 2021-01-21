@@ -36,6 +36,11 @@
       </div>
       <div id="dropdown-menu" class="dropdown-menu drop-not lele" role="menu">
         <div class="dropdown-content d-drop-not overflow-y-auto">
+          <a
+            class="clickable color-008489 px-3 pb-2 font-semibold size-12 underline-hover"
+            @click="defocus"
+            >See all notifications</a
+          >
           <a class="clickable dropdown-item relative w-full">
             <button
               class="hidden more-not bg-transparent absolute right-0 top-0 py-1"
@@ -482,6 +487,9 @@ export default {
     }
   },
   computed: {
+    currentpath() {
+      return this.$route.path
+    },
     currentlang() {
       return this.$i18n.locale === 'en'
         ? 'English'
@@ -500,6 +508,12 @@ export default {
   },
   methods: {
     hide() {
+      this.focused = false
+    },
+    defocus() {
+      if (!this.currentpath.includes('/notifications'))
+        this.$router.push('/userme/notifications')
+      else location.reload()
       this.focused = false
     },
   },
@@ -578,9 +592,9 @@ strong {
 .dropdown-item:hover .more-not {
   display: block;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
   .image.is-96x64 {
-    height: 32px !important;
+    height: 40px !important;
     width: 64px !important;
   }
   .drop-not {

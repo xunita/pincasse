@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  name: 'SSnot',
   data() {
     return {
       scroll: 0,

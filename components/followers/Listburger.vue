@@ -1,10 +1,10 @@
 <template>
   <div>
     <client-only>
-      <a
+      <nuxt-link
         v-for="i in 3"
         :key="i"
-        :href="localePath('/other/courses', $i18n.locale)"
+        :to="localePath('/user/yaya', $i18n.locale)"
         class="dropdown-item flex align-center justify-between space-x-3 py-2 pl-8"
       >
         <p class="flex align-center space-x-3">
@@ -18,7 +18,7 @@
         <p class="flex align-center">
           <i class="fas fa-circle size-2 color-008489"></i
           ><i class="fas fa-circle size-6 color-008489 ml-2"></i></p
-      ></a>
+      ></nuxt-link>
       <span
         v-if="!hasmore"
         key="er"

@@ -41,15 +41,14 @@
                 (scrolling && !hasnouser && scrollsize < 540 && winsize > 500),
             }"
           >
-            <Header @showMenu="showMenu" />
+            <Header />
           </div>
           <Aside
             v-show="menu"
-            v-click-outside="hide"
+            id="aside"
             class="fixed overflow-auto h-aside z-50"
             :class="{ hidding: !menu }"
             @hideMenu="hideMenu"
-            @more="more"
           />
           <div style="height: 50px !important" class="bg-color-white"></div>
           <Tag v-if="hastag" class="bg-color-white border-b pb-2 z-30" />
@@ -143,7 +142,7 @@ export default {
       return this.scroll > 1
     },
     menu() {
-      return this.menuu === true
+      return this.$store.state.showmenu === true
     },
   },
   beforeMount() {
@@ -167,13 +166,8 @@ export default {
     large() {
       this.width = window.innerWidth
     },
-    showMenu(value) {
-      this.menuu = value
-      this.ismenuclick = true
-    },
     hideMenu() {
-      this.menuu = false
-      this.ismenuclick = false
+      this.$store.commit('SHOW_MENU', false)
     },
     sleep(milliseconds) {
       const date = Date.now()
@@ -184,15 +178,6 @@ export default {
     },
     handleScroll() {
       this.scroll = window.scrollY
-    },
-    hide() {
-      this.sleep(50)
-      if (!this.ismenuclick && !this.moree) this.menuu = false
-      this.ismenuclick = false
-      this.moree = false
-    },
-    more() {
-      this.moree = true
     },
   },
 }

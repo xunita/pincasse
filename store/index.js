@@ -8,10 +8,15 @@ export const state = () => ({
   delmod: false,
   tagsugges: false,
   tagtrend: false,
+
+  showmenu: false,
 })
 export const mutations = {
   SET_LANG(state, value) {
     state.currentlanguage = value
+  },
+  SHOW_MENU(state, value) {
+    state.showmenu = value
   },
   SET_TAG_SUG(state, value) {
     state.tagsugges = value

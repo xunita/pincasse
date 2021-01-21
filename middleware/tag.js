@@ -1,4 +1,5 @@
 export default function ({ store, route }) {
+  store.commit('SHOW_MENU', false)
   // If the user is not authenticated
   if (
     route.path === '/home' ||

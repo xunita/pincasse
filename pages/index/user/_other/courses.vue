@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-8 text-center color-363636f">
-      <h4 class="font-semibold size-18">Liked courses</h4>
+      <h4 class="font-semibold size-18">Courses</h4>
     </div>
     <div
       class="flex w-full whatitis align-center justify-between pb-2 border-b mb-8 space-x-8"
@@ -10,11 +10,12 @@
         <Searchbarsimple placeholder="Search a course..." />
       </div>
     </div>
-    <Listcourseliked />
+    <List />
   </div>
 </template>
 <script>
 export default {
+  name: 'Dddcdfb',
   data() {
     return {
       focused: false,
