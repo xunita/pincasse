@@ -1,4 +1,8 @@
 export default {
+  generate: {
+    fallback: true,
+  },
+  ssr: false,
   // loading: '@/components/animation/Loadingfull.vue',
   loading: {
     color: '#008489',
