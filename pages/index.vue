@@ -66,6 +66,7 @@
 <script>
 import trending from './index/trending.vue'
 export default {
+  scrollToTop: true,
   name: 'Homie',
   components: { trending },
   data() {

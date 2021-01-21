@@ -1,5 +1,4 @@
 export default {
-  ssr: false,
   // loading: '@/components/animation/Loadingfull.vue',
   loading: {
     color: '#008489',
