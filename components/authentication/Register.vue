@@ -4,7 +4,7 @@
       <Logo2 class="relative m-0-auto clickable" />
       <div class="oath-log -mt-10">
         <h4 class="text-center size-20 color-363636f mb-2">
-          Sign in to Pincasse
+          Sign up to Pincasse
         </h4>
         <div class="flex flex-col space-y-2">
           <nuxt-link
@@ -69,7 +69,7 @@
                   />
                 </g>
               </g></svg
-            ><span class="size-14">Sign in with StackOverflow</span></nuxt-link
+            ><span class="size-14">Sign up with StackOverflow</span></nuxt-link
           >
           <nuxt-link
             to="#"
@@ -79,13 +79,22 @@
                 ><i class="fab fa-github color-white"></i></span
             ></client-only>
             <span class="size-14 text-white font-semibold"
-              >Sign in with Github</span
+              >Sign up with Github</span
             ></nuxt-link
           >
         </div>
         <div class="border mt-10 rounded-md p-5 flex flex-col space-y-2">
           <div class="w-full">
-            <label for="username" class="size-14">Username or email</label>
+            <label for="username" class="size-14">Email</label>
+            <br />
+            <input
+              id="username"
+              type="text"
+              class="border w-full py-1 h-7 size-145 rounded no-outlines outline-none px-2"
+            />
+          </div>
+          <div class="w-full">
+            <label for="username" class="size-14">Username</label>
             <br />
             <input
               id="username"
@@ -96,9 +105,6 @@
           <div class="w-full">
             <div class="flex align-center justify-between">
               <label for="pwd" class="size-14">Password</label>
-              <a class="color-008489 clickable underline-hover size-13"
-                >Forgot password?</a
-              >
             </div>
             <input
               id="pwd"
@@ -106,19 +112,29 @@
               class="border w-full py-1 h-7 size-145 rounded no-outlines outline-none px-2"
             />
           </div>
+          <div class="w-full flex space-x-1">
+            <input
+              id="senupd"
+              type="checkbox"
+              class="border mt-1 rounded no-outlines outline-none"
+            />
+            <label for="senupd" class="size-12"
+              >Receive all the updates on courses, and current trends.</label
+            >
+          </div>
           <nuxt-link
             to="#"
             class="button bg-color-008489 border rounded-md flex align-center space-x-2"
           >
             <span class="size-14 text-white font-semibold"
-              >Sign in
+              >Sign up
             </span></nuxt-link
           >
           <div class="w-fit m-0-auto">
             <div class="flex align-center text-center space-x-2 size-13 mt-5">
-              <span>Haven't an account yet?</span>
-              <a class="color-008489 clickable underline-hover"
-                >Create an account</a
+              <span>Have an account?</span>
+              <nuxt-link to="/login" class="color-008489 underline-hover"
+                >Login</nuxt-link
               >
             </div>
           </div>

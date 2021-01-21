@@ -117,8 +117,8 @@
           <div class="w-fit m-0-auto">
             <div class="flex align-center text-center space-x-2 size-13 mt-5">
               <span>Haven't an account yet?</span>
-              <a class="color-008489 clickable underline-hover"
-                >Create an account</a
+              <nuxt-link to="/register" class="color-008489 underline-hover"
+                >Create an account</nuxt-link
               >
             </div>
           </div>
