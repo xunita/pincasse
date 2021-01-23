@@ -85,11 +85,11 @@
         </div>
         <div class="border mt-10 rounded-md p-5 flex flex-col space-y-2">
           <div class="w-full">
-            <label for="username" class="size-14">Email</label>
+            <label for="email" class="size-14">Email</label>
             <br />
             <input
-              id="username"
-              type="text"
+              id="email"
+              type="email"
               class="border w-full py-1 h-7 size-145 rounded no-outlines outline-none px-2"
             />
           </div>

@@ -28,6 +28,10 @@
   width: 110px !important;
   height: 110px !important;
 }
+.image.is-480x480 {
+  width: 360px !important;
+  height: 360px !important;
+}
 .card-header-icon {
   align-items: center;
   cursor: pointer;
