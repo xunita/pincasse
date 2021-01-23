@@ -165,8 +165,8 @@
         </div>
         <div class="media justify-between">
           <div class="flex align-center">
-            <nuxt-link to="#" title="See profile">
-              <div class="media-left">
+            <nuxt-link to="#" title="See profile" class="w-fit">
+              <div class="media-left w-fit">
                 <figure class="image rounded-full is-44x44">
                   <img
                     class="rounded-full"
@@ -176,7 +176,7 @@
                 </figure>
               </div>
             </nuxt-link>
-            <div class="w-fit">
+            <div class="w-fit -ml-1">
               <nuxt-link to="#" title="See profile"
                 ><span
                   class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"

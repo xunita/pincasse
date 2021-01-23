@@ -53,14 +53,16 @@
             <span>{{ $t('cr') }}</span></nuxt-link
           >
           <div v-show="sm" class="tt llchoice mr-2"><Langchoice /></div>
-          <Noticon />
-          <nuxt-link
+          <Addcourse />
+          <Noticon class="mr-1" />
+          <!-- <nuxt-link
             to="/login"
             class="tt color-363636 button rounded is-lights no-outline border-0 font-medium size-14 flex align-center py-2 px-5"
           >
             <i class="fas fa-sign-in-alt color-363636 size-16"></i
             ><span class="ml-2 color-363636">{{ $t('sign') }}</span>
-          </nuxt-link>
+          </nuxt-link> -->
+          <Dropuser />
         </client-only>
       </div>
     </div>

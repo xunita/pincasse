@@ -48,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div class="mt-1 size-15">
+          <div class="mt-1 size-14">
             <span class="mscourse pb-1zz"
               >How to Write Good Commit Messages: A Practical Git Guide A
               Practical Git Guide How to Write Good Commit Messages: A Practical

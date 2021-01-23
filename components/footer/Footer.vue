@@ -74,8 +74,8 @@
         >
       </div>
     </div>
-    <div class="px-5 w-fit m-0-auto ffoot">
-      <ul
+    <div class="w-fit m-0-auto pt-5">
+      <!-- <ul
         class="flex flex-wrap justify-between color-363636 font-semibold size-14"
       >
         <li>
@@ -96,7 +96,20 @@
         <li>
           <a class="hover-008489" href="#">{{ $t('cpolicy') }}</a>
         </li>
-      </ul>
+      </ul> -->
+      <span class="col-ws size-12 text-center"
+        >© {{ toyear }}
+        <a href="/" class="inline-block">
+          <div class="h-8 relative flex align-center space-x-1">
+            <h4
+              class="color-008489 select-none size-14 font-semibold border-008489"
+            >
+              Pincasse
+            </h4>
+          </div>
+        </a>
+        • by Sopoude</span
+      >
     </div>
   </div>
 </template>
@@ -106,6 +119,9 @@ export default {
     return { lang: false }
   },
   computed: {
+    toyear() {
+      return new Date().getFullYear().toString()
+    },
     currentlang() {
       return this.$i18n.locale === 'en'
         ? 'English'

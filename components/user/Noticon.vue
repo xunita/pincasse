@@ -8,7 +8,7 @@
       <div class="dropdown-trigger">
         <client-only>
           <button
-            class="button relative color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
+            class="button relative color-363636 rounded-full is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
             aria-haspopup="true"
             aria-controls="dropdown-menu"
             @click="
