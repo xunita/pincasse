@@ -24,7 +24,7 @@
                 alt="Placeholder image"
               />
             </figure>
-            <span class="block icon is-small">
+            <span class="block relative dodo icon is-small">
               <i class="fas fa-chevron-down size-10 color-363636"></i>
             </span>
           </div>
@@ -60,6 +60,9 @@ export default {
 .walele {
   animation: appear 0.3s;
   right: 0 !important;
+}
+.dodo {
+  right: 0.2rem !important;
 }
 @keyframes appear {
   0% {
