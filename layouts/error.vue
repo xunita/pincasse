@@ -34,7 +34,7 @@
                   SOMETHING BAD HAPPENED !
                 </h4>
                 <div
-                  class="mt-5 dbtn flex align-center justify-center space-x-10"
+                  class="mt-5 dbtn flex align-center justify-center space-x-8"
                 >
                   <a
                     class="button bbee py-2 px-8 is-primary is-outlined rounded-md size-145"

@@ -4,7 +4,7 @@
       <Notificationaside class="py-2" />
       <div class="border-b py-2">
         <nuxt-link
-          :to="localePath('/user/mycourses', $i18n.locale)"
+          :to="localePath('/userme/mycourses', $i18n.locale)"
           class="dropdown-item flex align-center space-x-2 py-2 pl-8"
           ><svg
             class="w-6 h-6 -pl-1 bb color-363636"
@@ -20,7 +20,7 @@
           ><span class="font-semibold">{{ $t('my_courses') }}</span></nuxt-link
         >
         <nuxt-link
-          :to="localePath('/user/likedcourses', $i18n.locale)"
+          :to="localePath('/userme/likedcourses', $i18n.locale)"
           class="dropdown-item flex align-center space-x-3 py-2 pl-8"
           ><i class="fas fa-thumbs-up color-363636 ml-1 size-15"></i
           ><span class="font-semibold">{{

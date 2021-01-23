@@ -2,7 +2,7 @@
   <div class="border-b">
     <client-only>
       <nuxt-link
-        :to="localePath('/user/subscribers', $i18n.locale)"
+        :to="localePath('/userme/subscribers', $i18n.locale)"
         class="dropdown-item flex align-center space-x-3 py-2 pl-8"
         ><svg
           class="scale"

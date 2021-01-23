@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="localePath('/user/followed', $i18n.locale)"
+    :to="localePath('/userme/followed', $i18n.locale)"
     class="dropdown-item flex align-center space-x-3 py-2 pl-8"
     ><svg
       class="w-5 h-5 color-363636"
