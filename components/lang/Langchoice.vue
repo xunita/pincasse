@@ -30,7 +30,7 @@
         class="dropdown-menu font-semibold lele"
         role="menu"
       >
-        <div class="dropdown-content">
+        <div class="dropdown-content border">
           <nuxt-link
             :to="switchLocalePath('en')"
             class="dropdown-item flex"

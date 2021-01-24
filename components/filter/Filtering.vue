@@ -158,7 +158,7 @@
             </div>
             <div v-show="listelinglang" class="relative">
               <div
-                class="dropdown-content z-10 ddrop overflow-y-auto absolute w-full"
+                class="dropdown-content border z-10 ddrop overflow-y-auto absolute w-full"
               >
                 <div v-if="langavai.length !== 0">
                   <client-only>
@@ -220,7 +220,7 @@
             </div>
             <div v-show="listelingframe" class="relative">
               <div
-                class="dropdown-content ddrop overflow-y-auto absolute w-full"
+                class="dropdown-content border ddrop overflow-y-auto absolute w-full"
               >
                 <div v-if="frameavai.length !== 0">
                   <client-only>

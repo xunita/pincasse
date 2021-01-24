@@ -35,7 +35,7 @@
         </client-only>
       </div>
       <div id="dropdown-menu" class="dropdown-menu drop-not lele" role="menu">
-        <div class="dropdown-content d-drop-not overflow-y-auto">
+        <div class="dropdown-content border d-drop-not overflow-y-auto">
           <a
             class="clickable color-008489 px-3 pb-2 font-semibold size-12 underline-hover"
             @click="defocus"

@@ -26,7 +26,7 @@
         </client-only>
       </div>
       <div id="dropdown-menu" class="dropdown-menu" role="menu">
-        <div class="dropdown-content">
+        <div class="dropdown-content border">
           <nuxt-link
             :to="switchLocalePath('en')"
             class="dropdown-item flex"

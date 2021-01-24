@@ -17,7 +17,7 @@
             </div>
             <div class="self-start">
               <div class="ctitle font-semibold">
-                <span class="mscourse">John Wick</span>
+                <span class="mscourse size-165">John Wick</span>
               </div>
               <div
                 class="mt-1 mscourse flex align-center space-x-0 sm:space-x-5 font-semibold color-6d6d6d size-13"
@@ -65,7 +65,7 @@
           <button
             class="bg-color-008489p mt-3 max-sub size-13 font-semibold outline-none no-outline rounded text-white py-1 bghover-008489 hover-white active-white border-0"
           >
-            <span class="px-3"
+            <span class="px-3 submax"
               >Subscribed
               <!-- <svg
                 class="w-6 h-6"
@@ -92,6 +92,19 @@
                 ></path>
               </svg>
             </span>
+            <span class="px-3 hidden grrr"
+              >Unsubscribe<svg
+                class="w-5 h-5 inline-block col-tr"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                ></path></svg
+            ></span>
           </button>
         </div>
       </div>
@@ -153,6 +166,22 @@ export default {
 }
 </script>
 <style scoped>
+@media screen and (min-width: 451px) {
+  .max-sub:hover {
+    animation: 0.2s appearz;
+    background-color: rgb(231, 37, 37) !important;
+  }
+  .max-sub:hover .submax {
+    display: none !important;
+  }
+  .max-sub:hover .grrr {
+    display: block !important;
+  }
+  .max-sub:hover .col-tr {
+    color: rgb(231, 37, 37) !important;
+  }
+}
+
 .showunlikedtext {
   visibility: visible !important;
   width: auto;
@@ -200,6 +229,18 @@ export default {
     margin-left: 0.5rem !important;
     margin-right: 0.5rem !important;
   }
+  .max-sub {
+    background-color: rgb(231, 37, 37) !important;
+  }
+  .submax {
+    display: none !important;
+  }
+  .grrr {
+    display: block !important;
+  }
+  .col-tr {
+    color: rgb(231, 37, 37) !important;
+  }
 }
 .mscourse {
   display: -webkit-box;
@@ -228,6 +269,11 @@ export default {
 @keyframes appear {
   0% {
     transform: translateX(10px);
+  }
+}
+@keyframes appearz {
+  0% {
+    opacity: 0;
   }
 }
 @keyframes disappear {

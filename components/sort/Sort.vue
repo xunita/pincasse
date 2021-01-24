@@ -32,7 +32,7 @@
         class="dropdown-menu font-semibold mylele lele"
         role="menu"
       >
-        <div class="dropdown-content size-13">
+        <div class="dropdown-content border size-13">
           <a
             href="#"
             class="dropdown-item flex"

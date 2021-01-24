@@ -1,7 +1,7 @@
 <template>
   <div
     class="border relative flex align-center rounded"
-    :class="{ 'my-shadow border-transparent': focused }"
+    :class="{ 'my-shadow': focused }"
     @mouseover="
       {
         focused = true
