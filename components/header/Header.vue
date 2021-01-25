@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-14 w-full relative px-8 z-10 flex align-center justify-between tatapp"
+    class="h-14 w-full relative px-0 sm:px-8 z-10 flex align-center justify-between tatapp"
   >
     <div
       v-show="wantmax"

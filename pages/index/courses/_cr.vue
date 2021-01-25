@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <div class="fflex justify-between w-full">
-      <div id="smiddle" class="sidemiddle pb-10 md:pr-5 sm:pr-8 pr-12">
+      <div id="smiddle" class="sidemiddle pb-10 md:pr-3 sm:pr-10 pr-12">
         <div class="flex flex-col w-full">
           <nuxt-link
             class="font-semibold size-14 clickable color-008489 hover-008489"
@@ -143,13 +143,13 @@ export default {
     width: 80% !important;
   }
 }
-@media screen and (max-width: 499px) {
-  .btn-trend-home {
-    display: none !important;
+@media screen and (max-width: 640px) {
+  .sidemiddle {
+    width: 100% !important;
+    padding-right: 0 !important;
   }
-  .title {
-    font-size: 32px;
-    margin-top: -1.5rem !important;
+  .arright {
+    display: none !important;
   }
 }
 </style>
