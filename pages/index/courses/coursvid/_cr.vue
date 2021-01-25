@@ -1,33 +1,24 @@
 <template>
-  <div class="pt-5">
-    <div v-if="routing"><Filtering /></div>
-    <div class="pt-5"><nuxt-child /></div>
+  <div>
+    <div class="sideleft">
+      <div class="sidemiddle">
+        <div></div>
+      </div>
+    </div>
+    <div></div>
+    <div class="sideright"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Hco',
+  name: 'Vidd',
   data() {
     return {
       scroll: 0,
     }
   },
   computed: {
-    routing() {
-      return (
-        this.$route.path === '/courses' ||
-        this.$route.path === '/courses/' ||
-        this.$route.path === '/courses/interest' ||
-        this.$route.path === '/courses/interest/' ||
-        this.$route.path === '/courses/lastest' ||
-        this.$route.path === '/courses/lastest/' ||
-        this.$route.path === '/courses/search' ||
-        this.$route.path === '/courses/search/' ||
-        this.$route.path === '/courses/video' ||
-        this.$route.path === '/courses/video/'
-      )
-    },
     scrolling() {
       return this.scroll > 1
     },

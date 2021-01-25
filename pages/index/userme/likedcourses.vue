@@ -9,6 +9,7 @@
       <div class="w-full xl:w-5/12 lg:w-1/2 md:w-8/12 sm:w-9/12 self-end">
         <Searchbarsimple placeholder="Search a course..." />
       </div>
+      <div class="self-end"><Filterme /></div>
     </div>
     <Listcourseliked />
   </div>
