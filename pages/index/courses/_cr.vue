@@ -1,102 +1,12 @@
 <template>
   <div class="w-full">
-    <div class="flex flex-col space-y-10 justify-between w-full">
-      <div id="smiddle" class="sidemiddle border-b pb-8">
-        <div class="flex flex-col w-full">
-          <div class="flex align-center justify-between mb-2">
-            <nuxt-link
-              class="font-semibold self-end size-14 clickable underline-hover color-008489 hover-008489"
-              to="#"
-            >
-              #VueJs
-            </nuxt-link>
-            <div>
-              <a
-                class="clickable self-start button border-008489 rounded color-white bg-color-008489 bghover-008489hh flex select-none align-center space-x-2 py-2"
-              >
-                <i class="fas fa-play md:size-13 size-12"></i>
-                <span class="md:size-13 size-12">Get the course</span></a
-              >
-            </div>
-          </div>
-          <h4 class="size-24 font-semibold">
-            How to Write Good Commit Messages: A Practical Git Guide A Practical
-            Git Guide
-          </h4>
-          <div class="flex align-center justify-between mt-2">
-            <div class="flex align-center space-x-2">
-              <figure class="image rounded-full is-36x36">
-                <img
-                  class="rounded-full"
-                  src="https://i.ibb.co/NSQWM85/56.png"
-                  alt="Placeholder image"
-                />
-              </figure>
-              <span class="size-14 font-semibold color-363636f"
-                >• Yaya Sopegue</span
-              >
-            </div>
-            <p class="flex align-center size-12 color-6d6d6d">
-              <span>3 hour ago&nbsp;</span><span>• 24 min read</span>
-            </p>
-          </div>
-          <figure class="image rounded-md mt-8 is-content">
-            <img class="rounded-md" src="/a.png" alt="Placeholder image" />
-          </figure>
-        </div>
-        <div class="pb-4 mt-5">
-          <span class="size-24 color-363636f font-semibold">Introduction</span>
-        </div>
-        <div>
-          Cras rutrum risus erat, et maximus lectus dignissim et. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos. Etiam consectetur nulla et elit auctor, non eleifend mi
-          ultricies. Aenean vehicula tortor vitae enim aliquam cursus. Maecenas
-          venenatis eros metus, ut volutpat ex consequat in. In sodales auctor
-          felis, eget rutrum ante lobortis sed. Quisque faucibus metus leo, ac
-          molestie purus aliquet eu. Nullam bibendum in eros vel ultrices.
-          Nullam sit amet felis dui. Donec eros libero, blandit id vestibulum
-          eu, fringilla id augue. Nullam luctus commodo felis sed efficitur.
-        </div>
-        <div class="mt-6 w-full h-auto">
-          <p class="relative w-4/5 m-0-auto vvss">
-            <video
-              id="my-video"
-              class="video-js vjs-theme-sea"
-              controls
-              preload="auto"
-              poster="/b.png"
-              data-setup="{}"
-            >
-              <source src="/vid.mp4" type="video/mp4" />
-            </video>
-          </p>
-        </div>
-        <div class="mt-6">
-          Cras rutrum risus erat, et maximus lectus dignissim et. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos.
-        </div>
-        <div class="mt-10 mb-10">
-          <a
-            class="clickable w-full m-0-auto sm:w-2/3 self-start button border-008489 rounded color-white bg-color-008489 bghover-008489hh flex select-none align-center space-x-2 py-2"
-          >
-            <i class="fas fa-running size-18"></i>
-            <span class="size-145">Get started</span></a
-          >
-        </div>
-      </div>
-      <div class="pb-5 relative">
-        <div class="pb-4">
-          <span class="size-15 color-363636f font-semibold">For VueJs</span>
-        </div>
-        <Suggestion />
-      </div>
-      <!-- <div class="w-fit arright relative">
+    <div class="w-full">
+      <div><nuxt-child /></div>
+      <div v-if="rmatch" class="w-fit z-30 arright relative hidden sm:block">
         <div class="sideright topit pl-5 pt-5 border-l aside overflow-y-auto">
           <div class="pr-5"><Courseside v-for="i in 9" :key="i" /></div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -110,6 +20,12 @@ export default {
     }
   },
   computed: {
+    rmatch() {
+      return (
+        this.$route.path === '/courses/content/title' ||
+        this.$route.path === '/courses/content/title/'
+      )
+    },
     scrolling() {
       return this.scroll > 1
     },
@@ -149,7 +65,7 @@ export default {
 }
 .sideright {
   right: 0;
-  width: 260px;
+  width: 20%;
   height: 100%;
 }
 .fflex {
@@ -168,7 +84,7 @@ export default {
   transform: translate(-50%, -50%) !important;
 }
 .arright {
-  width: 240px !important;
+  width: 20% !important;
   height: auto !important;
 }
 @media screen and (max-width: 640px) {
