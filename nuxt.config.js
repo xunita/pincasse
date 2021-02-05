@@ -31,11 +31,24 @@ export default {
           'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js',
       },
       { src: 'https://use.fontawesome.com/releases/v5.14.0/js/all.js' },
+      { src: 'https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/assets/css/pc.css' },
       { rel: 'stylesheet', href: '/assets/css/bulma.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/@videojs/themes@1/dist/city/index.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://vjs.zencdn.net/7.10.2/video-js.css',
+      },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Yellowtail',

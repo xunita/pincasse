@@ -534,8 +534,8 @@ export default {
   background: #ddd;
 }
 .drop-not {
-  width: 460px;
-  margin-left: -10.5rem;
+  width: 540px;
+  right: 0 !important;
   max-height: 360px !important;
 }
 .d-drop-not {
@@ -574,29 +574,30 @@ strong {
 .message-not {
   width: 100% !important;
 }
-@media screen and (max-width: 480px) {
-  .image.is-96x64 {
-    height: 48px;
-    width: 84px;
-  }
+@media screen and (max-width: 700px) {
   .drop-not {
-    margin-left: -12.5rem;
+    right: -7rem !important;
+  }
+}
+@media screen and (max-width: 639px) {
+  .drop-not {
+    right: -5.5rem !important;
+  }
+}
+@media screen and (max-width: 528px) {
+  .drop-not {
+    width: 460px;
   }
 }
 @media screen and (max-width: 440px) {
   .drop-not {
     width: 385px !important;
-    margin-left: -10rem;
   }
 }
 .dropdown-item:hover .more-not {
   display: block;
 }
-@media screen and (max-width: 420px) {
-  .image.is-96x64 {
-    height: 40px !important;
-    width: 64px !important;
-  }
+@media screen and (max-width: 400px) {
   .drop-not {
     width: 320px !important;
     margin-left: -5.5rem;

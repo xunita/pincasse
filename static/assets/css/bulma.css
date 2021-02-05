@@ -184,8 +184,12 @@
 }
 .column.is-one-fifth,
 .column.is-one-fifth-tablet {
-  flex: none;
-  width: 20%;
+  flex: none !important;
+  width: 20% !important;
+}
+.columns.is-mobile > .column.is-one-quarter {
+  flex: none !important;
+  width: 25% !important;
 }
 .hero-video,
 .image.is-16by9 .has-ratio,
@@ -261,6 +265,9 @@
 }
 .columns.is-mobile > .column.is-narrow {
   flex: none;
+}
+.hover-008489:hover .makeme-white {
+  color: white !important;
 }
 .column {
   display: block;
