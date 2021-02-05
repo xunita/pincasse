@@ -263,9 +263,6 @@ export default {
   }
 }
 @media screen and (max-width: 499px) {
-  .brr {
-    display: none !important;
-  }
   .title {
     font-size: 32px;
     margin-top: -1.5rem !important;
