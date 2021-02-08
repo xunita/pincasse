@@ -2,13 +2,20 @@
   <div>
     <client-only>
       <a
-        class="clickable flex select-none align-center space-x-3 py-2"
+        class="clickable flex select-none align-center space-x-1 py-2"
         @click="
           {
             focused = !focused
           }
         "
       >
+        <div class="c100 centerss p50 small">
+          <span class="font-bold">2</span>
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
         <p class="flex align-center space-x-2">
           <span class="font-semibold size-14 color-363636">GLOBAL CONCEPT</span
           ><span class="block icon is-small">
@@ -115,5 +122,25 @@ export default {
     opacity: 0;
     transform: translateY(-10px);
   }
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.circle-border {
+  position: relative;
+  text-align: center;
+  width: 110px;
+  height: 110px;
+  margin-left: 30%;
+  border-radius: 100%;
+  background-color: #e53b3b;
+  background-image: linear-gradient(162deg, transparent 50%, #f0f0f0 50%),
+    linear-gradient(90deg, #f0f0f0 50%, transparent 50%);
 }
 </style>

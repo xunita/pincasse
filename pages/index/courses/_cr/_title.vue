@@ -30,7 +30,7 @@
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <span class="block ml-2 size-14"> 5.4k comments</span>
+            <span class="block ml-2 size-13"> 5.4k comments</span>
           </button>
           <button
             class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
@@ -45,7 +45,7 @@
                 d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
               ></path>
             </svg>
-            <span class="block ml-2 size-14">800 Shares</span>
+            <span class="block ml-2 size-13">800 Shares</span>
           </button>
         </div>
       </div>

@@ -3,7 +3,7 @@
     <div class="w-full">
       <div><nuxt-child /></div>
       <div v-if="rmatch" class="w-fit z-30 arright relative hidden sm:block">
-        <div class="sideright topit pl-5 pt-5 border-l aside overflow-y-auto">
+        <div class="sideright topit pt-5 border-l aside overflow-y-auto">
           <div class="pr-5"><Courseside v-for="i in 9" :key="i" /></div>
         </div>
       </div>

@@ -37,6 +37,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/assets/css/pc.css' },
       { rel: 'stylesheet', href: '/assets/css/bulma.css' },
+      { rel: 'stylesheet', href: '/assets/css/circle.css' },
       {
         rel: 'stylesheet',
         href: 'https://unpkg.com/@videojs/themes@1/dist/city/index.css',
