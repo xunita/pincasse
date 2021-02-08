@@ -65,6 +65,7 @@
         <div class="comments mt-10 pb-10">
           <div
             class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto relative my-shadow flex align-center rounded"
+            @mousedown="focus"
           >
             <client-only>
               <button class="no-outline outline-none w-full p-2">
@@ -83,6 +84,7 @@
                 class="relative trtr h-fit lg:w-3/5 md:w-4/5 sm:w-full border rounded-lg w-full"
               >
                 <textarea
+                  id="coment"
                   wrap="hard"
                   class="w-full aside noscroll toyo size-15 p-2 text-gray-700 focus:outline-none mt-1"
                   placeholder="Add a comment"
@@ -159,6 +161,9 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    focus() {
+      document.getElementById('coment').focus()
+    },
     back() {
       this.$router.go(-1)
     },
