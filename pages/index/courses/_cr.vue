@@ -2,7 +2,7 @@
   <div class="w-full">
     <div class="w-full">
       <div><nuxt-child /></div>
-      <div v-if="rmatch" class="w-fit z-30 arright relative hidden sm:block">
+      <div v-if="rmatch" class="w-fit z-30 arright relative hidden md:block">
         <div
           class="sideright topit px-3 pt-5 pb-10 border-l aside overflow-y-auto"
         >

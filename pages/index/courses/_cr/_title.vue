@@ -59,9 +59,77 @@
                   d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
                 ></path>
               </svg>
-              <span class="block ml-2 size-13">800 Shares</span>
             </button>
           </div>
+        </div>
+        <div class="comments mt-10 pb-10">
+          <div
+            class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto relative my-shadow flex align-center rounded"
+          >
+            <client-only>
+              <button class="no-outline outline-none w-full p-2">
+                <span class="size-14 color-363636">Add a comment</span>
+              </button>
+            </client-only>
+          </div>
+          <div class="mt-5">
+            <div class="flex space-x-2">
+              <img
+                class="rounded-full is-32x32"
+                src="https://i.ibb.co/NSQWM85/56.png"
+                alt="Placeholder image"
+              />
+              <div
+                class="relative trtr h-fit lg:w-3/5 md:w-4/5 sm:w-full border rounded-lg w-full"
+              >
+                <textarea
+                  wrap="hard"
+                  class="w-full noscroll toyo size-15 p-2 text-gray-700 focus:outline-none m-1"
+                  placeholder="Add a comment"
+                  rows="3"
+                ></textarea>
+                <div
+                  class="w-full relative bottom-0 border-t p-1 flex align-center justify-between"
+                >
+                  <div class="flex align-center">
+                    <button
+                      class="button color-363636 rounded-full is-lights no-outline border-0 border-tr font-medium size-14 flex align-center p-2"
+                    >
+                      <i class="far fa-smile color-363636 size-16"></i>
+                    </button>
+                    <button
+                      class="button color-363636 rounded-full is-lights no-outlines outline-none border-0 border-tr font-medium size-14 flex align-center p-2"
+                    >
+                      <i class="fas fa-code color-363636 size-15"></i>
+                    </button>
+                    <button
+                      class="button color-363636 rounded-full is-lights no-outlines outline-none border-0 border-tr font-medium size-14 flex align-center p-2"
+                    >
+                      <i class="fas fa-bold color-363636 size-15"></i>
+                    </button>
+                    <button
+                      class="button color-363636 rounded-full is-lights no-outlines outline-none border-0 border-tr font-medium size-14 flex align-center p-2"
+                    >
+                      <i class="fas fa-italic color-363636 size-15"></i>
+                    </button>
+                    <button
+                      class="button color-363636 rounded-full is-lights no-outlines outline-none border-0 border-tr font-medium size-14 flex align-center p-2"
+                    >
+                      <i class="fas fa-link color-363636 size-15"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <button
+                      class="button justify-self-end color-white bghover-008489 rounded-full bg-color-008489 no-outlines outline-none border-0 border-tr font-medium size-12 flex align-center px-4 py-1"
+                    >
+                      Comment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div></div>
         </div>
       </div>
     </div>
@@ -164,16 +232,14 @@ export default {
 }
 @media screen and (max-width: 767px) {
   .popo {
-    width: 62% !important;
+    width: 100% !important;
   }
 }
-@media screen and (max-width: 680px) {
-  .popo {
-    width: 57.5% !important;
-  }
+.toyo::placeholder {
+  font-size: 14px !important;
 }
-@media screen and (max-width: 640px) {
-  .popo {
+@media screen and (max-width: 450px) {
+  .trtr {
     width: 100% !important;
   }
 }
