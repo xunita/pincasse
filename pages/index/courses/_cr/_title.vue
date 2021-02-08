@@ -84,7 +84,7 @@
               >
                 <textarea
                   wrap="hard"
-                  class="w-full noscroll toyo size-15 p-2 text-gray-700 focus:outline-none mt-1"
+                  class="w-full aside noscroll toyo size-15 p-2 text-gray-700 focus:outline-none mt-1"
                   placeholder="Add a comment"
                   rows="3"
                 ></textarea>
