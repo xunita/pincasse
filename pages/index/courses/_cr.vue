@@ -3,8 +3,10 @@
     <div class="w-full">
       <div><nuxt-child /></div>
       <div v-if="rmatch" class="w-fit z-30 arright relative hidden sm:block">
-        <div class="sideright topit pt-5 border-l aside overflow-y-auto">
-          <div class="pr-5"><Courseside v-for="i in 9" :key="i" /></div>
+        <div
+          class="sideright topit px-3 pt-5 pb-10 border-l aside overflow-y-auto"
+        >
+          <div><Courseside v-for="i in 9" :key="i" /></div>
         </div>
       </div>
     </div>
@@ -51,7 +53,8 @@ export default {
 <style scoped>
 .topit {
   position: fixed !important;
-  top: 56px !important;
+  top: 0 !important;
+  padding-top: 56px !important;
 }
 .topitat {
   position: fixed !important;

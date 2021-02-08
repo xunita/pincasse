@@ -1,21 +1,33 @@
 <template>
-  <div>
+  <div class="h-fit">
     <client-only>
       <a
-        class="clickable flex select-none align-center space-x-1 py-2"
+        class="clickable h-fit flex select-none align-center space-x-2"
         @click="
           {
             focused = !focused
           }
         "
       >
-        <div class="c100 centerss p50 small">
-          <span class="font-bold">2</span>
-          <div class="slice">
-            <div class="bar"></div>
-            <div class="fill"></div>
-          </div>
+        <div class="single-chart">
+          <svg viewBox="0 0 36 36" class="circular-chart orange">
+            <path
+              class="circle-bg"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path
+              class="circle"
+              stroke-dasharray="10, 100"
+              d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <text x="18" y="22" class="percentage">1</text>
+          </svg>
         </div>
+
         <p class="flex align-center space-x-2">
           <span class="font-semibold size-14 color-363636">GLOBAL CONCEPT</span
           ><span class="block icon is-small">
@@ -124,23 +136,59 @@ export default {
   }
 }
 
-.circle {
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  top: 50%;
-  margin-top: -50px;
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-.circle-border {
-  position: relative;
-  text-align: center;
-  width: 110px;
-  height: 110px;
-  margin-left: 30%;
-  border-radius: 100%;
-  background-color: #e53b3b;
-  background-image: linear-gradient(162deg, transparent 50%, #f0f0f0 50%),
-    linear-gradient(90deg, #f0f0f0 50%, transparent 50%);
+.single-chart {
+  width: 19%;
+  justify-content: space-around;
+}
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.orange .circle {
+  stroke: #008489;
+}
+
+.circular-chart.green .circle {
+  stroke: #4cc790;
+}
+
+.circular-chart.blue .circle {
+  stroke: #3c9ee5;
+}
+
+.percentage {
+  fill: #008489;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 0.7em;
+  text-anchor: middle;
 }
 </style>
