@@ -19,45 +19,58 @@
             />
             <path
               class="circle"
-              stroke-dasharray="10, 100"
+              stroke-dasharray="75, 100"
               d="M18 2.0845
           a 15.9155 15.9155 0 0 1 0 31.831
           a 15.9155 15.9155 0 0 1 0 -31.831"
             />
-            <text x="18" y="22" class="percentage">1</text>
+            <text x="18" y="22" class="percentage">7</text>
           </svg>
         </div>
 
-        <p class="flex align-center space-x-2">
-          <span class="font-semibold size-14 color-363636">GLOBAL CONCEPT</span
-          ><span class="block icon is-small">
+        <div class="flex align-center space-x-2">
+          <p>
+            <span class="font-semibold size-14 color-363636"
+              >GLOBAL CONCEPT</span
+            >
+            <span
+              class="block w-fit h-fit flex align-center space-x-1 color-363636"
+            >
+              <i class="far fa-clock size-11 color-363636"></i>
+              <span class="size-10">30m 45s</span>
+            </span>
+          </p>
+          <span class="block icon is-small">
             <i class="fas fa-chevron-down size-10 color-363636"></i>
-          </span></p
+          </span></div
       ></a>
     </client-only>
     <div v-show="focused" class="lang-foot font-semibold tolele">
       <nuxt-link
         :to="switchLocalePath('en')"
-        class="dropdown-item flex unactive-lang bghover-008489okk hover-008489"
-        >English</nuxt-link
+        class="dropdown-item flex space-x-3 align-center unactive-lang bghover-008489okk hover-008489"
+        ><span><i class="fas fa-play-circle color-363636 size-16"></i></span
+        ><span>English</span></nuxt-link
       >
       <nuxt-link
         :to="switchLocalePath('fr')"
-        class="dropdown-item flex"
+        class="dropdown-item flex space-x-3 align-center"
         :class="{
           'active-lang': $i18n.locale === 'fr',
           'unactive-lang': $i18n.locale !== 'fr',
         }"
-        >Français</nuxt-link
+        ><span><i class="fas fa-play-circle size-16 color-008489"></i></span
+        ><span>Français</span></nuxt-link
       >
       <nuxt-link
         :to="switchLocalePath('es')"
-        class="dropdown-item flex"
+        class="dropdown-item flex space-x-3 align-center"
         :class="{
           'active-lang': $i18n.locale === 'es',
           'unactive-lang': $i18n.locale !== 'es',
         }"
-        >Español</nuxt-link
+        ><span><i class="fas fa-check-circle size-16 color-008489"></i></span
+        ><span>Español</span></nuxt-link
       >
       <nuxt-link
         :to="switchLocalePath('ru')"
@@ -142,7 +155,7 @@ export default {
 }
 
 .single-chart {
-  width: 19%;
+  width: 14%;
   justify-content: space-around;
 }
 
