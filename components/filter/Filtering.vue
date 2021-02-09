@@ -134,7 +134,7 @@
               <a
                 v-for="(langage, i) in langtab"
                 :key="i"
-                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
+                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489oka border-none no-outline outline-none"
                 ><span>{{ langage }}</span>
                 <client-only>
                   <button
@@ -196,7 +196,7 @@
               <a
                 v-for="(langage, i) in frametab"
                 :key="i"
-                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489ok border-none no-outline outline-none"
+                class="px-3 size-14 pb-11 flex align-center space-x-2 mb-1 rounded-full bg-color-008489oka border-none no-outline outline-none"
                 ><span>{{ langage }}</span>
                 <client-only>
                   <button

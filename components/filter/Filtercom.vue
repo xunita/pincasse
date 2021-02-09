@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="relative">
     <div
       v-click-outside="hide"
-      class="dropdown flex align-center"
+      class="dropdown absolute right-0"
       :class="{ 'is-active': focused }"
     >
       <div class="dropdown-trigger">
@@ -43,7 +43,7 @@
           <a
             v-for="(item, i) in tab"
             :key="i"
-            class="dropdown-item flex clickable"
+            class="dropdown-item flex clickable size-13"
             :class="{
               'active-lang': $i18n.locale === 'en',
               'unactive-lang': $i18n.locale !== 'en',
@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       focused: false,
-      tab: ['Most recent', 'Most seen', 'Most liked', 'Newest', 'Oldest'],
+      tab: ['Most recent', 'Oldest', 'Most liked', 'With answer'],
     }
   },
   computed: {

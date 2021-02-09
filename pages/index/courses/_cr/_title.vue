@@ -73,7 +73,7 @@
               </button>
             </client-only>
           </div>
-          <div class="mt-5">
+          <div class="mt-5 border-b pb-5">
             <div class="flex space-x-2">
               <img
                 class="rounded-full is-32x32"
@@ -131,7 +131,9 @@
               </div>
             </div>
           </div>
-          <div></div>
+          <div class="othercom mt-1 pb-5">
+            <Filtercom />
+          </div>
         </div>
       </div>
     </div>
