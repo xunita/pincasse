@@ -87,32 +87,32 @@ export default {
 }
 @media screen and (max-width: 767px) {
   .comments {
-    top: -3.5rem !important;
+    top: -3rem !important;
   }
 }
 @media screen and (max-width: 700px) {
   .comments {
-    top: -6rem !important;
+    top: -5.5rem !important;
   }
 }
 @media screen and (max-width: 650px) {
   .comments {
-    top: -3.5rem !important;
+    top: -5.8rem !important;
   }
 }
 @media screen and (max-width: 640px) {
   .comments {
-    top: -6.5rem !important;
+    top: -6rem !important;
   }
 }
 @media screen and (max-width: 560px) {
   .comments {
-    top: -9rem !important;
+    top: -8.5rem !important;
   }
 }
 @media screen and (max-width: 480px) {
   .comments {
-    top: -11.5rem !important;
+    top: -11rem !important;
   }
 }
 @media screen and (max-width: 450px) {
@@ -122,12 +122,12 @@ export default {
 }
 @media screen and (max-width: 420px) {
   .comments {
-    top: -13.5rem !important;
+    top: -12.8rem !important;
   }
 }
 @media screen and (max-width: 360px) {
   .comments {
-    top: -15.5rem !important;
+    top: -15rem !important;
   }
 }
 .sideright {
