@@ -1,75 +1,77 @@
 <template>
-  <div class="popo lg:w-4/5 md:w-3/4 sm:w-3/5 w-full lg:pr-6 md:pr-6">
+  <div class="popo h-fit lg:w-4/5 md:w-3/4 sm:w-3/5 w-full lg:pr-6 md:pr-6">
     <div class="w-full h-fit">
-      <div class="relative w-11/12 m-0-auto vvss">
-        <video
-          id="my-video"
-          class="video-js vjs-theme-sea"
-          controls
-          preload="auto"
-          poster="/b.png"
-          data-setup="{}"
-        >
-          <source src="/vid.mp4" type="video/mp4" />
-        </video>
-        <div class="w-full m-0-auto relative pipin border-b pb-2">
-          <div class="flex align-center">
-            <button
-              class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
-            >
-              <svg
-                class="w-5 h-5 color-363636"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+      <div class="w-11/12 m-0-auto">
+        <div class="w-full vvsse">
+          <video
+            id="my-video"
+            class="video-js vjs-theme-sea"
+            controls
+            preload="auto"
+            poster="/b.png"
+            data-setup="{}"
+          >
+            <source src="/vid.mp4" type="video/mp4" />
+          </video>
+
+          <div class="w-full m-0-auto relative pipin border-b pb-2">
+            <div class="flex align-center">
+              <button
+                class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
               >
-                <path
-                  d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
-                ></path>
-              </svg>
-              <span class="block ml-2 size-13"> 87k likes</span>
-            </button>
-            <button
-              class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
-              @click="
-                {
-                  hascom = !hascom
-                }
-              "
-            >
-              <svg
-                class="w-5 h-5 color-363636"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+                <svg
+                  class="w-5 h-5 color-363636"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"
+                  ></path>
+                </svg>
+                <span class="block ml-2 size-13"> 87k likes</span>
+              </button>
+              <button
+                class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
+                @click="iscommenting"
               >
-                <path
-                  fill-rule="evenodd"
-                  d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <span class="block ml-2 size-13"> 5.4k comments</span>
-            </button>
-            <button
-              class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
-            >
-              <svg
-                class="w-5 h-5 color-363636"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
+                <svg
+                  class="w-5 h-5 color-363636"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <span class="block ml-2 size-13"> 5.4k comments</span>
+              </button>
+              <button
+                class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
               >
-                <path
-                  d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
-                ></path>
-              </svg>
-            </button>
+                <svg
+                  class="w-5 h-5 color-363636"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
-        <div v-show="commenting" class="comments mt-10 pb-10">
+        <div
+          v-show="commenting"
+          class="comments lg:mt-20 md:-mt-8 sm:-mt-10 -mt-20 mb-2"
+        >
           <div
-            class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto relative my-shadow flex align-center rounded"
+            class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto my-shadow flex align-center rounded"
             @mousedown="focus"
           >
             <client-only>
@@ -78,7 +80,7 @@
               </button>
             </client-only>
           </div>
-          <div class="mt-5 border-b pb-5">
+          <div class="mt-5 firefox border-b pb-5">
             <div class="flex space-x-2">
               <img
                 class="rounded-full is-32x32"
@@ -139,7 +141,10 @@
           <div class="othercom mt-1 pb-5">
             <Filtercom />
           </div>
-          <div class="thecom mt-8 flex flex-col space-y-1 border-b pb-5">
+          <div
+            class="thecom mt-8 flex flex-col space-y-1 border-b pb-0 md:pb-5"
+          >
+            <Comment />
             <Comment />
             <Comment />
           </div>
@@ -182,6 +187,11 @@ export default {
     back() {
       this.$router.go(-1)
     },
+    iscommenting() {
+      this.hascom = !this.hascom
+      if (this.hascom) this.$store.commit('COMMENTING', true)
+      else this.$store.commit('COMMENTING', false)
+    },
     handleScroll() {
       this.scroll = window.scrollY
       // console.log(window.scrollY)
@@ -192,7 +202,13 @@ export default {
 
 <style scoped>
 .comments {
+  position: relative;
   animation: 0.3s appearyh;
+}
+@media screen and (max-width: 450px) {
+  .comments {
+    top: -6rem;
+  }
 }
 .topit {
   position: fixed !important;
@@ -206,7 +222,7 @@ export default {
   margin-left: 2.25rem !important;
 }
 .pipin {
-  top: 1rem !important;
+  top: 1.1rem !important;
 }
 .sidemiddle {
   width: 100% !important;
@@ -217,6 +233,9 @@ export default {
   height: 100%;
 }
 .vvss {
+  height: fit-content !important;
+}
+.vvsse {
   height: 480px !important;
 }
 .fflex {

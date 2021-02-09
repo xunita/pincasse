@@ -4,6 +4,7 @@ export const state = () => ({
   newlocale: '',
   currentlanguage: 'English',
   test: 0,
+  commenting: false,
   courseid: 0,
   delmod: false,
   tagsugges: false,
@@ -14,6 +15,9 @@ export const state = () => ({
 export const mutations = {
   SET_LANG(state, value) {
     state.currentlanguage = value
+  },
+  COMMENTING(state, value) {
+    state.commenting = value
   },
   SHOW_MENU(state, value) {
     state.showmenu = value

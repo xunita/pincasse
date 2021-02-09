@@ -568,6 +568,10 @@ input::placeholder {
   }
 }
 @-moz-document url-prefix() {
+  .firefox {
+    padding-bottom: 4rem !important;
+    z-index: 10;
+  }
   .as-bur {
     margin-left: 2rem;
   }

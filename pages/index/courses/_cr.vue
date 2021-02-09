@@ -1,11 +1,20 @@
 <template>
   <div class="w-full">
-    <div class="w-full">
-      <div><nuxt-child /></div>
+    <div class="w-full frog h-auto">
+      <div class="h-fit"><nuxt-child /></div>
       <div v-if="rmatch" class="w-fit z-30 arright relative hidden md:block">
         <div
           class="sideright topit px-3 pt-5 pb-10 border-l aside overflow-y-auto"
         >
+          <div><Courseside v-for="i in 9" :key="i" /></div>
+        </div>
+      </div>
+      <div
+        v-if="rmatch"
+        class="w-full h-auto block md:hidden pang"
+        :class="{ depang: commenting, comments: !commenting }"
+      >
+        <div class="px-3 pb-10 w-11/12 m-0-auto">
           <div><Courseside v-for="i in 9" :key="i" /></div>
         </div>
       </div>
@@ -22,6 +31,9 @@ export default {
     }
   },
   computed: {
+    commenting() {
+      return this.$store.state.commenting === true
+    },
     rmatch() {
       return (
         this.$route.path === '/courses/content/title' ||
@@ -51,6 +63,9 @@ export default {
 </script>
 
 <style scoped>
+.depang {
+  position: relative;
+}
 .topit {
   position: fixed !important;
   top: 0 !important;
@@ -65,6 +80,55 @@ export default {
 }
 .sidemiddle {
   width: 100% !important;
+}
+.comments {
+  position: relative;
+  animation: 0.3s appearyh;
+}
+@media screen and (max-width: 767px) {
+  .comments {
+    top: -3.5rem !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .comments {
+    top: -6rem !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  .comments {
+    top: -3.5rem !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .comments {
+    top: -6.5rem !important;
+  }
+}
+@media screen and (max-width: 560px) {
+  .comments {
+    top: -9rem !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .comments {
+    top: -11.5rem !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .depang {
+    top: -6.5rem !important;
+  }
+}
+@media screen and (max-width: 420px) {
+  .comments {
+    top: -13.5rem !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  .comments {
+    top: -15.5rem !important;
+  }
 }
 .sideright {
   right: 0;
@@ -93,6 +157,12 @@ export default {
 @media screen and (max-width: 640px) {
   .vvss {
     width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .frog {
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
 </style>

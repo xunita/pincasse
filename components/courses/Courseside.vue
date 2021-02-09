@@ -1,34 +1,34 @@
 <template>
-  <div class="h-fit">
+  <div class="h-fit w-full px-2">
     <client-only>
       <a
-        class="clickable h-fit flex select-none align-center space-x-2"
+        class="clickable h-fit flex select-none align-center justify-between space-x-2"
         @click="
           {
             focused = !focused
           }
         "
       >
-        <div class="single-chart">
-          <svg viewBox="0 0 36 36" class="circular-chart orange">
-            <path
-              class="circle-bg"
-              d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-            <path
-              class="circle"
-              stroke-dasharray="75, 100"
-              d="M18 2.0845
-          a 15.9155 15.9155 0 0 1 0 31.831
-          a 15.9155 15.9155 0 0 1 0 -31.831"
-            />
-            <text x="18" y="22" class="percentage">7</text>
-          </svg>
-        </div>
-
         <div class="flex align-center space-x-2">
+          <div class="single-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart orange">
+              <path
+                class="circle-bg"
+                d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path
+                class="circle"
+                stroke-dasharray="75, 100"
+                d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="22" class="percentage">7</text>
+            </svg>
+          </div>
+
           <p>
             <span class="font-semibold size-14 color-363636"
               >GLOBAL CONCEPT</span
@@ -40,9 +40,9 @@
               <span class="size-10">30m 45s</span>
             </span>
           </p>
-          <span class="block icon is-small">
-            <i class="fas fa-chevron-down size-10 color-363636"></i>
-          </span></div
+        </div>
+        <span class="block icon is-small">
+          <i class="fas fa-chevron-down size-10 color-363636"></i> </span
       ></a>
     </client-only>
     <div v-show="focused" class="lang-foot font-semibold tolele">
@@ -155,7 +155,7 @@ export default {
 }
 
 .single-chart {
-  width: 14%;
+  width: 32px;
   justify-content: space-around;
 }
 
