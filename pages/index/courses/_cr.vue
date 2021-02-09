@@ -11,7 +11,7 @@
       </div>
       <div
         v-if="rmatch"
-        class="w-full h-auto block md:hidden pang"
+        class="w-full h-auto block md:hidden border-b"
         :class="{ depang: commenting, comments: !commenting }"
       >
         <div class="px-3 pb-10 w-11/12 m-0-auto">
