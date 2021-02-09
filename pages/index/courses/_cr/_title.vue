@@ -31,6 +31,11 @@
             </button>
             <button
               class="button color-363636 rounded is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
+              @click="
+                {
+                  hascom = !hascom
+                }
+              "
             >
               <svg
                 class="w-5 h-5 color-363636"
@@ -62,7 +67,7 @@
             </button>
           </div>
         </div>
-        <div class="comments mt-10 pb-10">
+        <div v-show="commenting" class="comments mt-10 pb-10">
           <div
             class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto relative my-shadow flex align-center rounded"
             @mousedown="focus"
@@ -134,6 +139,10 @@
           <div class="othercom mt-1 pb-5">
             <Filtercom />
           </div>
+          <div class="thecom mt-8 flex flex-col space-y-1 border-b pb-5">
+            <Comment />
+            <Comment />
+          </div>
         </div>
       </div>
     </div>
@@ -146,9 +155,13 @@ export default {
   data() {
     return {
       scroll: 0,
+      hascom: false,
     }
   },
   computed: {
+    commenting() {
+      return this.hascom === true
+    },
     scrolling() {
       return this.scroll > 1
     },
@@ -178,6 +191,9 @@ export default {
 </script>
 
 <style scoped>
+.comments {
+  animation: 0.3s appearyh;
+}
 .topit {
   position: fixed !important;
   top: 56px !important;

@@ -611,6 +611,9 @@ input::placeholder {
     transform: translateZ(80px);
   }
 }
+.appearyh {
+  animation: 0.3s appearyh !important;
+}
 @keyframes appearyh {
   0% {
     transform: translateY(-10px);

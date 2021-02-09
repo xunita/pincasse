@@ -48,13 +48,13 @@
     <div v-show="focused" class="lang-foot font-semibold tolele">
       <nuxt-link
         :to="switchLocalePath('en')"
-        class="dropdown-item flex space-x-3 align-center unactive-lang bghover-008489okk hover-008489"
+        class="dropdown-item flex space-x-2 align-center unactive-lang bghover-008489okk hover-008489"
         ><span><i class="fas fa-play-circle color-363636 size-16"></i></span
         ><span>English</span></nuxt-link
       >
       <nuxt-link
         :to="switchLocalePath('fr')"
-        class="dropdown-item flex space-x-3 align-center"
+        class="dropdown-item flex space-x-2 align-center"
         :class="{
           'active-lang': $i18n.locale === 'fr',
           'unactive-lang': $i18n.locale !== 'fr',
@@ -64,7 +64,7 @@
       >
       <nuxt-link
         :to="switchLocalePath('es')"
-        class="dropdown-item flex space-x-3 align-center"
+        class="dropdown-item flex space-x-2 align-center"
         :class="{
           'active-lang': $i18n.locale === 'es',
           'unactive-lang': $i18n.locale !== 'es',
