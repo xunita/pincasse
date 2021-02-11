@@ -236,7 +236,7 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.handleScroll)
-    window.addEventListener('resize', this.large)
+    window.removeEventListener('resize', this.large)
   },
   methods: {
     sleep(milliseconds) {

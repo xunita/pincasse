@@ -1,7 +1,10 @@
 <template>
-  <div class="popo h-fit lg:w-4/5 md:w-3/4 sm:w-3/5 w-full lg:pr-6 md:pr-6">
+  <div
+    class="h-fit w-full md:w-4/5 lg:pr-6 md:pr-6"
+    :class="{ 'tout pr0': transition }"
+  >
     <div class="w-full h-fit">
-      <div class="w-11/12 m-0-auto">
+      <div class="w-full md:w-10/12" :class="{ 'tout pr0': transition }">
         <div class="w-full vvsse">
           <video
             id="my-video"
@@ -72,10 +75,12 @@
         >
           <div
             class="border lg:w-3/5 md:w-3/4 sm:w-4/5 w-full m-0-auto my-shadow flex align-center rounded"
-            @mousedown="focus"
           >
             <client-only>
-              <button class="no-outline outline-none w-full p-2">
+              <button
+                class="no-outline outline-none w-full p-2"
+                @click="showlogin"
+              >
                 <span class="size-14 color-363636">Add a comment</span>
               </button>
             </client-only>
@@ -89,13 +94,14 @@
               />
               <div
                 class="relative trtr h-fit lg:w-3/5 md:w-4/5 sm:w-full border rounded-lg w-full"
+                @click="focus"
               >
                 <textarea
                   id="coment"
                   wrap="hard"
                   class="w-full aside noscroll toyo size-15 p-2 text-gray-700 focus:outline-none mt-1"
                   placeholder="Add a comment"
-                  rows="3"
+                  rows="4"
                 ></textarea>
                 <div
                   class="w-full relative bottom-0 border-t p-1 flex align-center justify-between"
@@ -147,6 +153,9 @@
             <Comment />
             <Comment />
             <Comment />
+            <a class="clickable w-fit color-363636 size-12 font-semibold pb-4">
+              <span class="underline-hover">More comments (4)</span></a
+            >
           </div>
         </div>
       </div>
@@ -157,15 +166,28 @@
 <script>
 export default {
   name: 'Vidddcdssds',
+  props: {
+    trans: {
+      type: Boolean,
+      default: true,
+    },
+  },
   data() {
     return {
       scroll: 0,
       hascom: false,
+      authing: false,
     }
   },
   computed: {
+    transition() {
+      return this.trans === true
+    },
     commenting() {
       return this.hascom === true
+    },
+    auth() {
+      return this.authing === true
     },
     scrolling() {
       return this.scroll > 1
@@ -183,6 +205,9 @@ export default {
   methods: {
     focus() {
       document.getElementById('coment').focus()
+    },
+    showlogin() {
+      this.authing = true
     },
     back() {
       this.$router.go(-1)

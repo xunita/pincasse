@@ -5,6 +5,7 @@
         class="button relative color-363636 rounded-full is-lights no-outline border-0 border-tr font-medium size-14 flex align-center py-2"
         aria-haspopup="true"
         aria-controls="dropdown-menu"
+        @click="$router.push('/add')"
       >
         <svg
           class="w-5 h-5 -pl-1 bb color-363636 makeme-008489"

@@ -18,6 +18,60 @@ body {
   overflow-wrap: break-word !important;
   white-space: normal;
 }
+.twoline {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.oneline {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.-mt65 {
+  margin-top: -1.6rem;
+}
+.pr0 {
+  padding-right: 0 !important;
+}
+.tout {
+  width: 100% !important;
+  transition: transform ease-out 0.1s !important;
+}
+.drawer {
+  display: block !important;
+  transition: transform ease-out 0.3s !important;
+}
+.drawer.is-open {
+  transform: translateX(100%) !important;
+  transition: transform ease-out 0.3s !important;
+}
+.drawer.is-hid {
+  transform: translateX(0) !important;
+  transition: transform ease-out 0.3s !important;
+}
+.none {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+@media screen and (max-width: 767px) {
+  .none {
+    display: none !important;
+  }
+  .show {
+    display: none !important;
+  }
+}
+.threeline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .m-0-auto {
   margin: 0 auto !important;
 }
@@ -316,6 +370,9 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .size-13 {
   font-size: 13px !important;
+}
+.clbo {
+  clear: both !important;
 }
 .clickable {
   cursor: pointer;

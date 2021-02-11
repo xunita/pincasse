@@ -1,5 +1,5 @@
 <template>
-  <div class="h-fit w-full px-2">
+  <div class="h-fit w-full border-b px-6">
     <client-only>
       <a
         class="clickable h-fit flex select-none align-center justify-between space-x-2"
@@ -46,6 +46,12 @@
       ></a>
     </client-only>
     <div v-show="focused" class="lang-foot font-semibold tolele">
+      <nuxt-link
+        :to="switchLocalePath('en')"
+        class="dropdown-item flex space-x-2 align-center unactive-lang bghover-008489okk hover-008489"
+        ><span><i class="fas fa-play-circle color-363636 size-16"></i></span
+        ><span>English</span></nuxt-link
+      >
       <nuxt-link
         :to="switchLocalePath('en')"
         class="dropdown-item flex space-x-2 align-center unactive-lang bghover-008489okk hover-008489"

@@ -107,9 +107,9 @@
                 >Sopegue</a
               ></span
             >
-            <div class="border rounded-lg w-full">
+            <div class="border rounded-lg w-full" @click="focus">
               <textarea
-                id="coment"
+                id="coment2"
                 wrap="hard"
                 class="w-full aside noscroll toyo size-15 p-2 text-gray-700 focus:outline-none mt-1"
                 placeholder="Add a comment"
@@ -158,6 +158,9 @@
         </div>
         <div v-show="subcoming" class="subcom mt-1 flex flex-col space-y-1">
           <Subcom v-for="i in 4" :key="i" />
+          <a class="clickable w-fit color-363636 size-12 font-semibold pb-4">
+            <span class="underline-hover">More responses (4)</span></a
+          >
         </div>
       </div>
     </div>
@@ -178,6 +181,11 @@ export default {
     },
     subcoming() {
       return this.subcom === true
+    },
+  },
+  methods: {
+    focus() {
+      document.getElementById('coment2').focus()
     },
   },
 }
