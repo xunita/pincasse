@@ -93,7 +93,7 @@
       </div>
       <div
         v-if="rmatch"
-        class="w-full h-auto block md:hidden border-b"
+        class="w-full h-auto block md:hidden"
         :class="{ depang: commenting, comments: !commenting }"
       >
         <div class="pb-10 w-full m-0-auto">
