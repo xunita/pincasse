@@ -270,7 +270,6 @@ export default {
   .course-sample {
     padding: 0 !important;
     padding-bottom: 2rem !important;
-    border-bottom-width: 1px;
   }
   .ddd {
     border: none !important;
