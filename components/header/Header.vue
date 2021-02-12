@@ -10,7 +10,7 @@
         <client-only>
           <button
             id="menubtn"
-            class="bg-white h-fit w-fit z-40 no-outline"
+            class="bg-white h-fit w-fit pl-2 py-2 z-5000 no-outline"
             @click="showMenu"
           >
             <svg
