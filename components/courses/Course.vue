@@ -303,8 +303,8 @@ export default {
     padding-bottom: 1rem !important;
   }
   .ert {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
   .ddd {
     border: none !important;
