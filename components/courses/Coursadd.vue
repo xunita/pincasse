@@ -75,17 +75,17 @@
               >
             </button>
           </div>
-          <div class="w-fit tgtg pt-20 m-0-auto flex align-center space-x-2">
+          <div class="w-fit tgtg pt-20 m-0-auto flex align-center space-x-5">
             <nuxt-link
               :to="localePath('/home', $i18n.locale)"
-              class="button cancc is-light border rounded-md flex align-center space-x-2 px-10"
+              class="button cancc is-light border rounded-md flex align-center space-x-2 px-8"
             >
               <span class="size-13 sm:size-14 font-semibold"
                 >Cancel
               </span></nuxt-link
             >
             <a
-              class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-2"
+              class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-8"
               @click="gonext"
             >
               <span class="size-13 sm:size-14 text-white font-semibold"
