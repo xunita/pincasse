@@ -1,6 +1,6 @@
 <template>
   <div class="m-0-auto border-b w-full pb-3 select-none">
-    <div class="mx-0 sm:mx-2">
+    <div class="mx-0 sm:mx-3">
       <client-only
         ><button
           class="no-outline outline-none flex align-center space-x-2"
