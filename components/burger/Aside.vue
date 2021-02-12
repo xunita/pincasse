@@ -3,7 +3,7 @@
     <div class="flex w-full bg-color-white h-14 align-center as-bur">
       <client-only>
         <button
-          class="bg-white w-fit h-fit no-outline btn-search"
+          class="bg-white relative -top-02x w-fit h-fit no-outline btn-search"
           @click="hideMenu"
         >
           <svg
@@ -20,7 +20,7 @@
             ></path>
           </svg>
         </button>
-        <nuxt-link :to="home" class="h-fit ml-2 -mt-1">
+        <nuxt-link :to="home" class="h-fit ml-3 -mt-1">
           <div class="h-8 relative flex align-center">
             <h4 class="title color-008489 ml select-none size-18 font-semibold">
               Pincasse
