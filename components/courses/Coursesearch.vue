@@ -33,7 +33,7 @@
             </client-only>
           </div>
           <div
-            class="z-10 bg-color-008489ok absolute vidcone rounded-br w-fit bottom-0 right-0"
+            class="z-10 bg-color-008489ok absolute rounded-tl w-fit top-0 left-0"
           >
             <client-only>
               <button
