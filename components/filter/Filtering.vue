@@ -705,32 +705,32 @@ export default {
 }
 @media screen and (max-width: 1600px) {
   .baba {
-    width: 16.66666%;
+    width: 16.66666% !important;
   }
 }
 @media screen and (max-width: 940px) {
   .baba {
-    width: 20%;
+    width: 20% !important;
   }
 }
 @media screen and (max-width: 768px) {
   .baba {
-    width: 25%;
+    width: 25% !important;
   }
 }
 @media screen and (max-width: 540px) {
   .baba {
-    width: 33.3333%;
+    width: 33.3333% !important;
   }
 }
 @media screen and (max-width: 450px) {
   .baba {
-    width: 50%;
+    width: 50% !important;
   }
 }
 @media screen and (max-width: 300px) {
   .baba {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @keyframes appear {
