@@ -6,9 +6,7 @@
           class="border mt-10 rounded-md h-full px-5 pt-5 pb-20 flex flex-col space-y-3"
         >
           <div class="w-fit h-fit">
-            <a
-              class="button is-lights outline-none no-outline rounded-md flex align-center space-x-1"
-              @click="backprev"
+            <a class="clickable flex align-center space-x-1" @click="backprev"
               ><span
                 ><svg
                   class="w-5 h-5 color-363636 relative top-01x"
