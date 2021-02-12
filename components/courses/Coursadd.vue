@@ -75,7 +75,7 @@
               >
             </button>
           </div>
-          <div class="w-fit tgtg pt-16 m-0-auto flex align-center space-x-8">
+          <div class="w-fit tgtg pt-20 m-0-auto flex align-center space-x-2">
             <nuxt-link
               :to="localePath('/home', $i18n.locale)"
               class="button cancc is-light border rounded-md flex align-center space-x-2 px-10"
@@ -85,7 +85,7 @@
               </span></nuxt-link
             >
             <a
-              class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-20"
+              class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-2"
               @click="gonext"
             >
               <span class="size-13 sm:size-14 text-white font-semibold"
