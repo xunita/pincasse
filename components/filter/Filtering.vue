@@ -17,7 +17,7 @@
     </div>
     <div :class="{ fifi: filtering, notfifi: !filtering }">
       <div class="flex flex-wrap mx-0 sm:mx-2">
-        <div class="column is-one-fifth baba">
+        <div class="column is-one-quarter baba">
           <h5 class="font-semibold border-b pb-1 size-15">Sort by</h5>
           <div class="mt-1">
             <client-only>
@@ -104,27 +104,7 @@
             ></client-only>
           </div>
         </div>
-        <div class="column is-one-fifth baba">
-          <h5 class="font-semibold border-b pb-1 size-15">Content type</h5>
-          <div class="mt-1">
-            <client-only>
-              <a
-                class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                :class="{ 'font-semibold color-008489': txt }"
-                @click="itemsel('text')"
-                >Text<span v-show="txt" class="ml-2"
-                  ><i class="fas fa-check size-10"></i></span
-              ></a>
-              <a
-                class="block clickable flex align-center space-x-1 hover-008489 size-14"
-                :class="{ 'font-semibold color-008489': vid }"
-                @click="itemsel('video')"
-                >Video<span v-show="vid" class="ml-2"
-                  ><i class="fas fa-check size-10"></i></span></a
-            ></client-only>
-          </div>
-        </div>
-        <div class="column is-one-fifth baba">
+        <div class="column is-one-quarter baba">
           <h5 class="font-semibold border-b pb-1 size-15">Language</h5>
           <div
             v-click-outside="hidelistlang"
@@ -184,7 +164,7 @@
           </div>
         </div>
         <div
-          class="column is-one-fifth baba"
+          class="column is-one-quarter baba"
           :class="{ framedisabled: disableframe }"
         >
           <h5 class="font-semibold border-b pb-1 size-15">Framework</h5>
@@ -247,7 +227,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-one-fifth baba">
+        <div class="column is-one-quarter baba">
           <h5 class="font-semibold border-b pb-1 size-15">Track</h5>
           <div class="mt-1">
             <client-only>
@@ -284,7 +264,7 @@
           </div>
         </div>
 
-        <div class="column is-one-fifth baba">
+        <div class="column is-one-quarter baba">
           <h5 class="font-semibold border-b pb-1 size-15">Platform</h5>
           <div class="mt-1">
             <client-only>
@@ -705,30 +685,26 @@ export default {
 }
 @media screen and (max-width: 1600px) {
   .baba {
-    width: 16.66666% !important;
-  }
-}
-@media screen and (max-width: 940px) {
-  .baba {
     width: 20% !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 967px) {
   .baba {
     width: 25% !important;
   }
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 767px) {
   .baba {
-    width: 33.3333% !important;
+    width: 33.33% !important;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 567px) {
   .baba {
     width: 50% !important;
   }
 }
-@media screen and (max-width: 300px) {
+
+@media screen and (max-width: 400px) {
   .baba {
     width: 100% !important;
   }
