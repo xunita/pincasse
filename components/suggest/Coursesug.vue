@@ -16,34 +16,37 @@
       <div class="card-image rounded ddd">
         <figure class="image relative is-4by3">
           <div
-            class="z-10 bg-color-008489ok absolute vidcone px-3 rounded w-fit top-0 left-0 ml-2"
-          >
-            <client-only>
-              <div class="-mt-1">
-                <i class="fas fa-video color-white size-12"></i>
-              </div>
-            </client-only>
-          </div>
-          <div
-            class="z-10 ml-2 mb-2 bg-color-008489ok absolute vidcone rounded w-fit bottom-0 left-0"
+            class="z-10 bg-color-008489ok absolute vidcone rounded-bl w-fit bottom-0 left-0"
           >
             <client-only>
               <button
                 class="color-white pb-2 pt-2 pr-3 size-12 px-3 flex align-center space-x-5"
               >
                 <span class="flex align-center space-x-1"
-                  ><i class="fas fa-thumbs-up size-10"></i>
-                  <span class="size-12">23 K</span></span
+                  ><i class="fas fa-thumbs-up size-12"></i>
+                  <span>23 K</span></span
                 >
                 <span class="flex align-center space-x-1"
-                  ><i class="far fa-eye size-10"></i
-                  ><span class="size-12">1 M</span></span
+                  ><i class="far fa-eye size-12"></i><span>1 M</span></span
                 >
               </button>
             </client-only>
           </div>
           <div
-            class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+            class="z-10 bg-color-008489ok absolute rounded-tl w-fit top-0 left-0"
+          >
+            <client-only>
+              <button
+                class="color-white pb-2 pt-2 size-11 px-2 flex align-center space-x-5"
+              >
+                <span class="flex align-center space-x-1">
+                  <span>4h 30m</span></span
+                >
+              </button>
+            </client-only>
+          </div>
+          <div
+            class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>
               <button
@@ -56,7 +59,7 @@
                   }
                 "
               >
-                <i class="far fa-thumbs-up size-13"></i>
+                <i class="far fa-thumbs-up size-16"></i>
               </button>
               <button
                 v-else
@@ -68,13 +71,13 @@
                   }
                 "
               >
-                <i class="fas fa-thumbs-up size-13"></i>
+                <i class="fas fa-thumbs-up size-16"></i>
               </button>
             </client-only>
           </div>
           <div
             v-if="phover"
-            class="z-10 mr-2 hidden sm:block bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+            class="z-10 mr-2 hidden sm:block bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>
               <button
@@ -99,11 +102,11 @@
               >
                 <span
                   style="visibility: hidden"
-                  class="font-semibold size-12 w-0 pt-1"
+                  class="font-semibold size-14 w-0 pt-1"
                   :class="{ showlikedtext: islikedhover }"
                   >Like</span
                 >
-                <i class="far fa-thumbs-up size-13"></i>
+                <i class="far fa-thumbs-up size-16"></i>
               </button>
               <button
                 v-else
@@ -127,11 +130,11 @@
               >
                 <span
                   style="visibility: hidden"
-                  class="font-semibold size-12 w-0 pt-1"
+                  class="font-semibold size-14 w-0 pt-1"
                   :class="{ showunlikedtext: isunlikedhover }"
                   >Liked</span
                 >
-                <i class="fas fa-thumbs-up size-13"></i>
+                <i class="fas fa-thumbs-up size-16"></i>
               </button>
             </client-only>
           </div>
@@ -140,16 +143,24 @@
       </div>
       <div class="mt-1 ert">
         <div class="content mb-1">
-          <div class="ctag">
+          <div class="ctag flex justify-between">
             <nuxt-link
-              class="font-semibold size-14 clickable color-008489 hover-008489"
+              class="font-semibold size-13 clickable color-008489 hover-008489"
               to="#"
             >
               #VueJs
             </nuxt-link>
+            <div class="flex align-center space-x-1">
+              <span class="size-12 color-363636f">by</span>
+              <nuxt-link to="#" title="See profile"
+                ><span class="mscourses font-semibold size-13 color-6d6d6ddd"
+                  >Sopegue
+                </span></nuxt-link
+              >
+            </div>
           </div>
           <div class="ctitle font-semibold">
-            <span class="mscourse pb-1zz size-15"
+            <span class="mscourse pb-1zz size-14"
               >How to Write Good Commit Messages: A Practical Git Guide A
               Practical Git Guide</span
             >
@@ -260,10 +271,6 @@ export default {
     padding: 0 !important;
     padding-bottom: 2rem !important;
     border-bottom-width: 1px;
-  }
-  .ert {
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
   .ddd {
     border: none !important;

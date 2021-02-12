@@ -80,6 +80,13 @@
                       >Browse a picture
                     </span>
                   </div>
+                  <div class="wordbreaking w-fit m-0-auto">
+                    <span class="size-11 block font-semibold"
+                      >You can only load
+                      <span class="text-red-600">.jpe?g | .png | .gif</span>
+                      picture type</span
+                    >
+                  </div>
                 </div>
                 <div class="impp absolute opacity-0 znegatif">
                   <input
@@ -103,22 +110,22 @@
                 </span>
               </div>
             </div>
-            <div class="w-fit tgtg pt-6 m-0-auto flex align-center space-x-5">
+            <div class="w-fit tgtg pt-10 m-0-auto flex align-center space-x-5">
               <nuxt-link
                 :to="localePath('/home', $i18n.locale)"
-                class="button cancc is-light border rounded-md flex align-center space-x-2 px-6"
+                class="button cancc is-light border rounded-md flex align-center space-x-2 px-8"
               >
                 <span class="size-13 sm:size-14 font-semibold"
                   >Cancel
                 </span></nuxt-link
               >
-              <a
-                class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-6"
-                @click="gonext"
+              <nuxt-link
+                :to="localePath('/add/chapter', $i18n.locale)"
+                class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-8"
               >
                 <span class="size-13 sm:size-14 text-white font-semibold"
                   >Continue
-                </span></a
+                </span></nuxt-link
               >
             </div>
           </div>

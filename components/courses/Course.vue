@@ -33,6 +33,19 @@
             </client-only>
           </div>
           <div
+            class="z-10 bg-color-008489ok absolute rounded-tl w-fit top-0 left-0"
+          >
+            <client-only>
+              <button
+                class="color-white pb-2 pt-2 size-11 px-2 flex align-center space-x-5"
+              >
+                <span class="flex align-center space-x-1">
+                  <span>4h 30m</span></span
+                >
+              </button>
+            </client-only>
+          </div>
+          <div
             class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>
@@ -143,15 +156,6 @@
               >How to Write Good Commit Messages: A Practical Git Guide A
               Practical Git Guide</span
             >
-          </div>
-          <div class="ctitle size-12 color-6d6d6d">
-            <span class="mscourse pb-1zz">2 Min Read</span>
-          </div>
-          <div class="ctitle size-12 color-6d6d6d">
-            <span class="mscourse pb-1zz">600 Min Read / 10 Hour Watch</span>
-          </div>
-          <div class="ctitle size-12 color-6d6d6d">
-            <span class="mscourse pb-1zz">10 Hour Watch</span>
           </div>
         </div>
         <div class="media justify-between">
@@ -272,31 +276,31 @@ export default {
 .vidcone {
   margin-top: 0.5rem !important;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1180px) {
   .course-sample {
-    width: 33.33%;
+    width: 25% !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 967px) {
   .course-sample {
-    width: 50%;
+    width: 33.33% !important;
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 747px) {
   .course-sample {
-    width: 50%;
+    width: 50% !important;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .course-sample {
-    width: 100%;
+    width: 100% !important;
   }
 }
 @media screen and (max-width: 450px) {
   .course-sample {
-    padding: 0 !important;
-    padding-bottom: 2rem !important;
-    border-bottom-width: 1px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 1rem !important;
   }
   .ert {
     padding-left: 1rem;

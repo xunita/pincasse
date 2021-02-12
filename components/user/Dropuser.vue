@@ -38,7 +38,7 @@
         <div class="dropdown-content border">
           <nuxt-link
             to="/userme"
-            class="dropdown-item clickable flex align-center space-x-2"
+            class="dropdown-item clickable flex align-center space-x-1"
             @click.native="
               {
                 focused = false
@@ -46,7 +46,7 @@
             "
           >
             <svg
-              class="w-5 h-5 bb color-363636 makeme-008489"
+              class="w-4 h-4 bb color-363636 makeme-008489"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +59,9 @@
             </svg>
             <span class="size-13">My profile</span>
           </nuxt-link>
-          <hr class="dropdown-divider" />
           <nuxt-link
             to="#"
-            class="dropdown-item clickable flex align-center space-x-2"
+            class="dropdown-item clickable flex align-center space-x-1"
             @click.native="
               {
                 focused = false
@@ -70,7 +69,7 @@
             "
           >
             <svg
-              class="w-5 h-5 bb color-363636 makeme-008489"
+              class="w-4 h-4 bb color-363636 makeme-008489"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +83,7 @@
           </nuxt-link>
           <hr class="dropdown-divider" />
           <a
-            class="dropdown-item hover-008489 clickable flex align-center space-x-2"
+            class="dropdown-item hover-008489 clickable flex align-center space-x-1"
             @click="
               {
                 focused = false

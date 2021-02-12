@@ -52,9 +52,19 @@
             <h4 class="font-semibold size-15">Course's chapters</h4>
           </div>
           <div class="relative top-2x">
-            <div class="flex flex-col space-y-6"><Chapter /> <Chapter /></div>
+            <div class="flex flex-col space-y-6">
+              <Chapter
+                v-for="(i, j) in com.length"
+                :key="j"
+                class="appearyh"
+                :chapkey="j"
+                :comlen="com.length"
+                @delchap="delchap"
+              />
+            </div>
             <button
               class="button w-fit relative top-12x bg-white outline-none no-outline border-none flex align-center space-x-1"
+              @click="addchapter"
             >
               <svg
                 class="w-5 h-5 color-008489"
@@ -69,7 +79,7 @@
                 ></path>
               </svg>
               <span class="size-13 font-semibold color-363636f"
-                >Add a new chapter</span
+                >New chapter</span
               >
             </button>
           </div>
@@ -104,6 +114,7 @@ export default {
   },
   data() {
     return {
+      com: [1],
       file: '',
       oldfile: '',
       image: '',
@@ -119,8 +130,14 @@ export default {
     },
   },
   methods: {
+    addchapter() {
+      this.com.push(1)
+    },
+    delchap(value) {
+      this.com.splice(value, 1)
+    },
     backprev() {
-      this.$emit('backprev')
+      this.$router.go(-1)
     },
     uploadpic() {
       document.getElementById('file').click()

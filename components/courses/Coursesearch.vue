@@ -33,6 +33,19 @@
             </client-only>
           </div>
           <div
+            class="z-10 bg-color-008489ok absolute vidcone rounded-br w-fit bottom-0 right-0"
+          >
+            <client-only>
+              <button
+                class="color-white pb-2 pt-2 size-11 px-2 flex align-center space-x-5"
+              >
+                <span class="flex align-center space-x-1">
+                  <span>4h 30m</span></span
+                >
+              </button>
+            </client-only>
+          </div>
+          <div
             class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>

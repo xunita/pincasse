@@ -1,7 +1,6 @@
 <template>
   <div>
     <client-only>
-      <Notificationaside class="py-2" />
       <div class="border-b py-2">
         <nuxt-link
           :to="localePath('/userme/mycourses', $i18n.locale)"
@@ -33,10 +32,10 @@
   </div>
 </template>
 <script>
-import Notificationaside from '../burger/Notificationaside.vue'
+// import Notificationaside from '../burger/Notificationaside.vue'
 import Subscribeaside from '../burger/Subscribeaside.vue'
 export default {
-  components: { Notificationaside, Subscribeaside },
+  components: { Subscribeaside },
   data() {
     return {}
   },

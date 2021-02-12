@@ -1,5 +1,5 @@
 <template>
-  <div id="eltoscrol" class="z-10 plus50px overflow-x-auto">
+  <div id="eltoscroling" class="z-10 plus50px overflow-x-auto">
     <div class="flex align-center space-x-5 w-fit m-0-auto wtag">
       <client-only>
         <div
@@ -70,12 +70,12 @@ export default {
       } while (currentDate - date < milliseconds)
     },
     scrollLeft() {
-      const scroll = document.getElementById('eltoscrol').scrollLeft
-      const scr = document.getElementById('eltoscrol').scrollWidth
-      const cl = document.getElementById('eltoscrol').clientWidth
+      const scroll = document.getElementById('eltoscroling').scrollLeft
+      const scr = document.getElementById('eltoscroling').scrollWidth
+      const cl = document.getElementById('eltoscroling').clientWidth
       if (scroll - 500 > 5) this.tagscrol = true
       else this.tagscrol = false
-      document.getElementById('eltoscrol').scroll({
+      document.getElementById('eltoscroling').scroll({
         top: scroll - 500,
         left: scroll - 500,
         behavior: 'smooth',
@@ -88,12 +88,12 @@ export default {
       // this.sleep(500)
     },
     scrollRight() {
-      const scroll = document.getElementById('eltoscrol').scrollLeft
-      const scr = document.getElementById('eltoscrol').scrollWidth
-      const cl = document.getElementById('eltoscrol').clientWidth
+      const scroll = document.getElementById('eltoscroling').scrollLeft
+      const scr = document.getElementById('eltoscroling').scrollWidth
+      const cl = document.getElementById('eltoscroling').clientWidth
       if (scroll + 500 > 5) this.tagscrol = true
       else this.tagscrol = false
-      document.getElementById('eltoscrol').scroll({
+      document.getElementById('eltoscroling').scroll({
         top: scroll + 500,
         left: scroll + 500,
         behavior: 'smooth',
@@ -105,17 +105,17 @@ export default {
       }
     },
     handleScroll() {
-      const cl = document.getElementById('eltoscrol').clientWidth
-      const scroll = document.getElementById('eltoscrol').scrollLeft
-      const scr = document.getElementById('eltoscrol').scrollWidth
+      const cl = document.getElementById('eltoscroling').clientWidth
+      const scroll = document.getElementById('eltoscroling').scrollLeft
+      const scr = document.getElementById('eltoscroling').scrollWidth
       if (scr - cl <= scroll) this.reachtotal = true
       else this.reachtotal = false
       if (scroll <= 0) this.tagscrol = false
       else this.tagscrol = true
     },
     large() {
-      const scr = document.getElementById('eltoscrol').scrollWidth
-      const cl = document.getElementById('eltoscrol').clientWidth
+      const scr = document.getElementById('eltoscroling').scrollWidth
+      const cl = document.getElementById('eltoscroling').clientWidth
       if (cl >= scr) {
         this.tagscrol = 0
         this.reachtotal = true

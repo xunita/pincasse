@@ -1,27 +1,9 @@
 <template>
   <div class="bg-color-white">
     <div class="hasdata">
-      <div class="px-8 flex align-center flex-wrap zeze">
-        <Course v-for="i in 6" :key="i" class="column is-one-quarter" />
+      <div class="flex align-center flex-wrap zeze">
+        <Course v-for="i in 10" :key="i" class="column is-one-fifth" />
       </div>
-      <div class="container px-8 pb-8">
-        <h4 class="color-6d6d6d italic">
-          There is always something to learn, come back later to discover new
-          courses.
-        </h4>
-      </div>
-    </div>
-    <div class="hasnodata container px-8 pb-8">
-      <h4 class="color-6d6d6d italic">
-        There is always something to learn, reload the page to view the courses
-        or come back later to discover new courses.
-      </h4>
-      <button
-        class="bg-color-008489 mt-5 outline-none no-outline rounded text-white bghover-008489 hover-white active-white py-2 border-0"
-        @click="reload"
-      >
-        <span class="px-8">reload</span>
-      </button>
     </div>
   </div>
 </template>

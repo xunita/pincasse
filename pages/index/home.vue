@@ -1,6 +1,38 @@
 <template>
-  <div>
-    <List />
+  <div class="pt-6">
+    <div>
+      <nuxt-link
+        :to="localePath('/courses/lastest', $i18n.locale)"
+        class="color-363636f w-fit hover-008489"
+      >
+        <span class="font-semibold w-fit size-16 makeme-008489 underline-hover">
+          Latest courses
+        </span>
+      </nuxt-link>
+      <div class="mt-1"><List /></div>
+    </div>
+    <div class="mt-5 mb-5 border-t border-b pt-5">
+      <nuxt-link
+        :to="localePath('/courses/lastest', $i18n.locale)"
+        class="color-363636f w-fit hover-008489"
+      >
+        <span class="font-semibold w-fit size-16 makeme-008489 underline-hover">
+          React Js
+        </span>
+      </nuxt-link>
+      <div class="mt-4 relative"><Suggestion /></div>
+    </div>
+    <div>
+      <nuxt-link
+        :to="localePath('/courses/lastest', $i18n.locale)"
+        class="color-363636f w-fit hover-008489"
+      >
+        <span class="font-semibold w-fit size-16 makeme-008489 underline-hover">
+          Featured
+        </span>
+      </nuxt-link>
+      <div class="mt-1"><List /></div>
+    </div>
   </div>
 </template>
 

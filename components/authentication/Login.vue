@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="w-full">
-      <Logo2 class="relative m-0-auto clickable" />
+      <nuxt-link :to="localePath('/home', $i18n.locale)"
+        ><Logo2 class="relative m-0-auto clickable"
+      /></nuxt-link>
       <div class="oath-log -mt-10">
         <h4 class="text-center size-20 color-363636f mb-2">
           Sign in to Pincasse

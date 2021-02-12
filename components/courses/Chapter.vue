@@ -1,9 +1,11 @@
 <template>
   <div class="flex flex-col border-b pb-5 relative top-1x space-y-3">
     <div class="pb-1 border-b color-363636f flex align-center justify-between">
-      <h4 class="font-semibold size-15">Chapter I</h4>
+      <h4 class="font-semibold size-15">Chapter {{ chapkey + 1 }}</h4>
       <button
+        v-show="comlen === chapkey + 1 && chapkey > 0"
         class="button w-fit h-fit no-outline outline-none border-none bg-white hover-008489"
+        @click="delchap"
       >
         <svg
           class="w-5 h-5 color-363636 makeme-red"
@@ -31,9 +33,19 @@
           class="border w-full py-1 h-7 size-14 rounded no-outlines outline-none px-2"
         />
       </div>
-      <div class="flex flex-col"><Part /> <Part /></div>
+      <div class="flex flex-col">
+        <Part
+          v-for="(i, j) in part.length"
+          :key="j"
+          class="appearyh"
+          :partkey="j"
+          :partlen="part.length"
+          @delpart="delpart"
+        />
+      </div>
       <button
         class="button mt-1 bg-white outline-none no-outline border-none flex align-center space-x-1"
+        @click="addpart"
       >
         <svg
           class="w-5 h-5 color-008489"
@@ -47,20 +59,68 @@
             clip-rule="evenodd"
           ></path>
         </svg>
-        <span class="size-13 font-semibold color-363636f">Add a new part</span>
+        <span class="size-13 font-semibold color-363636f">New part</span>
       </button>
     </div>
   </div>
 </template>
 <script>
 export default {
+  filters: {
+    romanize(num) {
+      const roman = {
+        M: 1000,
+        CM: 900,
+        D: 500,
+        CD: 400,
+        C: 100,
+        XC: 90,
+        L: 50,
+        XL: 40,
+        X: 10,
+        IX: 9,
+        V: 5,
+        IV: 4,
+        I: 1,
+      }
+      let str = ''
+
+      for (const i of Object.keys(roman)) {
+        const q = Math.floor(num / roman[i])
+        num -= q * roman[i]
+        str += i.repeat(q)
+      }
+
+      return str
+    },
+  },
+  props: {
+    chapkey: {
+      type: Number,
+      default: 0,
+    },
+    comlen: {
+      type: Number,
+      default: 1,
+    },
+  },
   data() {
     return {
+      part: [1],
       focused: false,
       inputfoc: false,
     }
   },
   methods: {
+    delpart(value) {
+      this.part.splice(value, 1)
+    },
+    addpart() {
+      this.part.push(1)
+    },
+    delchap() {
+      this.$emit('delchap', this.chapkey)
+    },
     manageleave() {
       if (this.inputfoc !== true) this.focused = false
     },
