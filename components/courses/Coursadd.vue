@@ -9,7 +9,7 @@
             <a class="clickable flex align-center space-x-1" @click="backprev"
               ><span
                 ><svg
-                  class="w-5 h-5 color-363636 relative top-01x"
+                  class="w-5 h-5 color-363636"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                   xmlns="http://www.w3.org/2000/svg"
