@@ -1,8 +1,10 @@
 <template>
   <div class="h-16 w-full relative px-8 z-10 tatapp">
     <div class="vertical-center w-fit flex align-center relative pos-right">
-      <div class="mr-5"><Langchoice /></div>
-      <client-only>
+      <!-- <div><Langchoice /></div> -->
+      <Addcourse />
+      <Noticon class="mr-1" />
+      <!-- <client-only>
         <btn-link
           :needfocus="false"
           href="https://github.com/nuxt/nuxt.js"
@@ -12,14 +14,15 @@
             $t('sign')
           }}</span></btn-link
         ></client-only
-      >
+      > -->
+      <Dropuser />
     </div>
   </div>
 </template>
 <script>
-import Langchoice from '../lang/Langchoice.vue'
+// import Langchoice from '../lang/Langchoice.vue'
 export default {
-  components: { Langchoice },
+  // components: { Langchoice },
   data() {
     return {}
   },

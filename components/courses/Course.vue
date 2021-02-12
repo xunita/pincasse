@@ -158,18 +158,18 @@
           <div class="flex align-center">
             <nuxt-link to="#" title="See profile" class="w-fit">
               <div class="media-left w-fit">
-                <figure class="image rounded-full is-40x40">
+                <figure class="image rounded-full is-32x32">
                   <img
-                    class="rounded-full"
+                    class="rounded-full is-32x32"
                     src="https://i.ibb.co/NSQWM85/56.png"
                     alt="Placeholder image"
                   />
                 </figure>
               </div>
             </nuxt-link>
-            <div class="w-fit -ml-1">
+            <div class="w-fit -ml-2">
               <nuxt-link to="#" title="See profile"
-                ><span class="mscourses font-semibold size-14 color-6d6d6ddd"
+                ><span class="mscourses font-semibold size-13 color-6d6d6ddd"
                   >Yaya Sopegue
                 </span></nuxt-link
               >

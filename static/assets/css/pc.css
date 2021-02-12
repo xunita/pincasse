@@ -141,7 +141,6 @@ input[type='search']::-webkit-search-cancel-button {
 }
 .top-01x {
   top: 0.07rem !important;
-
 }
 .top-03x {
   top: 0.3rem !important;
@@ -573,12 +572,7 @@ textarea {
   -webkit-animation: fa-spin 0.5s infinite linear;
   animation: fa-spin 0.5s infinite linear;
 }
-@media screen and (max-width: 500px) {
-  .pos-right {
-    float: none !important;
-    margin: 0 auto !important;
-  }
-}
+
 .milogo {
   position: absolute !important;
 }

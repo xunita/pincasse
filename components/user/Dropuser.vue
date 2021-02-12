@@ -17,7 +17,7 @@
               }
             "
           >
-            <figure class="image rounded-full is-36x36">
+            <figure class="image rounded-full is-32x32">
               <img
                 class="rounded-full is-36x36"
                 src="https://i.ibb.co/NSQWM85/56.png"

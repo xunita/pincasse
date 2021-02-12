@@ -84,7 +84,6 @@
             >
             <a
               class="button concc bg-color-008489 border rounded-md flex align-center space-x-2 px-8"
-              @click="gonext"
             >
               <span class="size-13 sm:size-14 text-white font-semibold"
                 >Save and publish
