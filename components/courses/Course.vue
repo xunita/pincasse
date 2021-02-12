@@ -16,16 +16,7 @@
       <div class="card-image rounded ddd">
         <figure class="image relative is-4by3">
           <div
-            class="z-10 bg-color-008489ok absolute vidcone px-3 rounded w-fit top-0 left-0 ml-2"
-          >
-            <client-only>
-              <div class="-mt-1">
-                <i class="fas fa-video color-white size-12"></i>
-              </div>
-            </client-only>
-          </div>
-          <div
-            class="z-10 ml-2 mb-2 bg-color-008489ok absolute vidcone rounded w-fit bottom-0 left-0"
+            class="z-10 bg-color-008489ok absolute vidcone rounded-bl w-fit bottom-0 left-0"
           >
             <client-only>
               <button
@@ -42,7 +33,7 @@
             </client-only>
           </div>
           <div
-            class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+            class="z-10 mr-2 block sm:hidden bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>
               <button
@@ -73,7 +64,7 @@
           </div>
           <div
             v-if="phover"
-            class="z-10 mr-2 hidden sm:block bg-color-008489 absolute vidcone rounded w-fit top-0 right-0"
+            class="z-10 mr-2 hidden sm:block bg-color-008489 absolute vidcone rounded-full w-fit top-0 right-0"
           >
             <client-only>
               <button
@@ -167,7 +158,7 @@
           <div class="flex align-center">
             <nuxt-link to="#" title="See profile" class="w-fit">
               <div class="media-left w-fit">
-                <figure class="image rounded-full is-44x44">
+                <figure class="image rounded-full is-40x40">
                   <img
                     class="rounded-full"
                     src="https://i.ibb.co/NSQWM85/56.png"
@@ -178,8 +169,7 @@
             </nuxt-link>
             <div class="w-fit -ml-1">
               <nuxt-link to="#" title="See profile"
-                ><span
-                  class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+                ><span class="mscourses font-semibold size-14 color-6d6d6ddd"
                   >Yaya Sopegue
                 </span></nuxt-link
               >

@@ -46,7 +46,7 @@
           <Aside
             v-show="menu"
             id="aside"
-            class="fixed overflow-auto h-aside z-50"
+            class="fixed h-aside h-full bg-white z-10000 pb-20"
             :class="{ hidding: !menu }"
             @hideMenu="hideMenu"
           />
@@ -261,6 +261,9 @@ export default {
   .searchbar {
     width: 80% !important;
   }
+}
+.d-header {
+  z-index: 9999 !important;
 }
 @media screen and (max-width: 499px) {
   .title {

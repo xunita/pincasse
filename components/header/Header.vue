@@ -6,14 +6,26 @@
       v-show="wantmax"
       class="w-full relative flex align-center justify-between"
     >
-      <div class="flex align-center relative -ml-1">
+      <div class="flex align-center relative">
         <client-only>
           <button
             id="menubtn"
-            class="bg-white z-40 no-outline p-2"
+            class="bg-white h-fit w-fit z-40 no-outline"
             @click="showMenu"
           >
-            <i id="menubtnii" class="fas fa-bars color-363636 size-18"></i>
+            <svg
+              id="menubtnii"
+              class="w-5 h-5 color-363636"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
           </button>
         </client-only>
         <nuxt-link :to="home" class="h-8 -ml-1454 h-logo">

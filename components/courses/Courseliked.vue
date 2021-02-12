@@ -167,7 +167,7 @@
           <div class="flex align-center">
             <nuxt-link to="#" title="See profile">
               <div class="media-left">
-                <figure class="image rounded-full is-44x44">
+                <figure class="image rounded-full is-40x40">
                   <img
                     class="rounded-full"
                     src="https://i.ibb.co/NSQWM85/56.png"
@@ -178,8 +178,7 @@
             </nuxt-link>
             <div class="w-fit">
               <nuxt-link to="#" title="See profile"
-                ><span
-                  class="mscourses pb-1 font-semibold size-14 color-6d6d6ddd"
+                ><span class="mscourses font-semibold size-14 color-6d6d6ddd"
                   >Yaya Sopegue
                 </span></nuxt-link
               >

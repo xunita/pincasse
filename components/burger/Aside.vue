@@ -1,14 +1,24 @@
 <template>
-  <div class="aside overflow-x-hidden border-r color-363636">
-    <div
-      class="flex w-full sticky z-50 top-0 bg-color-white h-14 align-center as-bur"
-    >
+  <div class="border-r color-363636">
+    <div class="flex w-full bg-color-white h-14 align-center as-bur">
       <client-only>
         <button
-          class="z-40 bg-white no-outline btn-search p-2"
+          class="bg-white w-fit h-fit no-outline btn-search"
           @click="hideMenu"
         >
-          <i class="fas fa-bars color-363636 size-18"></i>
+          <svg
+            id="menubtnii"
+            class="w-5 h-5 color-363636"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
         </button>
         <nuxt-link :to="home" class="h-fit ml-2 -mt-1">
           <div class="h-8 relative flex align-center">
@@ -19,9 +29,9 @@
         </nuxt-link>
       </client-only>
     </div>
-    <div>
-      <Northaside class="py-2 pl5px" />
-      <Middleaside class="pl5px" @more="more" />
+    <div class="aside overflow-y-auto z-10000">
+      <Northaside class="py-2" />
+      <Middleaside @more="more" />
       <footer class="py-2"><Footer /></footer>
     </div>
   </div>

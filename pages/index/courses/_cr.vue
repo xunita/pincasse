@@ -85,7 +85,7 @@
                 >
               </div>
             </div>
-            <div class="aside overflow-y-auto pb-24">
+            <div class="aside overflow-y-auto pb-32">
               <Courseside v-for="i in 20" :key="i" />
             </div>
           </div>

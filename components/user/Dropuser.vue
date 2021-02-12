@@ -19,7 +19,7 @@
           >
             <figure class="image rounded-full is-36x36">
               <img
-                class="rounded-full"
+                class="rounded-full is-36x36"
                 src="https://i.ibb.co/NSQWM85/56.png"
                 alt="Placeholder image"
               />
