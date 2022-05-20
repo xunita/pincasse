@@ -2,6 +2,10 @@
 
 Pincasse is/was an idea of youtube but for developers.
 
+# demo site
+
+[Demo here](https://pincasse.netlify.app/fr/).
+
 ## Build Setup
 
 ```bash
