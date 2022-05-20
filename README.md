@@ -1,5 +1,7 @@
 # pincassefront
 
+Pincasse is/was an idea of youtube but for developers.
+
 ## Build Setup
 
 ```bash
